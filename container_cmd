@@ -1,2 +1,1 @@
-docker run --gpus all -u c513afd4c399 -v /home/keti/ap_ws/gaussian-splatting -p 7007:7007 --rm -it --shm-size=12gb ghcr.io/nerfstudio-project/nerfstudio:89         
-           
+docker run --gpus all -v /home/keti/ap_ws:/home/keti/ap_ws -p 7008:7008 -it --shm-size=12gb my_nfstdo
