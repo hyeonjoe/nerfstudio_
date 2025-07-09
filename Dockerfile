@@ -44,7 +44,8 @@ RUN apt-get update && \
         libcgal-dev \
         libceres-dev \
         python3.10-dev \
-        python3-pip
+        python3-pip\
+        
 
 # Build and install CMake
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.31.3/cmake-3.31.3-linux-x86_64.sh \
@@ -54,6 +55,9 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v3.31.3/cmake-3.31.3
     && /tmp/cmake-install.sh --skip-license --prefix=/opt/cmake-3.31.3 \
     && rm /tmp/cmake-install.sh \
     && ln -s /opt/cmake-3.31.3/bin/* /usr/local/bin
+
+
+
     
 # Build and install GLOMAP.
 RUN git clone https://github.com/colmap/glomap.git && \
@@ -80,9 +84,10 @@ RUN git clone https://github.com/colmap/colmap.git && \
     cd ~
 
 # Upgrade pip and install dependencies.
+#modified numpy<2.0.0 -> ==2.1.2 & torch==2.1.2 ->2.5.1 torchvision -> 0.20.1
 # pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu118 && \
 RUN pip install --no-cache-dir --upgrade pip 'setuptools<70.0.0' && \
-    pip install --no-cache-dir torch==2.1.2+cu118 torchvision==0.16.2+cu118 'numpy<2.0.0' --extra-index-url https://download.pytorch.org/whl/cu118 && \
+    pip install --no-cache-dir torch==2.5.1+cu118 torchvision==0.20.1+cu118 'numpy==2.1.2' --extra-index-url https://download.pytorch.org/whl/cu118 && \
     git clone --branch master --recursive https://github.com/cvg/Hierarchical-Localization.git /opt/hloc && \
     cd /opt/hloc && git checkout v1.4 && python3.10 -m pip install --no-cache-dir . && cd ~ && \
     TCNN_CUDA_ARCHITECTURES="${CUDA_ARCHITECTURES}" pip install --no-cache-dir "git+https://github.com/NVlabs/tiny-cuda-nn.git@b3473c81396fe927293bdfd5a6be32df8769927c#subdirectory=bindings/torch" && \
