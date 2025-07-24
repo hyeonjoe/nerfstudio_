@@ -262,7 +262,8 @@ class VanillaPipeline(Pipeline):
         ):
             pts = self.datamanager.train_dataparser_outputs.metadata["points3D_xyz"]  # type: ignore
             pts_rgb = self.datamanager.train_dataparser_outputs.metadata["points3D_rgb"]  # type: ignore
-            seed_pts = (pts, pts_rgb)
+            pts_anomal = self.datamanager.train_dataparser_outputs.metadata["poin3Ds_anomaly"]
+            seed_pts = (pts, pts_rgb,pts_anomal)
         # TODO(ethan): get rid of scene_bounds from the model
         assert self.datamanager.train_dataset is not None, "Missing input dataset"
 

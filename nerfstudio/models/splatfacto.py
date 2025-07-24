@@ -217,7 +217,10 @@ class SplatfactoModel(Model):
         else:
             features_dc = torch.nn.Parameter(torch.rand(num_points, 3))
             features_rest = torch.nn.Parameter(torch.zeros((num_points, dim_sh - 1, 3)))
-
+        # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
+        if self.seed_points is not None and not self.config.random_init:
+            anomals = torch.nn.Parameter(self.seed_points[2])  # (anomaly)
+        # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
         opacities = torch.nn.Parameter(torch.logit(0.1 * torch.ones(num_points, 1)))
         self.gauss_params = torch.nn.ParameterDict(
             {
@@ -227,6 +230,7 @@ class SplatfactoModel(Model):
                 "features_dc": features_dc,
                 "features_rest": features_rest,
                 "opacities": opacities,
+                "anomals": anomals, # need to be removed later
             }
         )
 
@@ -339,6 +343,11 @@ class SplatfactoModel(Model):
     @property
     def opacities(self):
         return self.gauss_params["opacities"]
+    
+
+    @property
+    def anomals(self): #@@@@@@@@@@@@@@@@@@@@@@@@@@@need to be removed later
+        return self.gauss_params["anomals"]
 
     def load_state_dict(self, dict, **kwargs):  # type: ignore
         # resize the parameters to match the new number of points
@@ -412,10 +421,22 @@ class SplatfactoModel(Model):
     def get_gaussian_param_groups(self) -> Dict[str, List[Parameter]]:
         # Here we explicitly use the means, scales as parameters so that the user can override this function and
         # specify more if they want to add more optimizable params to gaussians.
+        # return {
+        #     name: [self.gauss_params[name]]
+        #     for name in ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
+        # }
+        #@@@@@@@@@@@@@@ need to be removed later
+        names = ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
+        # 만약 "anomal" 키가 있으면 추가
+        if "anomal" in self.gauss_params:
+            names.append("anomals")
         return {
             name: [self.gauss_params[name]]
-            for name in ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
+            for name in names
         }
+
+
+
 
     def get_param_groups(self) -> Dict[str, List[Parameter]]:
         """Obtain the parameter groups for the optimizers
