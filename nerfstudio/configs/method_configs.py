@@ -60,6 +60,7 @@ from nerfstudio.models.semantic_nerfw import SemanticNerfWModelConfig
 from nerfstudio.models.splatfacto import SplatfactoModelConfig
 from nerfstudio.models.tensorf import TensoRFModelConfig
 from nerfstudio.models.vanilla_nerf import NeRFModel, VanillaModelConfig
+from nerfstudio.models.custom_splatfacto import custom_SplatfactoModelConfig
 from nerfstudio.pipelines.base_pipeline import VanillaPipelineConfig
 from nerfstudio.pipelines.dynamic_batch import DynamicBatchPipelineConfig
 from nerfstudio.plugins.registry import discover_methods
@@ -768,7 +769,7 @@ method_configs["splatfacto-mcmc"] = TrainerConfig(
 )
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22
 method_configs["custom_method"] = TrainerConfig(
-    method_name="splatfacto",
+    method_name="custom_splatfacto",
     steps_per_eval_image=100,
     steps_per_eval_batch=0,
     steps_per_save=2000,
@@ -781,7 +782,7 @@ method_configs["custom_method"] = TrainerConfig(
             cache_images_type="uint8",
         ),
 
-        model=SplatfactoModelConfig(),
+        model=custom_SplatfactoModelConfig(),
     ),
     optimizers={
         "means": {
@@ -820,6 +821,8 @@ method_configs["custom_method"] = TrainerConfig(
                 lr_final=1e-4, max_steps=30000, warmup_steps=1000, lr_pre_warmup=0
             ),
         },
+        
+        
     },
     viewer=ViewerConfig(num_rays_per_chunk=1 << 15),
     vis="viewer",

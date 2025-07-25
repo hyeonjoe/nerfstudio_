@@ -9,6 +9,7 @@ from torch import nn
 from torchvision.models import resnet50
 import torchvision.transforms as T
 from custom_parsing import custom_parsing_class
+import numpy as np
 # torch.set_grad_enabled(False);
 
 class DETRdemo(nn.Module):
@@ -202,6 +203,7 @@ impath=imgdir_path+'0012.jpg'# bin에서 읽어서 해야댐
 
 binary_path = '/root/colmap/sparse/0/images.bin'
 cambinpath='/root/colmap/sparse/0/cameras.bin'
+points3D_bin_path='/root/colmap/sparse/0/points3D.bin'
 im = Image.open(impath)
 # scores, boxes = detr.detect(im, transform)
 
@@ -221,10 +223,13 @@ for idx,img_n in enumerate(jpg_files):
             c_x=(xmin.item()+xmax.item())//2
             c_y=(ymin.item()+ymax.item())//2
             img_name=img_n.rsplit('/')[-1]
-            features_info.append([c_x,c_y,img_name])
+            # features_info.append([c_x,c_y,img_name])
+            br,bg,bb=pil_img.getpixel((c_x,c_y))# check pixel value
+            # features_info.append([c_x,c_y,img_name])
+            features_info.append([c_x,c_y,img_name,br,bg,bb])
 # print(scores)
 
-print(features_info)
+print('featuresd_info:',features_info)
 images_extrin=cps.read_images_binary(binary_path)
 # for f1 in features_info:
 #     matching_name = f1[-1]
@@ -247,25 +252,42 @@ matched_ids = [
     image_id
     for f1 in features_info
     for image_id, img in images_extrin.items()
-    if img.name == 'frame_0'+f1[-1]#@@@@
+    if img.name == 'frame_0'+f1[-4]#@@@@
 ]
 camera_intrin=cps.read_cameras_binary(cambinpath)
-udst=cps.undistorting(camera_intrin,features_info)#need to be changed
+# udst=cps.undistorting(camera_intrin,features_info)#need to be changed
+udst,color_list=cps._undistorting(camera_intrin,features_info)#need to be changed
+print('color:',color_list)
 cwl=[]
 dwl=[]
+lscwdw=[]
 app_points=[]
-for iter in matched_ids:
+for idx,iter in enumerate(matched_ids):
 
     buf1=images_extrin[iter]
-    print(buf1.qvec)
+    # print('printqvec',buf1.qvec)
     R=cps.qvec2rotmat(buf1.qvec)
-    print(buf1.tvec)
-    bufcw,bufdw=cps.cal_ray(R,buf1.tvec,udst) #@@@@
-    cwl.append(bufcw)
-    dwl.append(bufdw)
-    pxyz=cps.triangulate_multi_rays(cwl,dwl)
-    app_points.append(pxyz)
+    # print('printtvec',buf1.tvec)
+    # bufcw,bufdw=cps.cal_ray(R,buf1.tvec,udst) #@@@@
+    lscwdw=cps._cal_ray(R,buf1.tvec,udst[0][idx]) #@@@@
+    print('output',lscwdw)
 
+
+
+    # cwl.append(bufcw)
+    # dwl.append(bufdw)
+    
+    cwl.append(lscwdw[0][0])
+    dwl.append(lscwdw[0][1])
+
+print('cwl:',cwl)
+print('cwl[0]:',cwl[0])
+print('dwl:',dwl)
+# pxyz=cps.triangulate_multi_rays(cwl,dwl)
+pxyz,nbypts=cps.triangulate_multi_rays(cwl,dwl)
+app_points.append(pxyz)
+app_points.extend(nbypts)
+#rgb넣어주기
 print('app_points',app_points)
 
 
@@ -281,4 +303,42 @@ print('ok')
 print(len(camera_intrin))
 print(type(camera_intrin))
 
+cps.write_post_process_points(app_points,color_list)
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from mpl_toolkits.mplot3d import Axes3D
 
+
+# app_points_np = np.stack(app_points)
+# points3D=cps.read_points3D_binary(points3D_bin_path)  # points3D는 Point3D 객체의 딕셔너리 형태로 반환됨
+
+# # 3D 좌표와 색상 추출
+# xyz = []
+# rgb = []
+# for pt in points3D.values():
+#     xyz.append(pt.xyz)
+#     rgb.append(pt.rgb / 255.0)  # matplotlib은 0~1 범위의 색상 사용
+
+# import numpy as np
+# xyz = np.stack(xyz)
+# rgb = np.stack(rgb)
+
+# # app_points가 [[x, y, z], ...] 형태 또는 (M,3) np.array라면
+# app_points_np = np.stack(app_points)  # 필요시
+
+# # 3D 플롯팅
+# fig = plt.figure(figsize=(8, 8))
+# ax = fig.add_subplot(111, projection='3d')
+# # 1) COLMAP 포인트 (원래 점들, 색상별)
+# ax.scatter(xyz[:, 0], xyz[:, 1], xyz[:, 2], c=rgb, s=1, label="COLMAP Points")
+# # 2) 새로 구한 app_points (빨간 점, 크게)
+# ax.scatter(app_points_np[:, 0], app_points_np[:, 1], app_points_np[:, 2],
+#            c='r', s=60, marker='o', label="Triangulated Points")
+# ax.set_xlabel('X')
+# ax.set_ylabel('Y')
+# ax.set_zlabel('Z')
+# ax.set_title('COLMAP 3D Point Cloud + Triangulated Points')
+# ax.legend()
+# # plt.show()
+# plt.savefig('3d_point_cloud_0723.png', dpi=300, bbox_inches='tight')

@@ -23,11 +23,12 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Literal, Optional, Tuple, Type, Union
 
 import torch
+
+import sys
 from gsplat.strategy import DefaultStrategy, MCMCStrategy
 
 try:
     from gsplat.rendering import rasterization
-except ImportError:
     print("Please install gsplat>=1.0.0")
 from pytorch_msssim import SSIM
 from torch.nn import Parameter
@@ -219,7 +220,7 @@ class SplatfactoModel(Model):
             features_rest = torch.nn.Parameter(torch.zeros((num_points, dim_sh - 1, 3)))
         # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
         if self.seed_points is not None and not self.config.random_init:
-            anomals = torch.nn.Parameter(self.seed_points[2])  # (anomaly)
+            anomals = torch.nn.Parameter(self.seed_points[2],requires_grad=False)  # (anomaly)
         # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
         opacities = torch.nn.Parameter(torch.logit(0.1 * torch.ones(num_points, 1)))
         self.gauss_params = torch.nn.ParameterDict(
@@ -540,6 +541,7 @@ class SplatfactoModel(Model):
             features_rest_crop = self.features_rest[crop_ids]
             scales_crop = self.scales[crop_ids]
             quats_crop = self.quats[crop_ids]
+            anomals_crop = self.anomals[crop_ids] #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ need to be removed later
         else:
             opacities_crop = self.opacities
             means_crop = self.means
@@ -547,6 +549,8 @@ class SplatfactoModel(Model):
             features_rest_crop = self.features_rest
             scales_crop = self.scales
             quats_crop = self.quats
+            anomals_crop = self.anomals #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ need to be removed later
+
 
         colors_crop = torch.cat((features_dc_crop[:, None, :], features_rest_crop), dim=1)
 
@@ -623,6 +627,7 @@ class SplatfactoModel(Model):
             "depth": depth_im,  # type: ignore
             "accumulation": alpha.squeeze(0),  # type: ignore
             "background": background,  # type: ignore
+            "anomaly_rgb" : rgb.squeeze(0),
         }  # type: ignore
 
     def get_gt_img(self, image: torch.Tensor):
