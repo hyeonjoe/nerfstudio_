@@ -29,6 +29,7 @@ from gsplat.strategy import DefaultStrategy, MCMCStrategy
 
 try:
     from gsplat.rendering import rasterization
+except ImportError:
     print("Please install gsplat>=1.0.0")
 from pytorch_msssim import SSIM
 from torch.nn import Parameter

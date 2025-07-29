@@ -578,7 +578,7 @@ class SplatfactoModel(Model):
             colors_crop = torch.sigmoid(colors_crop).squeeze(1)  # [N, 1, 3] -> [N, 3]
             sh_degree_to_use = None
 
-        render, alpha, self.info = custom_rasterization(
+        render, alpha, self.info,rast_anomal = custom_rasterization(
             means=means_crop,
             quats=quats_crop,  # rasterization does normalization internally
             scales=torch.exp(scales_crop),
@@ -625,7 +625,7 @@ class SplatfactoModel(Model):
             background = background.expand(H, W, 3)
 
         #####anomaly blending
-        blen_anomals = self.info["anomals"]
+        blen_anomals = rast_anomal
         # 예시: rgb [1, H, W, 3], anomals [1, H, W, 1]
         standrgb = rgb.squeeze(0)         # [1, H, W, 3]
         anomals = blen_anomals # [1, H, W, 1]
@@ -638,6 +638,12 @@ class SplatfactoModel(Model):
         # anomaly_mask = anomals.bool()   # [1, H, W, 1]
 
         # 1채널을 3채널로 브로드캐스트 (마지막 차원 맞추기)
+        print(f"[DEBUG] anomals.shape: {anomals.shape}, rgb.shape: {rgb.shape}")
+        
+        print(f"[DEBUG] alpha.shape: {alpha.shape}")
+        print(f"[DEBUG] alpha: {alpha}")
+        assert anomals.shape == rgb[..., 0:1].shape, f"Shape mismatch! anomals: {anomals.shape}, rgb: {rgb.shape}"
+
         anomaly_mask_expanded = anomals.expand(-1, -1, -1, 3)  # [1, H, W, 3]
 
         # torch.where(조건, True일 때 값, False일 때 값)

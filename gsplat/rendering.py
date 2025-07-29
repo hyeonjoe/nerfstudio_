@@ -15,6 +15,7 @@ from .cuda._wrapper import (
     rasterize_to_pixels,
     rasterize_to_pixels_2dgs,
     spherical_harmonics,
+    custom_rasterize_to_pixels#need to be removed later
 )
 from .distributed import (
     all_gather_int32,
@@ -1597,7 +1598,7 @@ def custom_rasterization(
     assert viewmats.shape == (C, 4, 4), viewmats.shape
     assert Ks.shape == (C, 3, 3), Ks.shape
     assert render_mode in ["RGB", "D", "ED", "RGB+D", "RGB+ED"], render_mode
-
+    
     def reshape_view(C: int, world_view: torch.Tensor, N_world: list) -> torch.Tensor:
         view_list = list(
             map(
@@ -1886,7 +1887,7 @@ def custom_rasterization(
     if colors.shape[-1] > channel_chunk:
         # slice into chunks
         n_chunks = (colors.shape[-1] + channel_chunk - 1) // channel_chunk
-        render_colors, render_alphas = [], []
+        render_colors, render_alphas,render_anomals = [], [], [] #need to be removed later
         for i in range(n_chunks):
             colors_chunk = colors[..., i * channel_chunk : (i + 1) * channel_chunk]
             backgrounds_chunk = (
@@ -1894,11 +1895,12 @@ def custom_rasterization(
                 if backgrounds is not None
                 else None
             )
-            render_colors_, render_alphas_ = rasterize_to_pixels(
+            render_colors_, render_alphas_ ,render_anomals_= custom_rasterize_to_pixels(
                 means2d,
                 conics,
                 colors_chunk,
                 opacities,
+                anomals,
                 width,
                 height,
                 tile_size,
@@ -1910,14 +1912,16 @@ def custom_rasterization(
             )
             render_colors.append(render_colors_)
             render_alphas.append(render_alphas_)
+            render_anomals.append(render_anomals_)
         render_colors = torch.cat(render_colors, dim=-1)
         render_alphas = render_alphas[0]  # discard the rest
     else:
-        render_colors, render_alphas = rasterize_to_pixels(
+        render_colors, render_alphas,render_anomals = custom_rasterize_to_pixels(
             means2d,
             conics,
             colors,
             opacities,
+            anomals,
             width,
             height,
             tile_size,
