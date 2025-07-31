@@ -35,7 +35,8 @@ __global__ void custom_rasterize_to_pixels_fwd_kernel(
     const int32_t *__restrict__ flatten_ids,  // [n_isects]
     S *__restrict__ render_colors, // [C, image_height, image_width, COLOR_DIM]
     S *__restrict__ render_alphas, // [C, image_height, image_width, 1]
-    int32_t *__restrict__ last_ids // [C, image_height, image_width]
+    int32_t *__restrict__ last_ids, // [C, image_height, image_width]
+    int32_t *__restrict__ render_anomals
 ) {
     // each thread draws one pixel, but also timeshares caching gaussians in a
     // shared tile
@@ -202,7 +203,7 @@ __global__ void custom_rasterize_to_pixels_fwd_kernel(
 }
 
 template <uint32_t CDIM>
-std::tuple<torch::Tensor, torch::Tensor, torch::Tensor> call_kernel_with_dim(
+std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor> call_kernel_with_dim(
     // Gaussian parameters
     const torch::Tensor &means2d,   // [C, N, 2] or [nnz, 2]
     const torch::Tensor &conics,    // [C, N, 3] or [nnz, 3]
@@ -269,7 +270,7 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor> call_kernel_with_dim(
     // channels into the kernel functions and avoid necessary global memory
     // writes. This requires moving the channel padding from python to C side.
     if (cudaFuncSetAttribute(
-            rasterize_to_pixels_fwd_kernel<CDIM, float>,
+            custom_rasterize_to_pixels_fwd_kernel<CDIM, float>,
             cudaFuncAttributeMaxDynamicSharedMemorySize,
             shared_mem
         ) != cudaSuccess) {
@@ -279,7 +280,7 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor> call_kernel_with_dim(
             " bytes), try lowering tile_size."
         );
     }
-    rasterize_to_pixels_fwd_kernel<CDIM, float>
+    custom_rasterize_to_pixels_fwd_kernel<CDIM, float>
         <<<blocks, threads, shared_mem, stream>>>(
             C,
             N,
@@ -302,14 +303,14 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor> call_kernel_with_dim(
             flatten_ids.data_ptr<int32_t>(),
             renders.data_ptr<float>(),
             alphas.data_ptr<float>(),
-            last_ids.data_ptr<int32_t>()
+            last_ids.data_ptr<int32_t>(),
             render_anomals.data_ptr<int32_t>()           // need to be removed later
         );
 
     return std::make_tuple(renders, alphas, last_ids,render_anomals); //need to be removed later
 }
 
-std::tuple<torch::Tensor, torch::Tensor, torch::Tensor>
+std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor>
 rasterize_to_pixels_fwd_tensor(
     // Gaussian parameters
     const torch::Tensor &means2d,   // [C, N, 2] or [nnz, 2]
@@ -340,7 +341,7 @@ rasterize_to_pixels_fwd_tensor(
             opacities,                                                         \
             backgrounds,                                                       \
             masks,                                                             \
-            anomals,                                                           \//need to be removed later
+            anomals,                                                           \
             image_width,                                                       \
             image_height,                                                      \
             tile_size,                                                         \

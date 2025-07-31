@@ -29,7 +29,7 @@ include_dirs = [glm_path, osp.join(current_dir, "gsplat", "cuda", "include")]
 # ────────────────────────────── ③ Extension 객체 ──────────────────────────
 ext_modules = [
     CUDAExtension(
-        name="gsplat.csrc_custom",          # ★ 새 .so 이름
+        name="csrc_custom",          # ★ 새 .so 이름
         sources=sources,
         include_dirs=include_dirs,
         extra_compile_args=extra_compile_args,
