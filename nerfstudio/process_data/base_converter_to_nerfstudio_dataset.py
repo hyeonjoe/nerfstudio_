@@ -35,6 +35,9 @@ class BaseConverterToNerfstudioDataset(ABC):
     verbose: bool = False
     """If True, print extra logging."""
 
+    grsam: Optional[Path] = None
+    """it must be true if you want to use groundedsam data"""
+
     def __post_init__(self) -> None:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.image_dir.mkdir(parents=True, exist_ok=True)

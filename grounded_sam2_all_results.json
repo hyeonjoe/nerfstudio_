@@ -1,0 +1,2880 @@
+[
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0014.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    430.2615051269531,
+                    373.738037109375,
+                    784.032958984375,
+                    691.14892578125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "g`gi05ik15M1N2O001O000O2O0000001O0`VNA_g1?_XNE_g1;`XNH^g18aXNJ]g17aXNM]g13bXNN^g12bXNO]g11bXN0^g11`XN0_g11aXN0^g11`XN0`g10_XN1ag1O^XN2bg1O\\XN2dg1NZXN4fg1LZXN4eg1L[XN5eg1K[XN5eg1KZXN6fg1JYXN7gg1IVWNL8=ah1GTWN189dh1GRWN377gh1c0XWN_Ofh1c0TWNBlh1j1O:F3L4M2N1O1N3N1O1N3N1O00gNRXNaNmg1]1WXNbNgg1_1XXNbNhg1^1XXNcNfg1]1ZXNeNeg1[1[XNfNcg1\\1[XNgNbg1m2O1N2O2M2O1N1O2O1N2NhMPYNCof1<TYNDif1>RYNGmf1g2O0O2OeKUYNb3kf1\\LWYNe3gf1YL[YNh3df1VL_YNk3_f1TLbYNl3_f1RLbYNo3^f1oKdYNQ4]f1lKdYNT4]f1jKdYNW4]f1eKeYN\\4Pg10OgLdXNo1\\g1PNhXNm1Xg1RNhXNn1Yg1QNhXNo1Wg1QNiXNP2Wg1PNiXNo1Wg1PNjXNP2Wg1nMkXNQ2Ug1oMkXNQ2Vg1mMlXNS2Rg1mMPYNQ2Qg1oMPYNP2Pg1oMQYNQ2nf1nMUYNQ2kf1nMWYNP2if1QNVYNn1kf1UNoXNm1Sg1VNaXNQ2`g1X100OdL_XN[2ag1dM`XN[2ag1cMbXN\\2^g1`MgXN_2Yg1_MkXN^2Wg1`MkXN_2Ug1`MmXN^2Ug1aMjXN`2Wg1^MjXNb2Wg1]MiXNb2Xg1]MhXNc2[g1[MfXNd2[g1ZMgXNd2\\g1TMkXNi2Wh1O1O0001O00100O10OSXNeMWf1[2gYNiMWf1W2gYNmMWf1S2gYNQNWf1o1eYNWNYf1j1eYNXNZf1f1gYN\\NXf1c1hYN_NWf1a1iYNaNUf1_1iYNdNVf1\\1iYNfNVf1Z1jYNfNVf1Z1iYNhNVf1Y1iYNgNWf1Y1hYNhNXf1X1gYNjNXf1V1gYNkNYf1U1fYNmNYf1S1gYNnNXf1R1fYNPOZf1Q1dYNPO\\f1P1dYNQO[f1o0dYNRO\\f1o0cYNQO]f11_YNhN3W1_f1OcYNgNMZ1`f1NiYNdNF^1af1NiYNfNC]1df1MhYNhNC[1ef1MgYNjNB[1ff1KgYNlNAZ1if1IfYNP1Zf1oNfYNR1[f1mNdYNT1]f1kNcYNU1^f1jNbYNV1^f1jNbYNU1`f1jN`YNV1af1iN_YNW1bf1hN^YNX1bf1hN^YNW1df1hN[YNX1gf1gNXYNZ1jf1XNlXNTO:d2lf1VNkXNVO9d2mf1UNkXNUO8g2Pg1kMnXN]O2i2Tg1dM]YN\\2if1\\MZYNd2Ph1010O01O3M3M2N1O1OH`MRWN^2oh1gMlVNX2Vi18100O1O1O001L3N3O01N2O2N2O1N2O001O001O001VYNVM]d1i2`[N\\M^d1f2^[N^M`d1c2^[N`Mad1`2][NbMcd1^2\\[NcMcd1]2\\[NeMdd1[2Z[NgMfd1Y2X[NhMid1X2U[NjMjd1^2nZNbMTe1_2hZNbMYe1_2eZN`M]e1a2`ZN_Mbe1b2\\ZN^Mee1b2YZN_Mhe1a2VZN_Mle1a2RZN`Moe1`2oYNaMRf1_2lYNaMVf1`2gYN`M[f1`2cYNaM^f1`2_YN`Mcf1_2]YN`Mef1`2YYNaMhf1_2UYNbMmf1_2oXNcMQg1_2lXNaMVg1`2gXN`M[g1a2bXN_M`g1_32N2O1N2O1N2N2O1N2N2N2aNlWNPOTh1n0oWNPOSh1n0oWNPOSh1o0mWNQOTh1P1iWNQOXh1o0fWNQO\\h1Y21O1O001O1O2N1O1SO\\WN]Ndh1`1_WN_Nbh1`1_WN`Nah1^1aWNaN`h1]1bWNcN`h1Z1aWNfN`h1Y1^WNiNbh1W1\\WNkNdh1Y2O10000O10000O02O2NO1O1O001O0100O010O001O1O1O1O1N101N2N2M3M4L3M3M3M2N3N2N2O1N2N2N2O1N2N3M2N2O1N2N1O2N2O1N2O0O2N2O1N2N3M2N2N2O1N2O1N2M4L3M`dea0"
+                },
+                "score": [
+                    0.89453125
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    0.8836002349853516,
+                    77.4036865234375,
+                    50.31065368652344,
+                    158.6585693359375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "d2X2hi1000000O100000O0100O10000O100O100O1O101N100O101N1O1O1O2N1O1O2N2N1O2N1O2N2N2N2M3N2M4L4L3L7Ikdbl1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "car car door",
+                "bbox": [
+                    4.78857421875,
+                    5.276123046875,
+                    1074.5660400390625,
+                    1440.9815673828125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "0PR1Pj0001O2N2N1O2N1O1O1O2N1O1O1O1O2N2N1O1O1O1O2N2N1O1O2N2N1O1O1O1O1O1O2N2N2N1O1O2N1O2N2N2N1O2N1O1O1O1O2N1O1O1O1O2N1O1O2N1O2N1O2N2N1O2N1O1O1O1O1O1O2N1O1O2N1O1O2N1O1O2N1O2N1O2N1O1O1O2N1O1O2N2N2N1O1O1O2N1O1O2N2N1O2N1O1O1O2N1O2N2N2N1O1O2N1O1O1O2N1O2N1O1O1O2N2N2N2N1O1O1O1O1O1O2N1O2N1O2N1O1O2N1O1O2N1O1O2N2N2N1O1O1O1O1O1O1O2N2N2N1O1O2N1O2N1O1O2N1O2N1O1O1O2N2N1O1O2N2N1O1O2N1O1O2N1O2N2N002N1O1O2N2N1O1O2N1O1O1O2N1O2N1O2N1O1O2N1O2N1O1O2N2N2N1O1O1O1O2N1O2N1O2N1O1O2N1O1O2N2N1O1O2N2N1O1O2N1O1O1O2N1O2N1O1O2N1O1O2N1O001O1O001O00000000000000O10000O100O1O1O1O1O1O1O100O100O1O1N2O1O100O1O1O100O1O1O100O1O1O1O1O1O1O100O1O100O1O1O1O1O100O1O1O100O1O1O1O100O1O1O1O1O1O100O1O1O100O1O1O1O1O1O100O1O1O1O1O100O1O1O1O1O1O100O100O1O1O1O1O1O1O100O100O1O1O1O1O100O1O100O1O1O1O1O1O100O100O1O1O100O1O100O1O1O100O1O1O100O1O1O1O1O100O1O1O100O1O1O1O100O1O1O100O5K2N1O101N100O2N3M3M2N100O2O0O2O1N2N2M3O1N2N101N1O101N2N2O1N1O2O1N2N2N2N2O1N2N2O1N1O3M3N1N2O0O1O2N1O2O0O2N2N2O1O2M1O1O1N3N1O2O1O1N2O1N3N1N2N1O2O2M2N2O1N2N2O1N1O2O1N2O1N2N1O2O0O2O1O1N1O2O0O2N1O2O1N101N101N4M1N1O100O1O2N3M2N2O1O1N101O0O2N3N3L2N100O101N2O1N2N2N2O1N2N100O1O00102M3N1N2O1N2O1N2N3N0O2O1N2O1N1O2N2N1O1O2O0O5K101N3N001O0O2O0O2N2O1N1O2N2O1N2O1N2N2N1O2N1000001N2N3M3M2N1O1O101N2N3M4M1N1O100O1O2O0O2N3M3M1O2N2O1N1O2O1N3M2N100O101N2N2N3M2N2O0O101N2N2M4M4L1O10000O101N2N2M3N3N1N101N1O100O1O3M2O0O2N2N2N2N2O1N2N2O1N2O1N1O2MTN[SObTOcl0^m001N1O2N2N2O1N2N100O2O1N3M2N2N2N1O2O1N2O0O2N2O2MbKdTO[XOYk0hg0dTO[XOZk0Vl001N2O0O2N2N2M3O0O2O001N2N2M4M3M100O101N2O1N2N2N2O1N2N101N1O1O2N3M2N2O1N1O2N2O1N3M1O2O1N100O1O2N1O2N3M3N1N2N1O2N3M2N2O1N2O0O101N1NeMmWOnPOQh0So0oWOnPOog0cQ1N2O1N2N2O0O3M2N2O0O2O2M1O1O2N1O2N2O2M2O1N2N2N2N2M201N2N2N101N1O2N1O2O1N2N2N2N2O1N2N2O0O2N2N101N2N2N1O1O101N3N3L3M2N2N1O101N1O2N2M3N2O1N101O1N1O2N3L4M101N100O2N2N2NhDZ\\OY^Odc0ha0_\\OV^O_c0ka0a\\OV^O]c0ka0d\\OT^O\\c0la0d\\OT^O[c0ma0e\\OT^OZc0la0e\\OV^OYc0ka0e\\OY^OXc0ha0g\\O\\^OUc0Ym0N]Dm\\O\\^OQc0ea0Q]OY^Oob0ga0S]OW^Omb0ia0U]OU^Ojb0la0W]OS^Ohb0na0X]OS^Ofb0na0Z]OS^Ocb0oa0^]OQ^O`b0Pb0a]OQ^O\\b0Pb0d]OQ^O[b0oa0e]OR^OYb0oa0h]OP^OXb0Pb0h]OQ^OVb0Pb0k]Oo]OTb0Rb0n]Om]OPb0Tb0R^Oj]Oma0Wb0T^Ok]Oha0Vb0X^Ok]Ofa0Vb0Z^Oj]Ofa0Vb0Y^Ok]Ofa0Vb0Y^Ok]Ofa0Vb0]^Oh]Oba0Xb0`^Og]O]a0[b0d^Od]O[a0]b0e^Oe]OXa0\\b0h^Oe]OVa0\\b0k^Od]OSa0]b0m^OYRO[OR;fa0fb0Y_OZ]Of`0fb0[_OY]Od`0hb0Z_O[]Od`0fb0X_O_]Of`0bb0W_Od]Oe`0]b0Z_Og]Ob`0Zb0b_Ob]O]`0_b0f_O^]OZ`0bb0g_O]]OX`0db0i_O[]OW`0eb0k_OY]OT`0hb0m_OW]OR`0jb0n_OW]Oo?kb0R@U]Ol?lb0T@U]Oj?lb0W@U]Of?lb0[@U]Oc?kb0^@T]Oa?mb0`@S]O_?mb0b@R]O]?ob0e@o\\OZ?Rc0h@l\\OW?Uc0j@k\\OT?Vc0l@k\\OR?Vc0m@l\\OR?Tc0m@n\\OR?Rc0m@P]OQ?Qc0QAm\\On>Tc0UAj\\Oi>Wc0XAi\\Oe>Yc0\\Ag\\O]>_c0cAb\\O\\>^c0dAc\\OZ>^c0gAb\\OX>^c0iAc\\OU>]c0kAd\\OT>\\c0lAd\\OT>\\c0lAd\\OS>]c0mAc\\OR>^c0oAd\\Om=]c0UBa\\Ok=_c0XB]\\Oi=cc0YB[\\Of=fc0[BY\\Od=hc0^BW\\Oa=ic0`BZ\\OZ=hc0fBY\\OW=ic0jBV\\OQ=Sd0kBm[OU=Sd0lBm[OS=Td0lBm[OS=Sd0nBm[OQ=Td0oBm[Oo<Td0RCk[Ol<Vd0VCi[Oi<Xd0YCe[Of<\\d0[Cd[Oc<^d0[Cd[Od<]d0[Cd[Oc<^d0[Cc[Od<_d0[Cb[Od<_d0^C_[O`<cd0aC\\[O]<ed0dC[[OZ<gd0eCZ[OY<hd0fCY[OW<jd0iCV[OU<ld0jCT[OT<nd0PDP[Om;Se0TDkZOk;Ve0SDlZOl;Ue0SDkZOl;We0SDjZOl;Ve0VDiZOh;Ze0XDdZOh;]e0XDbZOg;be0WD]ZOi;de0WD[ZOh;ge0XDZZOe;he0\\DYZO`;he0aDYZO[;je0fDTZOY;me0gDSZOX;ne0hDRZOX;oe0gDQZOX;Pf0hDPZOW;Sf0hDnYOV;Sf0kDmYOR;Uf0oDjYOo:Xf0REgYOl:[f0SEfYOk:\\f0TEeYOk:\\f0TEdYOk:_f0REcYOl:_f0TEaYOk:`f0VE^YOi:cf0XE]YOf:ef0ZE\\YOb:gf0^EZYO`:gf0bEVYO]:lf0fEPYOY:Rg0hEmXOV:Ug0jEjXOV:Vg0jEkXOT:Wg0jElXOS:Ug0mElXOR:Tg0mEoXOP:Sg0QFlXOm9Vg0TFhXOl9[g0SFdXOk9`g0TF^XOk9dg0VF[XOh9gg0YFYXOd9hg0]FYXO_9jg0bFUXO\\9mg0dFRXO[9Ph0dFPXO\\9Qh0dFoWOZ9Sh0gFkWOY9Wh0gFgWOX9[h0iFdWOU9]h0lFcWOR9`h0nF_WOP9bh0QG^WOl8fh0SGZWOl8gh0UGWWOj8kh0XGSWOg8nh0\\GoVOb8Si0_GkVOa8Vi0_GiVO`8Yi0aGfVO]8\\i0dGbVO[8`i0eGaVOX8ai0gG`VOW8bi0hG^VOW8ei0gG\\VOX8gi0gGXVOW8ji0kGTVOT8li0nGSVOP8oi0RHPVOk7Rj0UHoUOh7Sj0ZHjUOe7Yj0[HeUOd7]j0^H`UOa7cj0aHXUO_7jj0aHSUO`7nj0bHnTO_7Sk0cHjTO\\7Yk0eH`TO_7bk0aHZTOa7jk0\\HUTOd7ok0ZHoSOg7Rl0XHlSOi7Wl0WHfSOj7Zl0XHcSOh7^l0[H^SOd7el0]HXSOc7il0^HUSOa7ol0_HnROa7Tm0`HiROa7[m0_H`ROb7dm0]HYROb7im0_HSROb7om0_HnQOb7Rn0`HjQO`7Yn0aHdQO_7_n0`H_QO`7cn0`HZQOa7in0_HSQOb7Qo0\\HmPOd7Vo0_HePOVNRIa7YV1\\JbPORNZI]7UV1bJ`POQN\\I\\7TV1dJ`POoM]I[7UV1gJ\\POnM`IZ7UV1kJVPOlMeIW7YV1mJooNlMiIV7[V1nJioNlMmIU7\\V1oJeoNiMRJX7\\V1nJ`oNkMVJT7_V1nJWoNhMhIlNb0\\8bV1PKonNjMnIkN`0Z8eV1SKinNhMSJkN?X8iV1SKcnNkMRKQ7`V1QK\\nNnMUKP7eV1mJVnNQNXKoNiNg7oW1cHngNP26cMa5T1eKkNjNj7PX1`HlgN1N?271SOb5Q1QLd6aV1aHkgN1N?271SOb5Q1QLd6VQ1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0035.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    817.9293212890625,
+                    300.80908203125,
+                    919.0159912109375,
+                    359.2032470703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "UbU`12jk17J6L3M2N3M2O1N2O1N2O0O2O1O1N101O001O0O2O001N101O00001O001O00001N1000001O000000001O00000001O01O00000001O000000000000001O00001O00001N10001O001O00001N101O1N101O0O2O1O0O2O0O2O0O2N2N2O2M2M4L4KgYa9"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    3.0944061279296875,
+                    364.778564453125,
+                    302.44183349609375,
+                    459.8719482421875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "k<Y1gj10000001N10000O100N2000000O1N2D<N2N2O1O1O100O010O100O100O100O1O10O010000000000000000O1000O10000001O00000001O0000001O001O001O001O001O1O1O1O2N3YNoUNY1^j1N1O1O0O2O000O2O0O1O1C=L4M3M3N3N3L4MR\\9NmcF5M2O2N1O2N1O1O1O1A`0M2N3M101O1O100eUNfNPj1[1lUNkNQj1e1M1O2N1O1O1O1O1O001O1O0O2O00001O0000001O00001O00000000000000000000000000O1000000O100000000O100O100O100O100O1O1O1O100O1O1O1@QVNkNSj1T1SVNdNPj1Z1<O2O0000001O002N2N3M1QOWUNe0Tk1N3L2O1N3NXX;HigD:ZOl0E=D3J5N2N2N101O000000000000000001N2O1M6K3M2M6K5K3M2O1N1000O10000000000000001O0001O001O0O2O010001O0O10O0100O1O010O01O100O1OO100O100O000O10O1O2M2M3O2N1O2M2O2O001N2O0O200O1O1O1O101N1O2N2M3M3N`gk]1"
+                },
+                "score": [
+                    0.91015625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0029.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    837.7994384765625,
+                    229.5419158935547,
+                    933.271728515625,
+                    281.5375671386719
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "koZa19ek14M2N3N1N1O2N2O1N1O2O0O2O001N101N101O0O101O00000O2O00001N1000001O00000000000000001O00000000000000000001O00000O1000001O000000001N100000001N101O0O101O0O2O0O2O0O2N2O1N101N2N2N3L5JTTg8"
+                },
+                "score": [
+                    0.9609375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    119.83529663085938,
+                    467.68011474609375,
+                    499.7959289550781,
+                    663.3757934570312
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "`c`72hk18N1N101N2O000O2O001N101O1N3M2N2M3ROZO_VNi0^i1ZO`VNg0^i1\\O`VNe0^i1]O`VNe0_i1]O_VNd0`i1_O\\VNc0bi1@\\VNa0ci1@[VNb0di1_OZVNc0di1n0O1O1N20001O0O01O010O1O2N2N1O100N2O1O2N000O2O001N100O10O02O0O100O10000000O0100O010O10O10000O000001000O010000O10O010000O10001O0O1O100SOnUNKSj18jUNHZi1DTWNf0AFYi1GUWNc0BEXi1LTWN?DEUi12SWN;GBUi19nVN7M@Ui1S1nVNWORi1i0RWNTOmh1m0UWNPOkh1S1SWNmNlh1X1QWNgNnh1[1QWNeNnh1\\1QWNdNoh1_1nVNbNRi1U2001N20O010000O1N1M4N20O101O000O2O0000001O00001OO10000O101O00000O2O0O2O0O2O00001N1O2O1N3M10001N101O1N4M3L3NO1000O10O0010O011OoN`NbWN_1^h1fN^WNZ1ah1hN^WNX1bh1jN\\WNU1eh1mNYWNS1fh1oNXWNQ1ih1POVWNP1jh1POVWNo0kh1ROTWNn0kh1TOTWNl0lh1UOSWNk0lh1WOSWNh0mh1\\OoVNe0Qi1T100010O10O10O100O0VOlVNiNUi1V1nVNhNRi1X1oVNfNRi1Z1nVNfNQi1[1oVNeNQi1\\1nVNdNRi1[1QWNbNoh1^1SWN`Nnh1_1TWN^Nmh1c1TWNZNnh1e1UWNXNkh1j1VWNRNkh1o1c01N1000O1O0011O001N2O0O10O0101N2O1N2O1N2O0O2O001O0O101O0000000001O01O0010N10001N200O1O001N101N2O00M3D<O10O01OjMRWN[1oh1dNSWN[1lh1eNVWNY1kh1hNSWNY1lh1iNSWNW1lh1kNSWNT1nh1mNQWNS1oh1oNoVNo0Ti1POlVNo0Ui1ROjVNm0Xi1ROiVNl0Yi1UOdVNl0]i1j01O2N2WO^VNQOdi1m0_VNoNdi1n0`VNmNdi1f0XVNTO_j1k0bUNTO_j1k0aUNUO`j1k0_UNUOaj1k0_UNUObj1k0\\UNUOfj1m0502N1O00010O10O1O4L1N2N1N3N2O001N2O0000POaUN`0^j1b0O1O1O00000O10000001O00000O100O1O100O1M4H7O1N3N1N2O100O10O0O2M2M4N2M3O2N1O101O1N3N2N00000001O001O1`NTVNj0dj1M3L5L1O1O1N2O1O2Mho]R1"
+                },
+                "score": [
+                    0.921875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0052.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    537.6973876953125,
+                    582.3117065429688,
+                    653.1820068359375,
+                    680.0283813476562
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\kho09ck1:G6K5K4L4M3L4M2N3M2N2N2N2N2O1N2N2O1N101N2O1N2O0O2O1O001N101O001N2O00001O001O0O101O00001O00001O000000001O01O000000001O00000001O01O00001N10001O001O001N101O00001N2O001N2O1N101O1N101N2N2N2O1N3M2N3M2N3M2N3L5L3L4M2M5J6I[dUi0"
+                },
+                "score": 0.9765625
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0045.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    484.709228515625,
+                    27.020553588867188,
+                    716.542236328125,
+                    226.7751007080078
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "`ajl05jk14L3M2O1N2O1N3N1O2N1O1N2O2N1O001N2O1O1N2O1O1N3N2N1O1O3L3N1N3N2M3N1O1N10000010000O01000O10O100001O000O0100O01O1O2N2N1O1O001O1O1O1O1O1O1O001O1O001O0O2O0000kMhVNb1Xi1^NlVN^1Ti1aNQWN\\1nh1dNQWN]1oh1dNmVN_1Si1h0O1O10O01O10kMmVN\\1Ri1bNTWN\\1kh1^N]WNl1Yh1nMkWNR2Vh1jMmWNV2Th1gMlWN\\2kh12N1O1N2O001O001O00001N2O001O00100O001O001O001O1O10O00001O0100O7J1N2O001O00O100O1O1O2N3M4L3N2M3M2O0O101N10O1O8H2O2M3M1O001O010O000001O001O000O2O1O2N1O1O001O1O2M2O2N1O001O1O001O2N2N001O100O1O1O1O2N2N3M1O1O1O2oNPVNNRj1OoUN1Qj1NPVN2Pj1NoUN3Qj1MnUN5Rj1JnUN6Rj1JRVN2oi1NUVNMki13VVNMji11XVNNii1NZVN2gi1K\\VN4ei1H_VN7ej101O001O002N2L5K]aee0"
+                },
+                "score": 0.93359375
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0047.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    998.2037353515625,
+                    556.2691650390625,
+                    1076.5247802734375,
+                    643.5611572265625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "YRkj17dk1:J4K5K4M3L3O2M2M4M2O1N2O1N3N1O0O2O1O1N2O001O1O1N101O1O001O001O1O001O001O001O00010O00000010O0001O01O01O01O000010O01O001O0010O01O001O001O1O001O1N2O1O00m]O"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    538.5484008789062,
+                    21.72437286376953,
+                    730.2611694335938,
+                    231.46234130859375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Ymmo01lk16L3N3L3M3N2N3M2N2N2N2N2N1O2N1N3N1O2N1O3M3M1O2N2M2O1O1O3M2N1N2O3M1O2N1O1N3N2N1O2N1O2N1O1O100000000O100000011N4L:FO1O0O20O3M3M2N2N1O001O1O1O1O1O001O001O00001O00001O001O1O1O2N=D1N_LbXNa2^g1\\MeXNd2Zg1YMhXNi2Xg1UMiXNl2Wg1RMjXNo2Yg1lLgXNU3^g1dLdXN\\3Ph11O001O1O2N4M3L3N1N3M10O01O010O0001O001O1O1O1O001O1O1O2N1O2N2N3M3M2N2N3M4L2N10O01O001O1O002N100O1O100O1O102M1O2O1N2N2N2O1N2N1O1O1O100mN]VNGdi17aVNEbi17dVND_i18dVNF^i18cVNG`i16aVNIai15_VNKbi13`VNLai13`VNKci12X1M2N2N2McnPe0"
+                },
+                "score": [
+                    0.94140625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0005.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    685.0277099609375,
+                    355.71612548828125,
+                    1067.84814453125,
+                    535.4434814453125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "i^iX14ik14M3M2O1N3M2N2O2M2N3M1N3N2N1N3N2L3N3WOdNiVN`1Qi1j0000O101O100O1O2L3N2N2O1O100O1O2N102N3M2N2N2O1N2N101N5L2M01N2N2M3O010001NO2M3M3N1O2M3M3OjNQVN;ni1DYVN8fi1IYVN8fi1IYVN7gi1JXVN6gi1KZVN5ei1K[VN5di1M[VN3di1N[VN3di1O[VN1di10[VN1^i16cVNI[i19eVNGZi1:fVNFXi1=gVNBXi1d1O0001000000001O1O1O2N3M3M4L3M3M4M4L3N0O001N1000`LiWNV3ah1O1O2oLYWNe2Vi1K2N001O1PNdVNZ1^i1cNfVNZ1_i1`NcVN^1ai1]NbVNb1_j1^O3N000O101NQOZOgVNc0Wi1CjVNOYOIni1:^12N5L2M2O6J0O0O2[Oe0L5L7I8H5K7J7H7J4N1N3M2N3M2N1O2N1O10000O2O000O100O10000O1000000O100O010000000000000000000001O000O101O00001O00001O0O2O00001O001O1O1N2O1O1O1O001O1O1O2N3L4M2N001O002N4L4L4L1N100001O00O100O101O00001O00000O100000O100OPObVN_O_i1>fVN_O\\i14cVNTO6d0Rh1_OdXNe05ZOVg18cXN<ih1GkVNc0Ui1@fVNb0Yi1BaVNa0_i1P1000O10O010000001O0O10001N11O0000000000000001O1O1O1O2M01OdVNfMSi1[2lVNhMRi1X2mVNlMPi1f2L2N2N2N1O1O2N1O1O1O1O1O0O2O1O1O1O001O001O1O0O2O1O000O10001O00000O100000000000O0100000000000O100O1O100O10000O1O1O2]NiWNZOXh1d0lWNZOTh1g0kWNXOWh1g0iWNYOWh1h0jWNUOXh1j0kWNROVh1m0kWNQOWh1C`WNd0:GXh1D`WNc08iNNd0]h1O_WNb07kN20hh1b0oVNc0mi1]OTVNb0li1^OUVNb0ji1^OWVNa0hi1AXVN>hi1BUVNa0ji1l0N100O101O1N2OO1O00100001N101O2M2O1O3L2OO1O100O11O002N000000O1O1000eD"
+                },
+                "score": 0.92578125
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0008.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    311.43121337890625,
+                    384.6242980957031,
+                    814.4325561523438,
+                    551.8594970703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\Zjb0:fk10O2O0O2N1O2N1O1N3N1O100O1O1O000O11O0001N101O0O1O1O2O0O2O1N101M2M201N1N4L4L3O2O100O10O11O1O1O00100O1O1O1O100O1O02O2O5J`0@01N1001O002N4L4K2N001O[OVOXVNf0gi1\\OZVNb0bi1D\\VN<bi1G^VN8ai1J_VN5ai1L_VN3`i1N`VN2`i1NaVN1_i1OaVN1^i10RVN@8?fi12aVNO_i13]VNOci11ZVN3ei1MYVN65G]h14\\WN]1ah1dN]WN_1`h1cN]WN_1ch1P1O0O1O2N1N2N2M3N2N2O1O100O010000O100N3L3K5J6YOg0O101M2N4M4MP1PO4L2TOUUN?lj1\\OWUNb0Uk1O100100O10O02M4nTN\\OO7Pj1b1J4M2N001O001O00001O0000001O01OO1^OQNSWNo1jh1TNVWNm1hh1UNWWNk1ah1_N]WNa1`h1eN\\WN\\1ch1Q1N2N2O2N1O1O100O1N2O1O101N100O10000O011O0O10000O100O1O1000001O0000000000000001O00000000001O010O001O001O0000001O001O1O1O1O1O1O010O1O2M3N2_MaWN]1`h1aNaWN_1ah1_N_WNa1eh1[N[WNd1ih1XNWWNi1oh1oMSWNQ2^i1O1O1L4J7J7L3AlUNkN[j1m0`0J6L3N2O101N1O2N2OO001O1N21O0001O0N2O1N2O002M2J7N1ZOQOYVNQ1fi1TOUVNn0ii1VOTVNj0ii1ZOUVNg0hi1]OWVNc0ii1^OUVNc0ji1_OUVNb0ji1_OTVNb0ki1j0000001iVNXNTh1h1hWN_NUh1a1hWNdNVh1]1gWNgNWh1Y1gWNjNXh1`2O1O2N1O1O1O1O1O1O001O1O001O010O0000001O0000001O00000000001O00000001O000O100000000O10000O10000O10000O100N2O1O1O1O100O2hNcWNjN^h1U1cWNiN_h1V1cWNgN_h1X1dWNdN^h1[1eWN`N^h1_1gWNZN\\h1f1fWNWN[h1i1hWNoM]h1Q2i00000O1O10000010O00000000O101O01O01O2`NYVNb0ki1WOaVN`0hj1G4K3O2O0001N3M3L3N1SO_OYVNb0ei1@ZVN`0ei1BZVN>ei1DZVN=di1E[VN;]i1]OSVN7a0<[i1AQVN38IOc0gi1BRVN27KOa0gi1CSVN17LNa0bi14^VN\\O0`0`i18]VNXO4`0^i1d0bVN\\O]i1e0cVN[O]i1e0cVN[O]i1f0bVNZO_i1e0`VN\\O`i1e0_VN[Oai1e0_VN[Oai1d0`VN\\O`i1d0`VN]O_i1c0aVN]O_i1c0aVN]O_i1f0]VN[Oci1a100000001O0000000000001O01O0001O3M4L5mVNjMRh1U3M1O1O1O0000000000001O00000001N10000O100N2L4I7F:H8G900O100O100O100O2O000000000000000O11O00000001O00000000001O00001O00001O1O1O1O4L\\1dN2M2O1O1N2M5Kk`m?"
+                },
+                "score": [
+                    0.9296875
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    730.7197875976562,
+                    55.638282775878906,
+                    945.3495483398438,
+                    224.39370727539062
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "ZgjZ14kk12SOMg0<J3O1N5K4L7I3N3L7I4M2iVN]Nlg1f1SXNXNng1k1R15JUOWVNDfi1?WVNBgi1`1J6L2M4N2N2O0O2OM2O1O1ZOhVNaN5Dfh1_2>O001O12N2N1O^MjVNZ2Wi1aMnVN`2Xi16K1RXNXM`f1j2[YNYMff1i2TYN[Mkf1j2oXNWMQg1n2iXNSMWg1P3eXNQM[g1R3aXNoL`g1W3WXNkLjg1e33M1O1O010O01O000O2O000O1M3N2OTLZXN`3hg1]LYXNc3hg1[LYXNe3gg1ZL[XNe3fg1ZLZXNf3Ph101O000000100O3N0O0O10O1000000000000001O3M4LGeLnWN[3Qh1eLoWN[3Qh1eLPXN[3og1fLPXNZ3Ph1fLoWNZ3Rh1:1O1O2O1N2O0ON2OgLdWNP3[h1PMgWNo2Yh1QMgWNo2Yh1QMgWNo2Zh1QMdWNP3\\h1:100O0O10001O2N100O001O006J2NO1O100O21N001O00001O001O001O1O1O1O00001O0[MoVN[2Qi1:1O2N1O1O010O1O1O001O002OO01O00000000O1N28H1O1O001O1O1O2N1O2N001O1O010O3M1O1O1O1O1O1O1O1O100O1O1O2N1O1O10D`NWVN_1hi1cNXVN\\1Uj110000O11O00001O000000010N2O3M1O1O1O1O1O2N3M2N5L0O1O1O1O1N4L3K:G]Uk6"
+                },
+                "score": [
+                    0.91796875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0053.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    459.823974609375,
+                    625.2979125976562,
+                    579.471435546875,
+                    726.5648803710938
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "l`Xk09ak1;G8J4L4L4M3L3N3M2N2N3M2N2N2N101N2O1N2O1N2N101N2O1O0O2O1O0O2O001N101O00001N101O00001O00001O0000001O000000001O000001O0000000000001O00001O00001O00001O0O101O1N101O000O2O1N101N2O0O2O1N2O1N2N2O1N1O2N2N3M2N3M3M3L4M4L4L3K5K6I;DiZ`m0"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    395.03607177734375,
+                    87.73788452148438,
+                    525.2495727539062,
+                    213.61801147460938
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "fYkg02hk17L4L4[OG]UN>`j1F\\UN<bj1b0nNWOjVNm0Qi1]OgVNe0Xi1^OeVNc0[i1^OcVNc0\\i1Q1O2O0O1O2N\\NkVN?Ti1BlVN>Ti1W101O000O101O0O10001O_NPWN2Pi1MRWN2nh1OQWN2nh1`101O1O0010O01O0100O010O010VNSWN`0lh1^OWWNb0ih1]OWWNc0ih1_OTWNc0kh1Y10100N101O0O2M2M3N2O1000O1^ObWNbM]h1\\2gWNbMZh1\\2jWN^M[h1_2d0N3N101N101N1O2O00000O1000000O10000001O01N100000000000001O00001O000O10000O2N1N2_Oa0N3J5G;I6En`oP1"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0034.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    799.6301879882812,
+                    293.82208251953125,
+                    897.6895141601562,
+                    348.8184814453125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "lmQ_14hk17K5L2N2N2O1N2O1N101N2O1O1N101O1O0O2O001O0O2O00001O0O2O0000001O0000001O0O101O0000000001O0000000001O0001O00001O0000000O10001O00001O00001O0O2O001O00001N101O0O2O1N101N101N2N2O1N2N2N2N4J7Goeh:"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    4.7469482421875,
+                    385.0717468261719,
+                    306.7484436035156,
+                    485.8367614746094
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "li95ik16K5K6J7mTNUOdj1V1M2N2O0O2O00000O10O10O100EhNmUNY1Pj1=M3O1O1O1O100O1O1O00100O01000000000O1000000000000O100000000000O10000000001O00000000001O000O2O001O001O2N1O1O1O1O<D3M1O0O2O00000000001O0O1O1N2]O`UNDcj19c0N3M3M3M2Nk[96ocF4M2N2M3CFQUN;jj1a0L3O1O2N10000O2O003M3M3M2N3M2M2O1O1O1O001O1O001O001O001O0000001O000000001O000O1000O1001O00000000O1000000O100000O10O10000O10000O1O1N2O100O1O100O2M2L4J7DdUNoN_j1P1fUNkN\\j1U18O2N1N4M5J6J4M001N102N1N4Li[90ccFi0K8H;E3N2N3M6I4M1O1O00000100O1O1O1O3L6K4L2N00O01O1O2M2O2N1O100000O11N100N200O101O001O1O0O2O0010O010O1O0101N1O03M2N100O000001OO1O1O1O1O1O1O000000O1K6H7O1O2N2N101N2O1O1O1O1O1O2M2O1N3N1NSWd]1"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0031.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    829.2157592773438,
+                    286.7839050292969,
+                    927.2019653320312,
+                    341.0878601074219
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "dQl`18fk15K3N2O1N2N2N2O1O1N101N101N101N101O001N101O001O0O101O0000001O000O101O0000001O000000000000000010O000000000O1010O000000O2O0000001O000O101O001N1000001N101O0O2O1N1O2O1N101N2N2N2N2M5K5JWZR9"
+                },
+                "score": [
+                    0.9609375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    10.532821655273438,
+                    470.65167236328125,
+                    410.888671875,
+                    627.0491333007812
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "UVe01nk17I3M2O0O2O001O1O001O2M3N3L3N3M2M3M3M3M2O2M2O1N2O001O001N1O1ZOf0N2O10000O100000O10O11O00000O101O1O2M2O1O2N2N2N1O2M4M2N000O1000000O100O10000000O01000000O10000000O10O0100O1000O10000O010O101O00000O101N1\\OcUNE^j1JfUNK0:Zj1KfUNK09Zj1NdUNI39Yj19gUNGXj17jUNJVj15kUNJVj17kUNGUj19lUNEUj1;mUN^OXj1b0jUNYOXj1i0gUNWOYj1j0eUNWO[j1j0dUNVO[j1k0eUNUOni11PVNl01SOfi1=TVNb06QOai1h1^VNXN`i1j1`VNVN_i1l1_VNUN`i1m1^VNTNbi1l1[VNWNdi1T2N1O2N10000O101O0O10000O10O100000O10O100000000O100000000O100O10000O2O000O10001O0O10001O001N2O1O1O1O2N1O3L4M2N1N2O001O000O1000000O100000000O2O000O1000001O0O10mNROXWNi0ih1[OkVN_OMS1Wi1AgVNA1m0Xi1DbVNE2M0<]i1m0gVNQOYi1n0iVNQOWi1m0lVNROSi1n0oVNnNTi1R1oVNgNUi1X1i01000000O100O2O0O2O0O2O2N2N00O00100001O1O1N2O2N1O1N101O1O1O1O1N101O0O101O0O2O000O2O0O10001O000O100000000000000O11N1000000O101O000O2O2M3N1O1O1N3N1N1O2N2M5MO00001N1F[N^VN`1ai1eN`VNV1_i1mNbVNo0`i1ROaVNa0ki1@TVN?li1FPVN;oi1GoUN:Pj1GoUN:Pj1k00BnUNlNTj1S1oUNjNRj1T1QVNjNPj1U1RVNjNni1W1PVNjNPj1X1mUNiNSj1X1jUNjNWj1`10M3M4M2N20001N1002N10O1O0OO3N2M2O001O1O1O1O000O1000O100O100O1000001N1N2I7M3O101O1O0O101O0000000001O0000O1O1O1O11O1O000N3N2N2N2N1N3N2N1O1O1O1O10O10000000001UOeUNN\\j1JVVNKki11U1L4M3LhhfW1"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0060.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    242.95651245117188,
+                    552.2725219726562,
+                    362.1431579589844,
+                    650.1510620117188
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "cba>7dk1;F8I5L5K4M2N3M2N2N3M2N2N2N2N2N2O1N2O1N101N2O0O2O1N101O0O2O1O0O101O000O2O00001O00001N10001O0000000000001O00000000000001O00000000001O000O10001O001N10001O0O101O0O2O001N101N2O0O2O1N1O2N2O1N1O2O1N2N3L3N2N2N2N3M2N3L4L5K4K:EZUYZ1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    607.1617431640625,
+                    94.14324188232422,
+                    863.2156982421875,
+                    267.83526611328125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "lVST13lk13M2N2N2N2O1O1O001O1O1O1O1O1O2N2O1N2N2N2N2N24LM3N3\\OPOQVNR1li1QORVNQ1ki1c0N200O100O001O0101N1M4J5N2N10M30aNiUNW1Vj1kNiUNU1Vj1;O1M3O10000O1O1O1O1O1O1N2O10O010000OO2N2O010O0101O001N101O000000001O1O1O1O001O010O001O0010O01O1O10O00DdMSWN]2kh1gMSWNY2kh1jMTWNf1M^Nmh1OTWNT2kh1`01O001O001O001kMPWNX1Ri1aN\\WNV1eh1jN]WNU1bh1jNaWNT1`h1mN_WNS1`h1nN_WNS1`h1oN_WNQ1ah1PO]WNQ1bh1UOTWNP1kh1S1O00100O1O001O10O00010O1O010O010O00O101O01O10O01O100O0010O001O0001O1O001O10O0010O000N2O1ERWNeMnh1[2UWNbMlh1_2TWN`Mlh1`292O0O1O1O1O1oVNZMgh1g2YWNXMgh1j271N2O1N3N2M2N1000N101O000N3O010O101O000lNQWNVOQi1i0VWNPOkh1o0VWNPOjh1P1XWNmNjh1R1WWNlNkh1R1WWNlNjh1T1XWNhNkh1V1\\WN_Nih1a1k0O2L3N3MgUNfNPj1[1;O10O10O1N2O001O02O1N01O010O10O010O00010OYOZUN5ej1J]UN6cj1G_UN9aj1EbUN;^j1BdUN>]j1^OhUN`0mj1O1O1O1N2N2O1N2N2N2N1MZWn<"
+                },
+                "score": [
+                    0.93359375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0059.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    574.9176025390625,
+                    88.11652374267578,
+                    828.6365966796875,
+                    272.918212890625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "QWWR15ik13M2O2N2O1O1O1O10O01O100O1O2N1O2N101N1O2O0O2N2N3N3ZOQORVNR1ji1d0N1O2N100O1O1000O2O000O1L4D=N1000000000O100GeNlUN\\1Sj19O1O1M3M3O1N2O1O1O1O100O1O010O01O00100000O100000000000001O001O001O1O001O001O001O10O01O000EbMSWN`2jh1dMTWN\\2ih1?N200O100O0010O01O00N2N2cMXWNB2b1hh1lNWWN@2d1fh1nNUWN@5b1fh1XOYWNh0gh1YOYWNg0fh1Z1O1O001O1O1O010O10O010O0010O001O000001O00010O1O100O0010O0001O01O010O01O0OO21O0010O01O000M201N201O0100O10O01O1O1O1O010O10O001O010O0100O10O100O10000O2O00001M2O2iNoVN[OSi1d0RWNWOPi1h0RWNUOoh1k0XWNlNjh1U1ZWN`Nmh1_1j0O2M3L4M3O0101N2OO001O001O100O10O01O0010O00010OXOZUN7fj1G\\UN9cj1F_UN:aj1D`UN=bj1_O`UNa0bj1ZObUNe0mj100O1N2O001N2N1O2N2N5K[gQ?"
+                },
+                "score": [
+                    0.94140625
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    226.5807647705078,
+                    578.0361328125,
+                    346.55255126953125,
+                    679.0596923828125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "[cc=?]k18H7K4M3L4M3L3N3M2N2N3N1N2N2N2N101N2N2O1N101N101N2O0O2O0O2O1O0O2O00001N10001O001O000O101O00000000001O000000000001O00000000001O000000001O0O1000001O0O101O0O2O001N101O0O2O0O2O0O2N2O0O2O1N2N2O1N1N3N3M2N2N3M2N2N3K5L4M3L6J6I9B_XU[1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0024.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    500.2230529785156,
+                    62.132354736328125,
+                    594.0242309570312,
+                    117.21551513671875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "nRam04ik18J2M4M2N1O2N2N1O2N1O2O0O1O2O0O100O2O0O100O10000O101N10000O1000000O100000000O01000000000000O0100000O100000000O1000000O10000O101O0O10000O101N100O1O2O0O1O2N1O2N1O2N2N2N3L4L7H^idl0"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    149.67633056640625,
+                    417.88922119140625,
+                    430.06451416015625,
+                    723.0291137695312
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "_lX99fk12N1O2N1O2O000O2O0000001O010O010O0aUN^O`i1b0_VNA_i1`0^VNC`i1?]VNEai1;^VNFbi1;[VNHei17YVNKgi15XVNLhi15VVNMji13SVNNni13nUN0Sj10jUN2Vj1l01N10000000000001O010O000010O1O001OO2N1nMdN^YN^1_f1hN^YNY1_f1kN]YNW1af1mN\\YNT1bf1oN[YNS1df1nN[YNS1df1oNZYNS1df1oNZYNR1ef1POYYNQ1ff1ROWYNP1gf1ROWYNo0hf1ROVYNP1if1QOUYNR1jf1nNUYNS1jf1nNUYNT1jf1lNUYNU1jf1lNTYNV1lf1kNoXNZ1Pg1fNnXN\\1Qg1eNoXN[1Qg1fNmXN[1Rg1fNmXN\\1Rg1dNlXN^1Sg1dNkXN]1Ug1cNkXN_OLl0Yg1EjXN_ONl0Xg1EiXN_O1k0Ug1HhXN^O3j0Ug1HhXN_O1j0Wg1k2O000O01000000OO2N1D^KZYNc4df1=M3K50000O01[KcYNc20dM]f1IgYN]21hMWf1MiYNW23kMTf1OiYN[2MfMZf10hYN^3Wf1dLhYN[3Xf1fLgYNY3Yf1iLgYNV3Xf1mLgYN^14gNVf1LfYNZ1c0\\Nhe1;dYNX1g0[Nee1>eYNV1d0\\Nge1`0eYNU1>_Nme1=eYNU1<^Nne1?gYNR1:_NPf1?eYNT19\\NRf1[3fYNhL[f1]41O01000000O10O01O01O2O0O10000M3O2O0H_YNRKbf1n48000O2OO100O00100O2NCYKcYNg4[f1\\KdYNc4[f1`KdYN_4\\f1bKcYN]4_f1dK_YN[4bf1a01O1O1N2O1O1N2N2N2iKPYN\\3Rg1cLoXN\\3Rg1dLnXN[3Sg1dLnXNZ3Tg1eLmXNZ3Tg1iLiXNU3Yg1h01N3N1N2O1O1O2M2N2O2ROVXNbMlg1\\2WXNbMjg1^2VXNaMkg1_2VXN^Mlg1b2TXN]Mmg1c2UXNYMmg1e2YXNUMig1j2g00000O100O10O001N1N3N2O01000O100O10000O0100O010N2O1O001eNVWN_Okh1?WWNAih1=ZWNAgh1=[WNCdh1>\\WNASh1TOmWN]1N]OSh1AhWNS14ZOUh1_1hWNaNXh1b22O000O2N2N2SOn0N101N2O1O1O100O2N1O1O1O2N001O1N2TOSVNAPj1=RVNAPj1=RVNAPj1>QVN@Qj1?oUN@Sj1>oUN_OTj1`0mUN[OWj1e0c00O0001O00001N101O1O001O0O1N3N1O1O2N1O2M3Lfe[V1"
+                },
+                "score": [
+                    0.9296875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0064.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    0.845672607421875,
+                    65.13424682617188,
+                    50.474308013916016,
+                    152.0352020263672
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "U2a2_i101O000O2O001O0O2O001O0O2O001O0O2O000O2O0O2O1N101N2O1N101N2N2O0N3N2O1N2N2N2N2N3M3L3N3L3N4J6Jhh`l1"
+                },
+                "score": 0.97265625
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0042.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    974.9572143554688,
+                    377.73876953125,
+                    1073.5618896484375,
+                    448.96649169921875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "_l]i18ek17J5L3M3M2N2N2N2O2M2O1O1N2O0O2O1O1O1O0O2O001O1O001O001O001O1O00001O001O01O01O000010O0001O01O000010O0001O000010O0001O001O001O00001O001O1O001O0O2O1O001O1O0O2O1O001O1N2O1N2O1N2N2O2M2N3M3L5Kmj:"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    209.53509521484375,
+                    42.52318572998047,
+                    512.5849609375,
+                    216.24627685546875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\Vc<3hk17M2O1N101N2O0O2O1N1O2N2N1O2O0O2O001N2N101N2N2N1O2N1O2O001O001O1O1O0010O01O01O00001O010O001O001O001O001O000001O4L2N2M2OZOkUNBTj1=mUNDRj1=lUNDSj1=lUNESj1;lUNGRj1T100O2O1N1O2O001N2O1O0O101O001O1O001O10TN]VNY1ci1fN`VNY1`i1eNcVNZ1\\i1fNeVNY1\\i1fNfVNY1\\i1dNeVN[1Qj1O01O000010O101O0O10000O3N1N01O001N1N2O1N200N2O1O01O00100O10O0100O1O010000000001O000000010O1O;E6J2N2O1N1O00100O1O100O1000O10O0100O1O1O2N4L1O1O1O3M5K3M1O1O0000O100O1001O0000O1000000O10O001O010000O0110O0;F4K2O0O010O010O10O01O01O1O0O2O1N2O001N11O01O0010O01O010O10O10O02O2M3M3M100O1O10O100O2N1O001O1O2N3L4M1N101N100O100O01O0100O10001O001fNjUNg0Wj1XOkUNg0Uj1YOlUNf0Uj1XOlUNh0Vj1UOlUNj0Uj1TOmUNj0Vj1SOkUNm0Vj1POmUNo0bj101O001N101O001O1O001O0O2O1O2N2N002N1O2M2O1O001O1N2NSneQ1"
+                },
+                "score": [
+                    0.91796875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0021.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    242.93385314941406,
+                    46.50468826293945,
+                    338.41900634765625,
+                    107.45068359375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "eRa>2kk18H6K3M4M2N2N2N1O2N1O1O2O0O1O2N1O100O100O2O0O1O10000O100O10000O10000O1000O10O100000O1000O1000O10O10O1000000O010O10000O100O100O2O0O100O100O101N1O2N100O2N100O2N2M2O2N2M4M2L5KSjd[1"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    161.76573181152344,
+                    439.7264404296875,
+                    356.28656005859375,
+                    783.476318359375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "h^o9;ck13N1O1O2O0O10000O2O00000000000000OeMIoXN7nf1OoXN2mf13QYNMmf16RYNJlf1:RYNFlf1=SYNClf1?SYNAlf1a0SYN_Olf1c0RYN^Omf1c0SYN]Omf1d0RYN\\Omf1f0RYN[Olf1g0SYNYOkf1i0UYNWOjf1k0UYNUOjf1l0VYNSOjf1n0VYNROee1GeYNW1f0SO_e1LjYNQ1g0SOYe13nYNl0h0QOWe17PZNh0i0QOUe19RZNf0i0ROod1>WZN`0j0SOhd1c0]ZN;k0SOROBfd1T1][N7k00bc1Nb[N3k00_c10f[N0j01]c12h[NNk00Zc15k[NKk00Xc17m[NIj01Xc17n[NHi02Wc18P\\NEi04Uc19R\\NCh05Uc19k[NJo0NUc19o[NFi03Xc19o[NCe08[c19n[N^Oc0<_c18m[N\\O<c0Vc1iMa\\NZ2H^O;d0Xc1jM^\\N[48mMXc1g2e\\NZM[c1h2a\\N[M^c1d5000001O00O1hJ^\\NR2ac1nMc\\No1]c1QNc\\NTMM`4`c1\\Nd\\Nn1\\c1SNc\\Nm1]c1WNc\\NKOaN^c1d1c\\ND7hNUc1e1b\\NE7fNXc1h60aMc\\N[L]c1k0a\\NA6AYc1o0_\\NA9_OXc1h3i\\NWLWc1j3h\\NVLXc1j3h\\NVLXc1j3g\\NWLYc1j3_\\N]Lac1Q60000000001O000000O10O101O00000O1F901O1O1O2N1O1O001ZOoF\\^Na7^OmIoa1kN_^NX7ElIka1nN_^Nh8aa1ZG]^Ng8ba1[G]^Nd8ba1_G\\^Nb8da1bGX^N]8ia1k02N2N2N3L4K4L5K4K6I7K4L5J6I6TJW\\N]3nc1aLT\\N[3Pd1k1?K6L3N3M2M3L5J5M3K6J5K6I7[NkYNXMZf1f2iYNTM]f1i2fYNRM^f1m2dYNkLcf1T3V1N1UNlWNIUh15oWNIQh17oWNHSh18lWNHTh18lWNGUh1:iWNFXh19kWNDVh1;mWNAUh1>mWN@Uh1DaWNI=`0Th1F`WNJc07og1N_WNKc05og1O_WNMb01Qh10_WNOb0KSh14]WN1d0BTh1=YWNNPj12QVNKQj15PVNIQj17PVNFRj19PVNDRj19RVN@Uj1;j000O1N3N4KZQlZ1"
+                },
+                "score": [
+                    0.91796875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0022.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    298.0577087402344,
+                    65.64803314208984,
+                    393.1442565917969,
+                    124.55036163330078
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "UWha08fk14K5M2M3N2N2N1O2N1O1O2N1O101N100O2N100O100O101N100O10000O100O1000O0100O10000000000O0100000O10O1000000O10000O1000000O10O0100O101N100O100O10001N1O101N1O1O2N1O2N1O2N2N2N2M4L4K6H_i[X1"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    125.37549591064453,
+                    460.1682434082031,
+                    353.8742370605469,
+                    803.638671875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Xok77gk14L3N101O0O100000000O1010O0000000000000010O0000001O00000dMHPYN8mf1MQYN3lf12RYNOkf15SYNKkf19TYNFkf1<TYNDTOAef1n0VZNAoNHif1i0XZN^OmNLif1g0ZZN]OjNOkf1f0ZZN\\OhN0nf1e0YZN[OfN3Pg1c0ZZN[ObN5Sg1b0ZZN:ee1G[ZN9de1H\\ZN8ce1I\\ZN8ce1J\\ZN6ce1K]ZN4ce1M\\ZN4ce1M]ZN2de1N[ZN3de1N[ZN3ee1MZZN4fe1LXZN6he1JWZN7gd1XNlZNa1;9gd1]NhZN\\1>9hd1^NiZNY1;=jd1]NiZNW1;>id1_NkZNS1:`0id1_NmZNQ19a0fd1cNoZNm09b0ed1dNR[Ni07f0ed1cNT[Ng05G]O^OWe17W[Nd03GB]OQe1;Z[Na02EG^Okd1>\\[N?0DM^Oed1b0][N=O^O6B\\d1e0_[N;N^O7CZd1g0W[NfNKb1<]O9EWd1h0W[Na08nN=LPd1i0X[N?9jN`01mc1h0Z[N=9gNb05hc1j0\\[N;9eN>=kc1m2g[NdL?`0hc1m2i[NbL?F[O:[d1c3c[N`Lh0DZO9Yd1[1e[NP1g0\\Nbc1f0i[Nj0e0YM\\Ok0Ud1R1m[Nd0d0`M\\Oi0Rd1T1o[N?e0eM[Og0Qd1U1n[N`0f0dM\\Of0oc1W1o[N>f0fM]Oe0mc1W1P\\N>d0gMAc0jc1Z1P\\N;f0aMGj0cc1Z1o[N<_1[Nbb1Y1o[N<^1\\NQb1\\O_\\Nm11nM1P2Z1mNSb1\\O_\\Ni13mM4o1V1PORb1]Oa\\Ng12oM4l1T1UOTb1ZOb\\Nf12QN0l1U1VOVb1XOc\\Ne10>U1gNWb1WOd\\N]4U1]LWb1WOc\\N\\4V1^LVb1m1l\\NfNm0^OVb1b1h\\NPM9P2h0^OWb1b1Y]NPO`0PNUOP1Rc1P2X]NQOa0mMYOP1nb1R2U]NTOU1iNfa1S2o\\N[O[1aNga1U2i\\N^O_1]Nha1m4Z^NRKfa1m4[^NRKfa1m4[^NSKea1m4[^NSKea1l4[^NUKea1k4Y^NVKha1i4U^N[Kka1e4Q^N_Koa1`4P^NaKQb1_4m]NcKSb1\\Oa\\NY4Z1[LWb1[Oa\\NY4U1]L\\b1ZO_\\NX4U1^L]b1ZO^\\NX4S1^Lab1ZO\\\\NW4R1`Ldb1XOZ\\NW4P1aLib1XOW\\NV4o0bLlb1YOT\\NU4n0aLQc1W4k\\NiKYc1W4c\\NjK`c1c1m[N^O>POic1a1l[N^O9POmc1b1i[N@9kNQd1g1a[NB=dNUd1a4i[N]KYd1d4f[NYK]d1h4b[NUKad1m4][NQKed1S2V[NJ3PNid1V2V[NJ1lMkd1[2U[NH0iMnd1`2Q[NI1aMnd1k2Q[ND2[MPe1S3mZNC4WMPe1V3mZNSMKR2ee1k0aZNoLOS2_e1P1bZNmL2o1[e1VN_ZN`24ZM6m1We1XN`ZNa23[M6j1We1[N`ZNa22[M6h1Ye1\\N_ZNb20^M5c1]e1]N^ZNV32\\N`e1_N_ZNU31YNbe1aN^ZNa20_M1^1be1cN]ZN6O`14PN5d1]e1gNZZN53]13PN5e1bd1_Nd[N:_O54BIa1k0LWd1gN][N5F4:T1:LZd1jNZ[N2H49V17I`d1nNW[NNK56V14Igd1oNS[NNL46V11Jkd1POQ[NLM65S12Hmd1TOnZNML84o05DQe1YOiZNLM=0h0;CPe1_ObZNM3:Og0=_ORe1=`ZN^O1f0=]OUe1>]ZN_O1f0<\\OYe1>ZZN_O2g0:[O]e1?VZN^O4h09WObe1b0QZN^O5i08TOfe1d0mYN_O5i0:POge1f1QZNYO;lNge1f1SZN^O9eNie1m0`YNE?h0<]Nle1S2hYN@Vg1a0iXN_OXg1`0hXN_OZg1a0fXN^O[g1a0dXN_O^g1@TXNN=b0`g1_OTXNO;a0bg1@SXN28>fg1_ORXN47<hg1@PXN49;hg1e0ZXNZOfg1f0ZXNYOhg1e0YXNZOhg1e0ZXNYOhg1e0YXNZOhg1e0ZXNXOig1GfWN1c06ig1HeWN2b04jg1IeWN3b02kg1JdWN3b01kg1KeWN3b0Ojg1NfWN1a0Mmg11dWN0c0Hlg18cWNOe0^Ong1d0]WNMii13WVNLki13VVNLji14VVNLji14VVNKli13VVNLji14VVNKki15VVNJji15XVNIii17XVNGji18WVNFji1:YVN@ji1`0l0O0O101N10001N100O2N3KchoZ1"
+                },
+                "score": [
+                    0.91015625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0011.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    257.0950927734375,
+                    320.67010498046875,
+                    722.9987182617188,
+                    569.9279174804688
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "gij>8fk13M3N001O1O0O6K4J3NBQUN0nj10SUNOlj12TUNNlj12VUNLij15[UNHdj16_UNHdj13bUNIRa51XZL4L1N2O1O1N2O0O2UVNASh1?f110001N001O10O0100O10001N010O1O100O1O00100O2O0O101N101N1O2N001O1O100O1O2N1N7J4K4M2N3M2N1O2M2O1[WNmM\\g1U2aXNoM\\g1R2aXNSN[g1o1bXNUN]g1k1bXNVN]g1l1`XNWN_g1i1_XNZN_g1g1_XN[Nbg1d1]XN]Ncg1b1\\XN`Neg1^1YXNeNhg1Y1TXNlNlg1T1RXNmNPh1Q1mWNSOSh1m0lWNTOUh1k0jWNVOVh1j0iWNVOXh1W23M3N1O1O1N2O1N2N2L4N2^NTWNOmh1a1001N2O1N2M3M3N2N2NjWNiMhf1T2RYNWNkf1h1TYN\\Nkf1b1UYN`Nkf1^1SYNfNmf1V1SYNnNmf1o0TYNROmf1l0SYNVOmf1h0RYNZOPg1b0PYNAQg1<nXNFTg17kXNLTg12iXN3Vg1KaXNb0^g1]OaXNe0_g1YOaXNj0^g1UOaXNm0^g1SOaXNP1^g1nNcXNS1\\g1lNeXNU1\\g1iNeXNW1\\g1eNgXN[1Yg1aNlXN_1Tg1^NnXNb1Sg1\\NnXNd1Rg1ZNPYNf1Qg1WNQYNi1of1VNRYNk1nf1RNTYNn1lf1PNVYNP2kf1lMXYNT2hf1iM[YNX2Vh1000010O01O001O010O1O01O10O0I7L5M2O1L5M2M4M2O1O2M2N3N2O0O101N100O2N1N20001N1000000O2O0000001O0000O1O10O02N100O1O1N2L4M3O2N1N2N2N2O2N2M2M4N2N101N1O2N2N1oNhVNYOZi1a0kVN^O7WO^h1Z1[WN_O7WO_h1Y1ZWN_OZi1a0fVN^O\\i1a0cVN_O^i1>dVNB]i16kVNHXi14kVNIZi1NmVNOXi1KkVN5Zi1DiVN;^j1001O12M2N2N2NN3^UN0Pi13kVN5Pi1NlVN6Qi1LiVN;Ti1FjVN>Ri1EjVN?Si1FfVN?Wi1W1N2O1N2N2N2M3N1O2O00001O000O101O0E;M4M2N2N2O2M2O1O2O00000O100001N10000O2O1O001N2O0O2O1O0O10000O2N1O1N2O2N1QN^WN`0bh1@_WN>ch1A]WN>dh1B\\WN<gh1\\13M2M4I6N3M2M3N3N1O1O1O20O0010O001O000O200O01O01O01O01O01O010O1O1O2N2N2O0O1O1O0010O010O1jNaVNJ_i1FbVN@4g0Zi18bVNK]i1\\10XObVNoN^i1n0dVNSO[i1l0gVNSOZi1k0gVNUOYi1k0hVNTOYi1k0gVNVOXi1j0hVNVOYi1i0gVNWOYi1i0gVNXOYi1g0gVNYOZi1f0fVN[Oo0\\Oof1X1RXN\\Ol0BPg1R1TXN[Oj0FRg1n0TXN]Og0HTg1k0UXN]Od0KXg1g0UXN^O`0NZg1d0WXN_O:0_g1a0XXN_O54bg1=[XN^OO8hg18YXNBI:Qh11VXNFE<Vh1LWXNQ1jg1mNWXNS1hg1oNWXNQ1hg1POXXNP1gg1ROXXNm0ig1TOVXNl0ig1VOVXNi0jg1XOVXNg0jg1ZOVXNe0kg1[OUXNc0mg1]OSXNa0og1@PXN?Qh1CnWN:Th1GlWN7Vh1HjWN6Xh1KgWN3\\h1MbWN2`h10\\WN0gh1b12O2cNVWNAkh1=WWNBkh1=VWN@lh1a0SWN]Ooh1e0nVNZOTi1h12M2O101O00001O001O00001O0010O0010O000010O00010O00010O00010O0001O001O0010O0010O00001O00001N1O1O1O2M2^O]VNaNii1\\1`0L3N3M3M2O2M2M4L3N3M3N3K6J[m[e0"
+                },
+                "score": [
+                    0.90625
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    821.6802978515625,
+                    133.91555786132812,
+                    1018.1446533203125,
+                    342.037109375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "aP]`11hk1:G8I6K4K6J5M4M2M4J5G9N2M4H7I7M4K4J7H7M4M2N3L4L3M3M3N3M2M3M4M2M3O101O0O10001O00001O0O2O1O0O2O0O10000O2O00000O1O1O101O000100O001O010O1O010O10O1O000010O001O0TKTYNe4Tg1O0010O01O010O01O01O100O003N2N1O0O0001O0O13N0O00010O0010O0105J1O10O01O2N100O0001O0010O1O2N2O0O1O101N2N1O010O010O1O010O2N1O100O1O2N2O0O1O100O2N1O2O0O1O1O2O1N010O100O3M2N100O1O101N3M101N2O1N2N2N1O2O2M4L100O5K3M3M2N3M5J5L4K`0oNefg3"
+                },
+                "score": [
+                    0.96484375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0056.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    296.685546875,
+                    590.8547973632812,
+                    419.72607421875,
+                    696.1853637695312
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "moda06dk1<F7J6K4M3L3N3M3L4M2N3M2N2N2O1N2N2N2O1N2N2O0O2O1N101N2O0O2O1N101O0O101O001N101O00001O0O101O0000001O0000001O000000000010O000000001O0000001N1000001O001N10001O000O2O001N101O0O2O1N101N2O0O2O0O2N2N2O1N2N2O0O2N3M2M3N3M2N3L4L3N3K5L6H<Em[lV1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    452.13201904296875,
+                    2.97540283203125,
+                    656.5298461914062,
+                    198.1354522705078
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "i`Pk02mk14L3M2N2N2O0O100O2N1N3M2N3M2I8K4M4O1N2N2O1N101O1O0O2O1N2O1N10100YO]NoVNc1nh1dNnVN]1oh1hNnVNY1Pi1m0N3M2N2N2M4M2O1N101O0O10000O010000O0N3M3NO02O2OEnLjWNn2Yh1:2RMaWN[2`h1fMaWNY2]h1iMcWNV2]h1lMbWNT2]h1mMcWNR2\\h1PNdWNP2Yh1TNeWNl1Zh1n0N1O1O101N1O101N2N2N2M3O1O1O1O2N1O2O0O1N3M2M3O1N3N1O100O2N1O1O1KiKXYN`3hf1^L\\YNa3cf1_L]YNa3cf1]L_YNc3af1ZLbYNf3^f1YLcYNh3\\f1WLeYNh3\\f1WLeYNi3[f1WLeYNh3\\f1WLeYNi3[f1WLdYNh3^f1XLbYNg3_f1XLbYN`3mf1YLSYNf3Pg1XLPYNg3Rg1WLPYNg3gg1N1N2N1O2NYOaLoXN]3Rg1dLnXN[3lg1O001NAiLYXNV3Xh1O[OjLbXNV3\\g1QM`XNo2_g1SM`XNl2^g1XMaXNh2`g1XM_XNg2cg1XM^XNg2cg1YM[XNg2gg1YMWXNh2jg1YMSXNg2og1\\MlWNd2Vh1b01N2O1M3N2N2C=L4O1O10000O10000O100XNnVNWONo0Ui1JnVNUOOP1Si1KoVNTOMR1Ti1MQWN6Pi1LnVN4Ri1LoVN2Ri1NXWNFjh19XWNEih1;YWNAih1?YWN]Oih1GbVN`0h0Bjh1LaVNa0k0ZOgh14`VNa0cj1^O_UNa0Pk1O101O001O010O010O10O01O001O000O2O0O2N2N2NW_Ri0"
+                },
+                "score": [
+                    0.89453125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0038.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    764.0662841796875,
+                    279.01806640625,
+                    866.798828125,
+                    341.28485107421875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "_YP]12jk19H6L2N3M2N3M2O1N2O0O2O1O1N2O001O1N101O001N101O001O00001O001O00001O00001O0000001O0O10000001O01O0001O000001O0001O000000001O0000001O0O2O00001O000O2O001O0O2O001O1N101O1N101N2N2O1N2O1N2N2N2N3L5JZfd<"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    2.2705230712890625,
+                    218.42938232421875,
+                    224.53175354003906,
+                    324.97698974609375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Q7V2ji100O1O1O1O1O2O0O2N1O2O001O002M2M4lNdUN?_j1ZOgUN;Tk101O1O001N2O001O0OgTNEoj1<:1N5L1N=D1N3N1O2N1N101O1M2O2L4N1N3M2N3N2N1O2N1O1O101N10000000001O0000001O00O100O100000001O00000O10001O000O100O2N100O100O2O0O100O101N1O100O1O1002O0O001O00000001N100G:M2001O000mUNdNbi1\\1ZVNjNdi1V1WVNQOgi1o0WVNUOhi1j0WVNXOhi1h0WVNYOii1_11O100O2N1O1O4eNkUNc0Vj1c000000O1O1O2N100O01O1O1O1N2O1O100O1000001O00001O1O1O10O001O103L;E1000O100O0010O001O100O2N1O1O1N101N2O0O1O2M3N000O2O002N2N101N000O2O00100O10O01O1O100O10O0100O100O101N10001N101O0O2L[S^b1"
+                },
+                "score": [
+                    0.9140625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0037.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    749.4744873046875,
+                    274.597900390625,
+                    850.3050537109375,
+                    334.2364501953125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "WQV\\19ek15K4M2N3M2O1N2N2O1N2N101O1N101O1O0O2O1O00001O001O0O2O0000001O000O2O0000001O01O0001O00000000000001O0001O00000000000001O00001O001N10001O001O00001N101O0O2O1O001N101N2O1N101N2N2O1N2N2N2N2N4J8G]j`="
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    9.891654968261719,
+                    264.8167419433594,
+                    215.88592529296875,
+                    359.7679748535156
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "]9`0`k10000O100O101O0O1000001O000O10O010O100O2N101N2N2O1N2hTNDij1n0J4K4M4L3M3M2N3N1O1O1O2O0O101O00001O0000001O000001O000000000000001O0O10000000000O10000O1000000O101N100O1O1O1O100O1N2O1M300O100O1O1N2O1O2N100000000000001O000O10001O20dUNmNii1;mUN90ASj1MWVN1Fa0Tj1WO[VNV1Vj12N1L5K4N2O00100O1O1O1N2O000000001O010O10O00100O100000001O002N2`NkUNQ1ej1M000001O1O00000010O0101N101O00O10O01O010O1O1O00001O0O2O0O2O0N2N1O2N2O1N2O1O1O010O0000000010O01O001O1O1O100O1O100O101N100O2O0O2O1J^nnb1"
+                },
+                "score": [
+                    0.91015625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0067.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    174.35594177246094,
+                    365.2808837890625,
+                    362.81781005859375,
+                    484.5137939453125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "kP`:9ck19H5L5K4M2M4M3M2N2N2N3M2N2N2N2N2O1N2O0O2O1N2N2O0O2O1N2O001N2O001N2O1N101O001N101O000O2O001O1N10001O0O2O001O0O10001O001O00001O00001O0O101O0000001O0000001O01O00000001O00000000001O00000001O01O000001O0001O01O000000001O0000001O0000001O0O101O000000001O001O001O000O2O001O000O2O001O001O0O2O1O001N101O0O2O0O2O1O1N2O0O2O1N101N2O1N2O1N2N2O1N2N2N2N2N3M2M3N3M3M3L3M4L7HfZYZ1"
+                },
+                "score": 0.98046875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0065.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    2.5163040161132812,
+                    114.7149429321289,
+                    155.75448608398438,
+                    218.9976806640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "P4T2li100001N101O0O2O0000001N10001O0O101O000O101O000000001N101O001O1O000000001N1000001O00001O00001O0000000000001O000000010O00000000001O0000000001O00000000001O0000001O000000001O0000001O00001O00001O0O10001O00001O0O101O00001O0O2O001O0O2O001O0O2O0O2O001N10001N2O0O2O0O2O1N101N1O2O1N2N2O1M3N2N2N2M4M2N2M3M3M4L5Inf]f1"
+                },
+                "score": 0.98046875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0048.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    980.7367553710938,
+                    605.4910888671875,
+                    1076.197509765625,
+                    699.4503173828125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "iWki1>_k17J5K5L2N3M3M3M2N3M2N2O1N2N2O1N2O1N2O1O1N2O001O1N101O1O001O1O001O001O001O00001O001O001O00010O001O01O00010O000010O0001O001O001O00001O001O001O1O001O1O1O001O1O1N2O001O1O1N2O1N3N1N2O1N1000P\\O"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    570.7017822265625,
+                    26.184463500976562,
+                    750.8177490234375,
+                    247.48081970214844
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "YikQ12lk19H4M2N3M2M3N2N3M2N3M2N2N2N1O2M4M3M3M3M2N3M1O2N2N2N2N2N2N2M2O1O2N2N2N2N1O2N2N1O1O1O2N1O1O011N1WWNXMYh1_3I0O1001O00010O10O0O100O010O1O00100O1O1O3M3M4L4L4K2O2N1O1O100O1O1O2O2M4L5L1N1O100O1000O2N2N100O=C4L7I1O00001O00000000001O000000100N3N2N002O0O2N2O2M4L8H2O0O0010O01O100O2N1O3N1N1O100O2N3M2N2O1N2N1]OkVNZNUi1d1lVN\\NVi1a1kVN_NXi1Y1mVNgNUi1U1mVNkNUi1S1lVNlNUi1R1nVNkNVi1P1PWNlNRi1o0VWNkNoh1P1Y1F5K4M2N2O0O2O1N5HVbic0"
+                },
+                "score": [
+                    0.9453125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0063.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    2.61407470703125,
+                    471.9652099609375,
+                    139.3570556640625,
+                    572.320556640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "VX44ek1?E6K5L3L3N3M2N2N3M2N2N2N2N2N2N2O1N2N101N2O0O2O0O2O1N101N100O2O001N10001O0O2O00001N10001O0O10001O00000O2O00000000000000001O000000000000001O000000O100000001O000000001N1000001O00001N10000O2O00001N101N10001N101N101O1N1O2O001N101N2N2N1O2N2O1N2N2N2M3N2M3N3L3M4L4L4L5J6Im[[g1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    318.31060791015625,
+                    2.9750595092773438,
+                    541.4423217773438,
+                    160.39370727539062
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "k_Qc01lk14M3N2M2O2N2N1O2N1O1O2N2N1O2N1O2M2O2M2N3N2N2N2N2N1O2N2N2N2N3POUNfWNn1Si13N2M4M3K4L3N3N1N2N2N1O2O02O0O1J6K4O2O0010N2N101O1O10O01N2O100000000O100O001O1O0O100100O010O0100O10000O1O1O2M201O0O1O2N100O2N1003N9F10O0O1N3N1DnLiWNS3Uh1RMhWNo2Uh1TMiWNm2Vh1UMhWNm2Uh1VMjWNj2Vh1`0O1O1O11O001N2N1N2O1N2O0O10O101N110O10O011O001N100O0000000001O00001L3100O100O1O100O1N2O1O1O1O1O1O1N2O1O1N2O1N2M3M3N2N2N2N2N2N2O1N2N2N2O1N200O1O1O1O1N2L4K5M3N2O1O1O1N2O1O1N2O1O1N2O1N2N2N2O1O1N2M3M3M3O1N2M3MSPlo0"
+                },
+                "score": [
+                    0.76171875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0007.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    365.1945495605469,
+                    361.1238708496094,
+                    860.9783935546875,
+                    509.5386657714844
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "neme01mk13N2N2N2M2N3N2N1O2M2O2N1O001O001O0O2N101N1O1O1O100O1N3M2O1M2N3M2M4M3O20O01000O100O11O00001O1O001O100001N2O1O9G101N2ON1O1O001N2N2O1N101OoNiUN9Vj1GlUN9Sj1EPVN:Pj1ERVN:mi1EWVN9ii1F[VN7di1J]VN5ci1K^VN4bi1L^VN4ai1N^VN2bi1O^VN1ai11]VNOci1N`VN1ai1O^VN2bi1M^VN4bi1LUVN<ki1ETVN<li1DRVN>ni1CoUN`0Pj1i0N<Di0SO7K5K4L3O101N10000000000000000000O2O0O101N3M2N4Ke0VO`0@<SOmUNVOhj13WUNOVk1>O2O0O22L2N2O00O2O1O1N2O5SUNUO[j1a1G4L3M2N2M2O1O1O001O1O0FjMjVNW2gh1XNXWNh1fh1ZNZWNf1ch1^N\\WNc1`h1aN_WN_1_h1eN^WN\\1ah1R1N101O2N1O1O1O1O1O1O1O100O101O0O01000O100000001N01000O10001O0000000000O1010O000001O0000001O0000001O000O2O001O010O1O1O1O1N2O010bMcWNW1_h1fNcWNY1^h1dNdWN\\1^h1bNcWN]1ah1^N`WNb1fh1jMXWN43R2^i1O100001O0000O100O101N1O1O2M2hNbVN^Oni1`0k0N1N3O0O1O2N1O00100N11O2N1O1O2L3J6N2O1ZOXOSVNi0hi1_OSVNd0ii1DQVN=mi1l0O1O2N1000001O00001O00O100002fVNPN`h1R2WWN[Nch1g1WWN`Nfh1`2M2M3N1O1O1O1O100O1O001N1010O01O1O001N1000001O00010O00000000000000000000000O02O00000000000O01001N10000O1O1O1O1O100O100O1iNcWNiN_h1R1gWNkN[h1S1iWNiNXh1X1kWNcNWh1]1kWN_NXh1`1kWNYNYh1g1P10000O100000001O0dNSVNe0mi1ZOVVNd0ki1[OVVNd0li1ZOXVNb0ii1\\OYVNc0ii1UO]VNj0ei1POaVNo0Yj1O002N1YOoTN=Rk1]OUUNa0Wk1O2M3NN2O0aNC[WN>dh1C[WN>Sj11O0^O@dUNa0[j1@dUN`0\\j1@dUN`0_i1@kVN0G`0\\i1GaVN03:Zi1K^VNL89Xi1O]VNJ:7Xi11[VNK;5Yi1e0eVN[O[i1e0eVN[OZi1g0dVNZO]i1e0dVNZO\\i1f0dVN[O[i1e0eVN[O[i1e0eVN[OZi1e0gVN[OYi11_VNI96Xi11aVNG78Xi10dVNE5;Wi11bVNF69Xi11aVNG78Xi12^VNI96Xi11]VNM92Zi11]VNM92Zi11^VNK94Yi11_VNJ85Yi10`VNK75Yi11_VNJ85Yi11^VNK94Yi11]VNL:3Zi1d0fVN\\OZi1d0fVN]OYi1b0hVN^OWi1c0iVN]OWi1c0iVN]OWi1c0iVN^OVi1c0iVN]OXi1c0gVN^OXi1c0gVN^OXi1d0fVN\\OZi1c0gVN_OWi1`0jVNCSi1<mVNJnh16QWN2hh1NYWN`0Xh1@hWNd0Th1\\OmWNe0Qh1[OoWNg0og1YOQXNh0ng1XORXNh0ng1XORXNh0mg1ZORXNg0mg1YORXNh0ng1YOQXNg0og1^OlWNb0Th1_OkWNa0Uh1e1000dMmWNk0Sh1TOPXNj0Ph1UOQXNk0og1UOSXNh0ng1XORXNh0og1WORXNh0ng1XORXNh0ng1YOQXNe0Qh1AhWN<\\h1b0R1M3N20000000000O10000000000000001O00000000001O0O2O001O001O1O2N3M7I=C?A6I2O1O1O1O1N2N2N[ZW="
+                },
+                "score": 0.921875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0016.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    132.35556030273438,
+                    28.10995864868164,
+                    232.68017578125,
+                    104.03959655761719
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "YnP88dk17J6K4L3M3N2M3N1O2N2N2N1O2N1O2N101N1O101N100O100O2O0O1O100O10000O010O100O10000O0100000O1000O10O10O10000O10O10O100O10000O100O100O100O100O2O0O100O2N1O101N1O1O2N101N2N1N3N2N2N2N2M3M4L6I7F_fia1"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    458.539306640625,
+                    395.2829284667969,
+                    726.3863525390625,
+                    743.16552734375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "YS\\k03jk16K4M2O1O2M3N3M0O10O10oM_ObXNc0\\g1@bXNa0\\g1AbXNa0\\g1AcXNa0[g1@cXNd0`NTOah19nXNP1nf1POQYNS1mf1nNRYNT1lf1lNSYNX1jf1hNUYN[1if1eNWYN]1gf1cNXYN`1ff1`NZYNa1ff1_NXYNd1ff1\\NZYNf1df1\\NYYNg1ef1ZNYYNi1ef1XNZYNj1df1VN[YNm1cf1SNjXNHFX2]g1QNjXNKGV2]g1oMiXN0GS2_g1nMfXNo2Wg1QMgXNS3Xg1lLgXNW3Wg1jLhXNX3Vg1k0N2N1O2N1O2N1O1O001O0O2O000001O0O010O1RLWYNd2jf1[MXYNd2hf1\\MWYNe2if1[MWYNe2if1[MWYNe2if1[MWYNd2jf1\\MVYNd2jf1[MWYNe2hf1\\MXYNd2hf1\\MXYNd2hf1\\MXYNd2o0cLYd1j0fZNd2n0iLXd1d0iZNc2m0nLWd1[4g[NiKWd1V4g[NnKWd1Q4i[NSLUd1R1R[Nb0g0`NVd1m0U[Na0`0iNZd1f0W[N`0=mNZd1e0W[N?:RO^d1Y3`[NiL_d1W3a[NjL]d1W3b[NjL^d1V3][NPMad1Q3^[NPMbd16\\[N?1]Obd12b[N>L@ad13a[Ng2_d1^2OfJa[NS3_d1lLc[NT3\\d1lLd[NT3]d1kLd[NVNLZ27_OYd12n[N=N]OUd16m[N;2\\ORd17m[N=1\\OTd14k[Na01[OVd11j[Nd00[OWd1eNX[Nj0:iNJ_2<YO^d1ZNY[NR13c15ROod1UOQ[Ne1MZOTe1mNQ[Ni1I\\OWe1iNQ[Nk1G]OXe1gNR[Nk1F_OXe1fNR[Nm1D]OZe1fNQ[No1C\\O\\e1eNQ[NY4od1gKP[NZ4Qe1dKP[NY2_OPObe1gNP[NW2_OQObe1hNoZNW2@PObe1gNoZNU1]OXO4i0ae1jNnZNT1_OYO0j0de1hNlZNW1_OW1ee1bMlZNW1@V1ee1bMjZNY1AU1fe1`MiZN\\1BR1ie1]MgZNa1AQ1ke1XMgZNg1_OP1hf1POaYNf0`1eMhb1e1i[Nd0_1kMeb1a1l[Nc0_1nMdb1_1m[Nc0_1oMcb1_1m[Na0`1RNbb1^1m[N?b1TN`b1\\1o[N`0`1UNab1[1o[N?`1WNab1Y1Q\\N=`1ZN_b1Y1f[NUN3U2i1^N^b1X1Q\\N:b1^N]b1X1Q\\N:a1^N_b1Y1n[N9d1^N^b1Y1n[N8d1`N_b1V1n[N9d1aN^b1V1n[N8e1aN_b1U1m[N:c1bNab1R1m[N;c1cN`b1Q1n[N=a1bNbb1P1n[N?^1aNdb1P1n[N`0\\1`Nhb1n0m[Nc0Z1_Nib1n0m[Nd0X1_Nkb1m0m[Ne0V1^Nob1l0k[Nh0T1[NRc1l0k[Nj0P1\\NVc1i0k[Nj0n0]NXc1i0j[Nl0l0[N[c1g0j[NP1i0XN_c1f0i[NU1AaMe0e0Rd1c0i[NZ1YOfMh0=Xd1a0g[Nm1OaM]d1>f[NS2K_Mad16k[N]2@]Mid10j[Ne2[O[Mnd1Ki[Nf0iNl0>cNQe1El[NU3QOVMlf1l2QYNTMof1o2oXNQMof1T3nXNlLof1T4O0O2OSNoXNlNQg1T1QYNkNnf1S1WYNkNgf1T1]YNjNbf1V1bYNhN_f1W1cYNgN]f1Y1dYNfN\\f1Z1fYNdN[f1[1iYNaNWf1^1lYN`NTf1`1nYN_NQf1a1QZN^Noe1a1SZN^Nne1_1TZNaNle1]1UZNeNke1X1VZNjNie1S1ZZNnNee1o0bZNnN^e1P1cZNPO^e1n0cZNRO^e1k0QZNnM@X1_f1h0mYNWNBQ1af1g0kYN]N@o0df1c0jYNbN_Om0hf1?hYNhN\\Ol0lf1:gYN^NZOa03:lf1:QYNjNf0m0_OOkf1a0hYN^O@0if1=jYNC^O0if19oYNCZO3gf1<lYNA^O2hf1>hYN_O@3jf1=fYN@_O3lf1<fYNA]O3nf1;eYND[O1Rg1:`YNR1cf1kN[YNV1hf1hNWYNY1jf1gNTYNZ1nf1cNUYNZ1nf1dNTYNY1of1dNUYN1YOOeg1MVYN0WOOhg10oXN1ZONig13PXNXO`0g0HMkg1=ZXNGKKng1>UXNFNLog1>QXNFOLTh1EaWN<:2NOfh1O_WNNI4jh1N^WNLG7kh1N^WNJG7mh1OYWNLJ4nh1R1RWNnNnh1R1RWNnNnh1R1RWNmNPi1R1PWNnNQi1Q1oVNnNSi1P1mVNQOSi1o0mVNQOUi1m0kVNROWi1m0iVNSOXi1l0hVNTOZi1j0eVNWO\\i1e12O2M3N1O2M3N2N1N3M4M2M2O2M3N2N1N3N2N2M2O1N4M2M2O2M3M3M4K4M\\ZRe0"
+                },
+                "score": [
+                    0.91015625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0032.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    820.6768188476562,
+                    296.1630859375,
+                    919.3051147460938,
+                    350.821533203125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "mU[`16hk16J3N2N3M102M2O1N101N2O1O0O2O0O2O001N101O0O101O00001O00001O000O2O0000001O0000000000001O00000001O00000000000000001O0000001O000O2O00001O00001O0O2O001O0O101N101N101N2O1O0O2N2N2N2N3M3L5FQZa9"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    3.2470245361328125,
+                    449.75360107421875,
+                    371.06304931640625,
+                    587.9025268554688
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "i?a2_i100O100000000000000O101O001O1O2N2N5J3N2N1O2N1O000O2O00000O100000000O10000000000O10O10O10000000000O10000O1000000000000O2^ObUN@^j1?cUN@_j1>bUNB^j1=dUNA]j1;gUND[j19gUNEZj1>eUN_O]j1d0bUNYO_j1i0:2N2O000O1O1O1G9J7M4M5J4M1N3M2O2N100O1O100O1O1O1O100O1000000O1000O1000000000000O1000O10O1000000O100O10001O0000000O101N10001O001N101O2N1O1O1O1O1O1O1N2O1O2N1O1N2O001O001O0O10000000000O100O2OO0MgNfUNT1Wj1oNkUNo0Rj1TOQVNi0_i1I^VN7ai1T10UOaVNhN4M[i1Z1eVNfNii1\\1VVNdNii1^1<1O1O0O10000O1000001O00O10O0100001O1O2N3L3N1O1O001O1O1N2O001O1O1O001O0O2O000O101O000O2O00000O1000000000000O1000O1000000000O1000O100000000O10001N2N1O2N3N1O1N2N2N2O2M2N1O1N3M2M6J5@_UN[Oej1?a0M\\OFgUN9Wj1MfUN1Xj15gUNHZj1:gUNAZj1b0dUN^O\\j1h0\\UNZOdj1R1hUNlNbi1V1XVNoNfi1g1O00]OSVNTOli1l0TVNTOli1l0TVNUOli1]12O2N1O2O20O01O010N101N100O01O10O1O1O2N1ON2O1O10000000O1O100O2N1N2O2N1O1N3N10000010O0000000000O2O1O1O0O1O1O2N11O010O0O2N3M1O2M2O2M201M2O010O1O010O100O10N1O2L3[Of0N3M3M2O3K5KYmoY1"
+                },
+                "score": [
+                    0.9296875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0062.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    122.04499816894531,
+                    631.5153198242188,
+                    239.9373016357422,
+                    723.8795776367188
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "oh^7<`k19G6L4L4M3L3N3M2O1N2N2N2N2N2N2O1N2O0O2N101N2N101N101N2O00001N10001O0O101O00000O101O00001N1000000000001O0000000000000001O000O1000001O00000O101O00000O2O000O101O0O2O0O2O0O2O0O2O1N1O2O0O2N2O1N2M3O1N2N2N2N2M3M3N3L4M4K4L8GPk]a1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    441.2748718261719,
+                    167.92880249023438,
+                    677.4125366210938,
+                    339.7519836425781
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "XUZj08hk11N2N2O001O001O001O1O1O1O1N102M2M3N2N3M2M3N2L5M4L3M2N3M2N2M2O1M3L4O1O010O1O10N2K4J7M30O100O2N001O1O1O1O1O1O00100O10000O01000O01O1O0010000001N1000001O0000001O000O2O0O2O0O2L3L5L3N3N2O0O1O2O0O100O1O0O2O00001O00O2O001O1O1O01O1O100O01O0001O001O0010O001O0000010O10O001OO10001O000010O000000010O00010O000001N0I9N1100O100O01O0001O101N101N01O100O1000000O101O001N101O0O2N100nNiVNZOYi1d0iVNZOXi1e0iVNYOYi1f0hVNXO[i1g0eVNWO]i1i0eVNUO\\i1k0eVNRO\\i1o0dVNnN^i1S1bVNhNci1W1c00100O0O2N10001M3O0O101O01O001O0100O2N4L:G0O1O1O1O1O1O1O1N2N3L4LVmjg0"
+                },
+                "score": [
+                    0.9140625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0025.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    635.483154296875,
+                    93.20990753173828,
+                    729.646484375,
+                    147.19105529785156
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "kW^U13kk18H3N2M3N2N1O2N2O0O2N101N1O100O2O0O100O2O0O10001N10000O1000000O1000000O10000000000000000O1000000000O1000000O100000001N10000O10000O10001N100O101O0O1O2O0O1O2N1O2N2O1N1O2N2M4L6Hahed0"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    203.62576293945312,
+                    435.3597412109375,
+                    509.2706604003906,
+                    726.198974609375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "`T^<1mk15L2M3N2M3O1N100O2O010O1cUN_OYi1a0eVNBZi1?cVND\\i1<cVNF\\i1;aVNG_i1:_VNH`i18_VNIbi17\\VNJdi17ZVNKfi15XVNLhi15TVNMni13oUNOQj12lUN0Uj1l0101O01O01O01N101O001O0010O1O2O0O1O01O001O001N1O2N2N1O2N1O10hNVVN:hi1HWVN:fi1Q1aNnMnXNU2kf1TNQYNm1lf1XNQYNj1lf1ZNQYNg1mf1]NQYNc1nf1_NPYNc1nf1_NoXNc1Pg1_NnXNb1Pg1`N`XNRO5_2Zg1kNdXNW1Yg1lNfXNT1Zg1mNdXNT1[g1nNdXNR1\\g1i1O1000O010O100O010O10O01O000O2O1O1O100N101N2UN[XNZOeg1g0\\XNXOeg1g0[XNXOfg1h0ZXNWOgg1i0YXNWOgg1i0YXNVOhg1k0VXNTOkg1`21jNZXNPNhg1o1ZXNoMgg1R2TXNQNng1o1oWNSNTh1k1jWNUNWh1h2XO_LVYN_3ff1gLYYNX3hf1hLXYNW3hf1jLXYNU3hf1mLXYNQ3hf1PMXYNo2if1RMVYNm2jf1TMUYNl2jf1WMVYNg2jf1[MVYNc2if1_MXYN_2hf1lMQYNo1Pg1SNQYNj1of1WNRYNf1of1[NQYNd1nf1^NSYN`1mf1aNSYN^1mf1dNQYN[1Pg1fNPYNP1Yg1QOgXNm0Zg1UOeXNk0Zg1UOfXNl0Yg1UOgXNk0Xg1UOhXNl0Wg1UOiXNk0Vg1VOiXNj0Wg1WOgXNk0Wg1WOhXNj0Wg1WOhXNi0Xg1YOgXNg0Xg1ZOgXNg0Xg1[OfXNf0Yg1]OdXNd0\\g1o10000O01001O01O01OO100000001O1O1N101O1O0RNfXNVO[g1i0kXNROVg1o0iXNPOVg1S1iXNmNUg1V1jXNiNUg1Z1jXNeNTg1]1mXNbNRg1^1oXNaNSg1_1lXN`NUg1`1jXNaNVg1a1hXN_NYg1b1gXN\\NYg1f1gXNXNYg1l1dXNSN]g1o1`XNQN`g1W31N2TO[XN\\Mfg1c2[XN\\Mgg1d2XXN[Mig1]31O1N3N1[OSXNVMng1i2TXNTMog1j2TXNQMog1o2RXNlLRh1T3=0001M200O1000001O0O101O0O2O1N1001O01OO01O010O01O0O2O001O000001O1eNPWNFoh19SWNFnh15WWNKih14XWNKih15XWNIih18VWNHih1;UWNDlh1<UWNBlh1?SWN@nh1`0RWN^OPi1a0PWN_OQi1?mVNDSi1=PWN_OQi1c0PWNUOUi1k0nVNaNci1_1>101O00001\\O]NiVNc1Ui1dNeVN]1Zi1hNaVNY1]i1kNaVNU1^i1nN_VNT1`i1f0O101O00O1O100O3N2O1N1O3L2N3M2O1N3L3M3L4I7E^UNTOej1j0:M3O1O100O001O010O00001O001O1N1O2N2N2O0O2N1N3KQeeQ1"
+                },
+                "score": [
+                    0.93359375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0027.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    770.5501098632812,
+                    164.0929412841797,
+                    865.0775756835938,
+                    217.0866241455078
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "n][]14jk16J4M2N2N2N2N1O2O1N101N1O2O0O101O0O2O000O2O00000O2O000O100000001N100000000000000O101O0001O00000000000O1000000000000O101O00000O1000001N10000O2O000O2O000O2O0O2N1O2O1N1O2N2N2N2N4K6HVjd<"
+                },
+                "score": [
+                    0.96484375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    182.5244598388672,
+                    461.7116394042969,
+                    531.4740600585938,
+                    709.4586181640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "o`Z;3lk16J2kNFbVN:[i1KbVN7Zi1MdVN4[i1NcVN4[i1NdVN2[i10cVN1]i10aVN1^i11`VN0`i11^VNOci11\\VN1ci10[VN1ei10YVN2fi1OYVN2fi1OXVN2hi1OUVN4ji1R1O1O10O01000O100O1000O100O010O1001N10O100O1O001O1O00001O00000O2O00O100000O1O1O1O001O010O01000O01O0001N1001O0100O0POhMYXNY2cg1YNoWNf1og1V1000001O001O00001O0001O001O10O01O1O010O100O010O10O01O00100O100O1O1O1O1O2O0O100O1O1M4M2O2O000O101O0N2O101N1010O000000O2NYOfMkWNY2Rh1lMTXNk1kg1XNUXNg1jg1ZNdWNC:R2Qh1eNoWN[1Ph1fNPXNZ1og1bNVXN]1kg1`NXXN_1hg1aNYXN]1ig1cNWXN\\1ig1fNVXNZ1ig1jNSXNW1mg1jNRXNU1ng1mNPXNT1og1nNnWNS1Sh1nNkWNR1Uh1POiWNP1Wh1ROhWNm0Xh1TOgWNl0Zh1UOeWNj0[h1XOdWNh0[h1ZOcWNf0]h1[OcWNe0\\h1^OaWNb0`h1^10010O010O01O000001O00010O0010O001O0001O010O010O010O01N110O001O1O0E_WNWMch1g2<DPWNfMRi1Y2QWNeMoh1[2PWNfMPi1[2nVNfMRi1c210000H8O100001O2N1O0O2G8O1O1O2N`MUWNm1ih1TNXWNl1gh1TN[WNk1eh1VNZWNj1eh1WN[WNi1eh1WN[WNi1eh1XNZWNh1fh1XNZWNh1fh1XNZWNg1gh1i0001O1O1O1O001N101O000N3N1O2N2O001N1eNgVNOZi10fVNO[i11eVNO\\i10dVNO]i11cVNO]i11cVNN_i1Y10O1O1O1O1jNdVNG]i18gVNC[i1<hVN@Yi1a0hVN^OVi1e0iVNZOWi1g0jVNWOVi1k0jVNQOXi1P1PWNeNSi1[1h02O00001O003M0OO2O100001O2N1O1O0O2O1N20O01O001OO1O1O001O10O100D;M3000O2L301O1M3K5M3N2N2O2O1O3N4K2O1N3M3N1N1O2O0O2N1O1O1N2O1O1O1O1O1N2N2O0M4LRX^P1"
+                },
+                "score": [
+                    0.93359375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0068.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    440.48260498046875,
+                    392.0602722167969,
+                    622.1135864257812,
+                    513.778564453125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "fiRj02ik1=E6J6K4M3L4L3N3M2N3M2O2M2N2N2N2O1N2O1N2N2O1N101O1N2O0O2O1N2O001N2O0O2O1O1N101O001O0O2O1O00001O1N101O001O00001O00001O001O00001O00001O001O00001O00000010O000001O000000010O000000000010O0000000010O000001O00010O00001O0000001O001O001O00001O001O001O001O000O2O001O001O0O2O001O001O1N101O1N101O001N2O1N2O1N2O001N2O1N2N2N101N2O1N2N3M3M2O2M3L4M2M3N3L5K5J6K7Cdmoj0"
+                },
+                "score": 0.98046875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0023.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    377.87664794921875,
+                    56.71147918701172,
+                    471.230224609375,
+                    113.34960174560547
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "lV^f04hk18I5M2N2N2M2O2N2O0O2N1O101N1O100O100O2O0O100O10000O100O10000O1000000O100000O0100000000O10O1000000O1000000O1000000O10000O100O100O100O1O101N100O2N1O101N1O2N1O2N2N2M3N3K7If]kS1"
+                },
+                "score": [
+                    0.96484375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    111.23982238769531,
+                    428.80487060546875,
+                    365.88507080078125,
+                    748.3676147460938
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "aio66fk15N1O2N1O2O0O10001O0000001O01O00000001O01O01O0O101`UN]Oai1c0]VNAai1`0\\VNCci1=ZVNGei19XVNJhi17UVNKli15QVNNni13nUN0Sj10iUN3Wj1k01O0O100O10lMbNfYN^1Uf1lNeYNU1Yf1oNeYNQ1Zf1QOeYNo0Yf1TOeYNm0Yf1VOfYNj0Yf1XOfYNh0Xf1\\OfYNd0Yf1^OeYNd0Yf1^OfYNb0Zf1^OeYNc0Zf1_OeYNa0Zf1@dYNb0\\f1_ObYNb0]f1_ObYNb0]f1@`YNb0`f1^O_YNd0_f1]O_YNe0`f1]O]YNe0cf1[O\\YNf0cf1\\O[YNe0ef1\\OWYNh0gf1ZOTYNCCLYg1b0QYNCHJWg1c0PYNCJJUg1e0oXNCJJVg1c0mXNo0Sg1ROiXNQ1Wg15kXNcNUg1\\1mXNcNSg1\\1nXNdNQg1\\1PYNeNof1Y1SYNgNmf1X1TYNhNme1gN]ZNa2EiNke1kN]ZN[2HlNie1lN]ZNR2KXOfe1iN]ZNo1MYOde1jN_ZNl1N[Oae1kNaZNh1N^O_e1lNcZNd10@[e1nNeZNa11AXe1POeZN`13AWe1POdZNa14@Ve1RO`ZNc18]OWe1QO_ZNd15@[e1mN_ZNd16@Xe1h1hZNXNVe1j1jZNVNUe1P2fZNPNXe1n1gZNWNVe1k1mZNRNQe1Q2oZNoMod1S2Q[NmMnd1T2R[NkMmd1W2R[NjMld1f4O001NhMZ[NYMfd1e2a[NhKEj0ld1m0R[N;e0aMCU1gd1m0X[N7k0jNmc1R1S[N7m0iNPd1c3f[NdL[d1]3d[NbL^d1`3_[N`Lad1`3_[N_Lbd1a3_[N]Lad1e3_[NXLcd1^1kZNEb0lNbd1l3][NTLcd1n3Z[NRLgd1R4R[NPLfd1[4W[NeKid1^4V[N`Kkd1b4S[N\\Kod1i51O101N1O2N101N2N3M2N2O1M3M3N2H8O1O1O100O1O1O1O2N1N2O2YMaYNIaf17_YNHbf1i22N2eM]YNWOef1P32L4N2M3O2N1N2O1N2O1N1O2N2NO1L50O2M2O2SOcXNTM`g1k2bXNRM_g1n2cXNPM^g1P3cXNmL^g1T3eXNgL\\g1Y3e010N1SNdWN7\\h1EiWN:Wh1GiWN9Wh1GiWN9Wh1HiWN6dg1[NfXN`1E5bg1aNeXN[1I4ag1dNdXNY1J2ag1hNcXNX1JOdg1lN`XNV1KMfg1nN]XNl2cg1WM[XNi2eg1XMYXNh2hg1ZMVXNe2kg1h00O2N2ZMQXNF4<mg1LQXNC7?ig1NPXNB9>ig1n0WXNPOkg1o0WXNnNkg1Q1VXNmNlg1S1TXNkNng1T1SXNjNog1T1TXNhNog1W1RXNfNQh1Y1QXNbNSh1]1oWN_NSh1a1RXNTNUh1k1P101O1O1O1POPVNNQj10SVNMmi12UVNMli12UVNMli11VVNOii11WVNOii11XVNMji13UVNLli14TVNLli16RVNIPj16QVNHPj18RVNEoi1;UVN_Omi1a0j0N1O2N101N10010O000O2O0O101N2M3L_aUZ1"
+                },
+                "score": [
+                    0.9140625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0026.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    662.9381713867188,
+                    117.5630874633789,
+                    756.4359741210938,
+                    169.9913330078125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "ahRW14jk16J4M2M3N2O1N1O2N2O0O2N100O2O0O101O0O10001N10000O2O000O10000000000O10000000000O100000000000000001O000O10000000O10O2O0000000O10000O2O000O1O2O000O2O0O1O2O0O2N101N1O2N2N2M4M3HlSSc0"
+                },
+                "score": [
+                    0.96484375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    143.61830139160156,
+                    430.30303955078125,
+                    471.126953125,
+                    695.7327270507812
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Z[Q99fk12N1_UNIYi18dVNNWi14gVNNWi14gVNMXi15fVNMXi14fVNNYi14dVNN\\i14aVNM_i15]VNNai15\\VNLdi16YVNKhi14TVN0mi1ORVN1Pj1NoUN3Qj1MoUN3Rj1m001O01O01O000O2O0100O2N1O010O01O10O01O1O010O1O1O1O2M3N2M2O00O2M200O0101N1O1N2O100O100O1O100O1jNfMcXN\\2[g1lM_XNT2`g1PN]XNo1cg1TNPXN@O\\2Ph1WNoWN_OOZ2Rh1gNkWNY1Th1Y101O0O1O100010O1O010O0010O_NnWNUOSh1c0`XNQO`g1P1YXNWOgg1j0VXNWOkg1i0TXNWOlg1j0TXNUOmg1l0SXNROmg1P1UXNlMJg0Ph1_1_XN`Nbg1`1_XN^Nbg1d1\\XN[Neg1i1VXNXNjg1k1SXNTNng1m1PXNTNPh1l22O001O001O10dXN`LXf1_3iYNaLWf1^3jYNcLUf1[3mYNdLTf1[3mYNeLRf1[3Z1O2O0OeXNhLQf1W3oYNiLQf1V3PZNjLQf1T3PZNlLPf1S3QZNmLPf1P3RZNPMne1o2RZNQMPf1m2RZNRMoe1l2\\1XMWWNg2Yh1XMnWN4Ib2Xh1^MmWN0Ka2Vh1l000101SMgWNR2Yh1l0N2N1O2N00O2`MnWNQ1Rh1oNPXNo0Qh1POPXNP1og1oNSXNP1ng1nNTXNQ1mg1nNTXNR1kg1oNTXNQ1mg1oNPXNS1Ph1mNoWNU1og1mNPXNR1Qh1oNnWNQ1Rh1QOmWNn0Sh1TOlWNl0Th1UOkWNj0Uh1WOkWNh0Uh1a110O00000001O01O01O0000000000010O00001_NhWNZOWh1f0lWNWOUh1i0kWNVOUh1k0kWNTOVh1m0hWNSOXh1n0gWNSOYh1Y21O001O1TOgWNQNYh1o1gWNPNZh1P2eWNPN\\h1Q2cWNnM^h1R2bWNmM_h1S2bWNkM`h1T2`WNkMah1U2_WNkMah1U2_WNjMch1U2]WNjMdh1U2^WNiMch1W2]WNhMdh1X2]WNdMfh1[2^WN^Mfh1a23^MWWN`2fh1gMWWNY2gh1jMXWNV2gh1kMYWNU2fh1mMYWNR2gh1PNXWNP2hh1d0000O10O11O000dMUWNc1kh1]NUWNd1kh1\\NTWNc1mh1h0001O0O20O01O000O2O00001O00001N100O1O1O101N1O1bNeVN7[i1IeVN6\\i1V1100O0001O0O2N11N2O1kNeVNB^i1=gVN\\O\\i1d0gVNXOZi1i0fVNVOZi1j0fVNVOYi1m0eVNRO\\i1o0cVNPO^i1Q1cVNkN_i1V1dVNeN]i1]1eVN^N\\i1b1eVN\\N\\i1d1?10O10000O010mNgUN?Yj1AfUN`0Zj1d0O010N100O1D\\NZVNf1`i1`0O00100O0100O1O002O0N3N2L5L5M3L3L4L3N2L5N1L5K4N2N3N100000O10N101O001O1O001O0N4L4M3LPinS1"
+                },
+                "score": [
+                    0.87890625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0015.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    16.834247589111328,
+                    36.60601043701172,
+                    116.22677612304688,
+                    118.14995574951172
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "cbU1<ak15K6K4L3M3N3M2N1N3N1O2N1O2N1O2N1O2O0O1O2O0O1O2O0O1O100O100O100O100O01000O10000O10O01000O010000O010000O1000000O0010000O101O0O100O100O100O101N1O1O1O1O2O0O2N1O2N1O2N2N1O2N2M3N2N3L3M4L4KWnfh1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    412.791259765625,
+                    372.08203125,
+                    716.3106689453125,
+                    703.4749755859375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "^Xmh06hk14YVNL\\g17`XNM_g14_XNN`g12_XN0`g11_XN0`g11^XN2`g1O^XN3ag1M^XN4bg1M]XN4bg1L]XN5cg1K\\XN7cg1J[XN7eg1JYXN7hg1IVXN8jg1IUXN7kg1JSXN8lg1HTXN:jg1FUXN`0eg1BZXNe0_g1\\O_XNh0^g1XObXN3mNK^h12eXN3nNL[h12eXN2QOMZh10nWNZO8j0@MXh11kWNFO`0NKVh1l1jWNVNTh1j1kWNXNTh1h1lWNZNRh1d1QXN\\Nog1b1RXN`Nlg1_1UXNcNig1]1WXNdNhg1\\1XXNeNgg1]1VXNeNhg1k2O1O2N1N3N3M1O1O1O1O1N2O2N2N2N2N2N1N2O1O001N2O1N103M2M2OO0M301O10O1000O010O1jL_YNm0af1ROeYNh0\\f1kM\\YNd09`1[f1lM]YNc08a1[f1kM^YNd08`1[f1jM_YNe06a1\\f1hM_YNh05_1]f1gM_YNj03a1_f1aM`YNn0Oc1cf1[M`YNR1Fl13QM[f1KPZNn47SK`e1m4oYNdKPf1W5000002OOOXKnYNd3Qf1YLSZNf3le1ZLUZNf3je1ZLWZNf3ge1[L\\ZNd3be1WLWZNYO2a4fe1VLWZN]O0^4ge1^101OiMXZNWNfe1i1`ZNXLJa1ge1V2^ZNUNae1U40bJ]ZN]2NiNee1gN`ZN_2LiNee1dNcZNf4^e1WKfZNg4Ze1WKiZNZ2@Che1oMkZN]2^ODie1jMkZNb2\\ODef1l200O2N10000O10000000000000O10000O10001N1O1O1O1iLVYN[N4^2gf1VOZYNVN2b2ef1YOVYNYN2_2if1\\2000O1lLRYNV1of1hNWYNR1jf1nNXYNP1if1nNZYNo0gf1QOZYNm0gf1SOYYNm0gf1TOXYNk0if1UOWYNk0jf1TOVYNk0mf1SOSYNl0Qg1QOnXNo0l1^MPc1b1S[No0l1eMPc1Z1T[NP1k1iMQc1V1V[No0h1nMTc1o0V[NQ1d1SNXc1j0U[NR1_1XN]c1c0U[NT1^1[N^c1=V[NW1]1\\NRd1FcZNn1[1]NYd1[OVZN_2b1VNgd1k1X[NWNhd1i1W[NVNRe1b1nZN^NRe1c1lZN^NTe1c1jZN^Nnd1l1P[NSNod1Q2nZNPNPe1S2oZNlMQe1V2nZNjMQe1Z2kZNfMVe1_2eZNaMZe1d2aZN\\M`e1h2\\ZNXMde1j2ZZNUMge1l2WZNUMie1m2TZNSMne1n2PZNQMQf1Q3lYNPMSf1R3lYNnLTf1T3iYNlLXf1U3fYNlLZf1U3dYNlL]f1Y3YYNjLif1U41O2lMRYNSOPg1k0QYNUOPg1j0QYNTOQg1j0PYNVOQg1i0oXNVOSg1i0mXNWOTg1h0lXNXOVg1g23N2N1N2O1O2M2O1O2N1O10O10O100O2O0WMTXN^1lg1_NXXN_1hg1`NYXN`1hg1_NVXNc1jg1\\NUXNf1kg1X11O01O10O01OO2O00001oNPXNoMPh1P2PXNPNRh1n1oWNRNQh1l1PXNUNQh1i1oWNWNRh1h1nWNXNUh1d1lWN\\NVh1b1jWN^NXh1a1gWN^Nbh1[1\\WNfNeh1Y22O0cMYWN`1hh1k01O1O1O1N3N2M2O2N2O1N2O2M2N3M2N2O2M2O1N2O2M3M2O1N2O2N1N3N1N2N2N2N3N1N2O1O1N3N2M3N1N3M2O1N3M2N3L6KfSee0"
+                },
+                "score": [
+                    0.90625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0046.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    531.7811889648438,
+                    30.152297973632812,
+                    740.1146850585938,
+                    231.12937927246094
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "aebo07gk14M2O1N2O2N2N1N2O2M3M2O2N1O1O2M2O1O1O1N2O001O2N1N3N2N2N1N4M2N2M3N1O001O001O100O1O2O0O2O010O00O010000O101O1N10O01O10O01O1O1O00001O000O2O2N2N4L5K5K3M1O2N1O2N1O1O1O1O1O0100O100O10000O2O1N2O003M1lL\\WNi2mh10000001O2N3M4L4M1N100O0010000O10O1O1O00100O0018H0O10001O1O01O1O1O1O1N1O1O4L8H1O1O1O000000001O00001O1O1O001O1O1O001O1O2N1O010O1O2N2N2N1O1O2O1N001O1O1O1O100O3M3M3M2N2POQVNLPj11SVNMni11UVNMki12XVNLhi13YVNMgi13YVNMhi11ZVNNgi10ZVN1fi1N[VN1fi1M[VN3gi1I\\VN5fi1EaVN9fj1LZU^d0"
+                },
+                "score": 0.9453125
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0003.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    99.74725341796875,
+                    581.14208984375,
+                    238.21209716796875,
+                    709.640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Q`U6;^k1>E9H5L4L5K5K3M4M2M4M2N2M3N3M2N2N2N1O2N2N2N2N2O1N2O0O2N101N101N2O0O2O001N101N101O0O10000O2O0000001N10000000001O000O1000000000000000000000000000O101O00000O1000001N10001N1000001N101N100O2O0O2O0O2O0O2O0O2O0O2O1N2N1O2N2N2O1N2N2N2N2N2N2N2N3M2M3N3K5L4L4L5J6J6I:EVdaa1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    822.4047241210938,
+                    227.32318115234375,
+                    1074.8800048828125,
+                    387.4698486328125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "WeQa19fk13M4M3L4M3Ld0]O2M3N1O1O1O1O0010O001O001N2O1N2M4L5L4L20O00001O00001O000M5L2O2O1N1000001N10001O0M4H8K5L301N1O2O0O10001O0O2OO100000001O001O1O001O1O1O1N3N5J4M02N1O1O1N3N2M3MSN^VN_1`i1bN`VN`1]i1aNcVNa1Zi1aNeVNa1Xi1aNgVNa1Wi1e0O2O1O01OF:N2M2N31N1O0000M3L4N2O1N101O001OO2O001O001O0D<N2O22M4M1O1O2M2O1O1N101O10OO2O001O00001O01O01O00O10000O10001O00001O1N101O001O1O0O101N101O001N2O0000000nL[WNh2eh1XM^WNf2bh1[M\\WNf2dh1ZM\\WNf2ch1]MYWNd2ch1?4L1N100VMTWN`2lh191000000O1WMTWN^2lh1`MXWN^2hh1aM[WN]2dh1dM\\WN[2Yh1dMbWN36X2Vh1UNjWNj1Uh1WNmWNg1Rh1[NnWNd1Rh1]NfWNi1Zh1o0O10000O010O100000O01000O10000O10O0100O1O1O1O1O0N3N2FYWNZMhh1d2^WNWMbh1j2:001N2OO00000100000000000O001O011O0000000000fH"
+                },
+                "score": [
+                    0.9140625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0058.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    237.54580688476562,
+                    587.7905883789062,
+                    358.5602722167969,
+                    691.2232055664062
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "f[V>;`k1;H5J6K5L3M2M4M2N3M2M3O1N2N2N2N2O1N2N2O1N101N2N101N2O1N101N101O001N101O00001N10001O00001O0000001O0O1001O0000000001O00000001O00000O10001O0000001N10001O001N101O001N101N100O2O1N101N2O1N101N2N1O2N2O1N2N3M2N2N2M4M2M4M2M4K6L3L7FXd`Z1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    536.27685546875,
+                    55.081817626953125,
+                    778.0440673828125,
+                    252.53793334960938
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\Rno04jk14M2N2M3N2O1O1O001O1O001O001O1O1N2L4L4L5K4N3L3N3M2N3N2N2M3N2N1O100O1O00O1000O010000O10ON0EYVN_Nfi1e191L5M3M3N2O1O1O1O00100O1O100O100O100O010000O001O0010O011O0O2O001N1O2N1O2M2N3M2O1N3M2O2N1O2O0O2O0O2O1N1O1O2N1O1O1O1O001O0000000001N1O101N11O1O001O1O01O010O1O1O100O1O0000O1O10001N11O000000O11O00O11O01O0000O1000000000000O2L3iMcWN`04]NYh1T1cWN`03[N[h1Q3dWNoL\\h1Z30N3N1N300000000001O00O2N101N101O1O001O0O101N100O2N1O2N1WOnVNcNTi1Y1RWNbNPi1S1oVN`N51Ui1]1n00O100O2OL3O2N1O20O00100OO10001N2O1TOYUN>gj1_O]UN?ej1]O`UNa0aj1[OcUNc0nj1O00100O001O00100N2O1N2O1N3L4L^`oa0"
+                },
+                "score": [
+                    0.93359375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0050.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    816.8731689453125,
+                    614.4443359375,
+                    933.3236083984375,
+                    714.218017578125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "YhW`1<`k19H7J4L4M3M3M3M2N2N2N2N3M2N2O1N2O1N2O1N2O1N2O001N2O001O0O2O1O1O0O101O001O001O001O00001O001O0000001O0001O01O0001O000010O0001O00001O00001O001O001O0O2O1O001O001O0O2O1O001N2O1O1N1O2O1N2O1N3M102M2N3L3N3M2N3L3N3L5K5K7GVch8"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    548.4017944335938,
+                    2.0491180419921875,
+                    700.2238159179688,
+                    221.2300567626953
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "T\\dP19ck18L4L6J3M5K5K3M4L7I7I6J5K4L4L7I3M2N2N4`WNPMhg1S3jWNeMig1Z3O1O2N1O2N1O2N1O2N1O002N2N4gXN^Klf1R5I3M3M2N5K:F3M2N2N001O00001O000000001O000005L1N3M2N1O0001O001OO100ODWJcZNi5]e1XJbZNh5^e1YJbZNg5]e1YJcZNg5]e1YJcZNh5\\e1XJdZNh5\\e1YJbZNi5]e1XJaZNi5_e1<01OjIbZNj5^e1UJdZNk5[e1UJeZNk5[e1UJfZNj5Ze1WJdZNk5[e1VJcZNk5]e1=O00gIfZNl5Ze1RJjZNl5Ve1SJmZNn0If3Ye1[KP[Nb0DC5_4ke1iKVZND0c4ke1dKfZN]4Ze1_KiZNa4Xe1\\KjZNe4We1WKkZNi4Wf10O010O001O01O001O1O001TOSYNcLnf1V3ZYNgLjf1T3[YNeLlf1W3Q1M3N001000:TMoVNS2Ti1gMPWNW2`i1L5L3M3M3M2N1O1O1N4M2bNiUNn0Wj1SOiUNm0Sj1XOlUNg0Sj1]OjUNc0Uj1d03bNhVNMaQkf0"
+                },
+                "score": [
+                    0.91796875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0012.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    871.7365112304688,
+                    191.38735961914062,
+                    1033.2152099609375,
+                    389.1355285644531
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "kiZc15gk15L5L3M2N3M3M2N3M2N3M2N3M2N3K4N3M2N2N3M2N3M3M2N2N3M2M4L3N3N1M3N3L3N2N3M2N3M3M2M4M2O1M4M2O2M2O1M4M2O2M2N3N1N3N2M2O2N1O101O001O0O101O00001O00RORYNkLlf1R3YYNnLff1V3VYNjLjf1W3TYNkLkf1U400000oNWYNlLhf1R3ZYNnLef1P3^YNQMaf1o2`YNPM`f1P3`YNPM`f1Q3_YNPM`f1P3aYNoL`f1S3\\YNoLdf1W4O100O01O100O2N2O1N100O2O1N1O00101O2M10000O1O2N1O100O101N101N010O2O1O1N100O2O0O2N101N1O2O2M100O1O004M1N100O3N0O1O1O102M2N1[M]WNk1dh1TN]WNl1gh1d01O1O0oNWWNkNlh1S23N1N2O3L2N3N3O0M4lNbVNlN04fi1G^VNa01@N6Tj16PVNBN7Wj11mUNFN8Wj1OZVN0Sk1IO0O1kN0UVN5ii1OPVN6oi1LoUN5Qj1LcUNKN9`j1L_UN1K2ij1e05M4O1ASUNERk16Za^1"
+                },
+                "score": [
+                    0.9375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    291.02130126953125,
+                    304.4124755859375,
+                    714.7185668945312,
+                    573.2861328125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "TS_a01mk14L4L4N1N1O2O00000O2O000O100O10000000001NO101O0100O100O100O101O0O5LO010000O4M2M3N2eVNlNeg1V1YXNlNeg1X1VXNkNig1W1SXNlNkg1W1QXNkNng1X1oWNjNog1Y1mWNjNQh1X1mWNiNRh1X1lWNjNSh1X1jWNkNTh1V1jWNlNVh1T1iWNmNVh1U1hWNlNWh1U1hWNlNWh1U1fWNnNYh1S1fWNmNZh1T1eWNmN[h1S1dWNmN\\h1U1bWNlN]h1\\2O001O101N2N10HgWNjLXh1_31O000102M2N10kLlWN^2Rh1k0M`LUXNl2kg1RMVXNo2jg1nLXXNS3mg1dLXXN[3Wh1000O00100O1O1O100O001O1O010O1O1O1N2O1O1O1N2N2O1N2NTMTXNf1kg1ZNWXNf1gg1ZNZXNg1eg1WN]XNj1ag1VN`XNk1_g1SNcXNn1\\g1QNeXNo1[g1PNfXNP2Zg1PNeXNR2[g1hMgXN\\2Xg1bMeXNc2\\g1ZMeXNh2Zg1WMiXNg2Wg1UMoXNi2Qg1VMPYNj2Qg1TMQYNk2of1TMSYNl2mf1SMUYNk2Qg1mLWYNn2Ph1M10N1000001M1O2N2O1L4N2O100N2O1O1O100O100O10O010O0010O01O1O00100000000000000001O1O001O000000O10000D<M3G900010O00107I1O0O01O1OiWNQM]g1P3ZXN[Mdg1c2XXNeMeg1Y2ZXNmMdg1g1XXNcM4h0bg1f0XXNWO4YO3l0`g15WXNWO5<3[O1o0`g1=]XNZOO]O1o0cg19\\XN]OL@2l0fg15]XNNJOig1LcXN`1]g1SNnXNo1Sg1mMnXNU2Sg1bMnXNe2Sg1WMnXNk2Rg1SMoXNm2Qg1SMQYNl2mf1UMTYNk2kf1VMUYNi2kf1VMVYNk2kf1QMVYNP3jg13N3N10001O001M2M3O1M300000000O1N2L4L4O0101O1O001O0O1O100O0100000O101N1O1O2N1O1O102L3N3K3M4N1N3N1dNnVNITi1_12N3M2N3N2O001O10O01O1O00010O01O01O0O2O001O10O100O100O2O1N2O0O2N100O1O100O010O010TXN\\MZf1d2bYNaM^f1_2]YNfMbf1[2[YNhMef1W2ZYNkMef1V2YYNlMgf1S2XYNnMhf1T2SYNPNlf1R2PYNPNQg1P2lXNSNSg1m1lXNTNUg1l1gXNWNZg1h1eXNYN\\g1g1bXNZN^g1b0YXN]O82`g1e1^XN[Ncg1i1XXNXNig1n22N1O2N2N2bMmWNk0Uh1UOlWNi0Vh1VOjWNi0Wh1XOTXN;ng1EQXN:Ph1GPXN7Rh10eWN0^h12^WNLeh1f12M201N1O1O001N2O002N1N2O2N102N1O0010O010O001O0100O001O10OVOeVNoN\\i1P1dVNPO\\i1P1dVNQO\\i1j1O001O010O0010O0010O0100O1O010O001O001O001N101N2N1N3M3M2E<N1N3N1O2N1N2O2M2O1O2M2O2N2M2N3M3M3N1O2M3M8FkPie0"
+                },
+                "score": [
+                    0.921875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0017.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    208.96749877929688,
+                    46.504180908203125,
+                    309.2695007324219,
+                    119.9642333984375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "kZa<5fk1:H5L4M2M3M3N2N2N1O2N1O2N2N101N1O1O2O0O1O100O1O10000O101N100O100O100O01000O100000000O10O100000O01000000O01000O1000000O10000O100O100O2N100O101N1O100O2N100O2N1O2N1O2N1O2M3N2M4M2M4L5JnQ]]1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    462.0191345214844,
+                    438.3470458984375,
+                    697.4384765625,
+                    795.8565673828125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "``ek02jk17K5L2O0O2O0O2O1O0O2O0QUNDZj1=bUNKYj15eUN0Wj11hUN3Uj1MkUN7Qj1HQVN:ki1FVVN=gi1CYVN`0di1@]VNa0`i1@_VNd0bg1jNmYNb0aNg0]g1jNQZN?aNk0Zg1iNRZN=dNm0Wg1fNUZN?aNn0Xg1dNUZN]2ie1dMVZN_2ge1aMYZNc2ce1^M[ZNe2ce1\\M[ZNf2de1[MZZNh2de1YM[ZNi2ce1YMYZNj2fe1WMmYNU3Tf1lLgYNX3Xf1iLdYNZ3\\f1gLaYN\\3^f1eL`YN\\3af1dL\\YN]3ef1dLYYN]3gf1n00O1O101N1000ZZN\\KPd1d4m[NbKPd1^4m[NhKQd1V4n[NnKPd1R4o[NQLoc1o3o[NTLPd1k3P\\NWLoc1i3P\\NYLoc1g3Q\\NZLnc1g3P\\N[Loc1e3P\\N]Loc1c3P\\N_LPd1`3m[NcLSd1]3k[NfLTd1DY[N\\2b0QNUd1BZ[N\\2b0SNSd1BZ[N[2c0SNSd1W3l[NjLTd1V3l[NjLTd1V3k[NlLTd1T3j[NnLVd1S3f[NPMZd1P3b[NTM^d1m2^[NVMbd1k2\\[NVMdd1S50gJb[NP3^d1oLe[No2[d1PMg[No2Yd1QMh[Nn2Xd1RMh[Nn2Xd1RMi[Nm2Wd1RMl[Nl2Td1TMm[Nk2Sd1UMm[Nk2[1\\Kd`1j1R^Ni2X1dKa`1b1X^Nj2V1gK``1`1X^Ni2Y1hK^`1_1W^Nk2[1fK]`1b1Q^Nm2b1bK\\`1i6e_NWI[`1i6d_NXI\\`1h6d_NXI[`1a1j]NT3k1[K[`1`1m]NS3h1]K[`13n]Nc0Om3g1]K]`13R^N>JQ4h1^K\\`12U^N=GR4h1`K\\`11X^N`0Ci3i1gK\\`1O[^N=Ck3f1jK\\`1N[^N:En3d1kK\\`1M\\^N7FP4c1kK\\`1M\\^N8DQ4c1kK]`1L\\^N7DR4d1kK^`1IZ^N:GP4a1lKa`1EZ^N=GP4_1nKb`1@Z^Na0Gc1@1P2[N\\a13T]N`1BOP2]N[a14S]Na1@OR2\\N[a14S]Ni3c1SLZa14S]Ni3c1SLZa14S]Nh3d1SLZa15R]Ng3d1ULZa13S]Ni3b1TL[a13S]Nj3`1TL^a10S]Nc1ANm1_N_a10S]Nb1CNj1`Nba1OQ]Nb1D1g1^Nea1NP]Nc1C4f1[Nha1Mo\\Nd1C6c1YNma1Kn\\Ne1C7b1YNoa1Hm\\Nh1B;5kMa0;Tc1[Og\\Nj1YO]N8R3`0[MRd1U1Y[N\\N5Y3:WMXd1T1Z[N[N4\\38UMZd1T1Z[N[N4_34SM^d1S1Y[N\\N5b3OoLed1R1V[N^N6d3JnLjd1Q1T[N^N9^4cd1SMW[N]N6`4cd1SMZ[NYN5c4bd1RMi[Nm2Wd1RMk[Nl2Vd1TMk[Nk2Vd1SMk[Nn2Ud1QMk[No2Ud1QMl[NT1VOQOod1Jk[NT1XOROmd1Hl[NT1ZOTOjd1Eo[NT1]OUOcd1DS\\NT1BUOYd1EW\\NT1EVORd1C[\\NW1DWOPd1@^\\NX1CYOnc1]Oa\\NX1C\\Okc1ZOd\\NY1C^Ogc1VOh\\N\\1B^Ohc1QOd\\Nd1IYOec1mN[\\NS24nNSe1T1oZNmNod1S1S[NmNjd1S1X[NmNfd1T1][NjNbd1U1a[NjN^d1U1f[NiNYd1V1h[NiNYd1T1k[NkNUd1P1P\\NPOPd1n0c[NiMnNP1_e1W1b[NiMQOn0^e1X1b[NjMPOn0_e1V1[[NQNXOi0]e1T1XZNmMd07Gg0_e1T1VZNnMd07Gf0ae1U1SZNnMg07YOIKl0Vf1U1lYNPNo02ROOLh0\\f1U1fYNRNQ13mN00e0^f1U1eYNRNP14mN01c0`f1V1lZNZNaNL4c0af1W1eZNcNoN6^f1U1aZNgNRO2`f1V1\\ZNiNSO2gf1Q1UZNPOPONof1V1kYNlNTOOTg1S1hYNoNRONWg1R1hYNoNQOOYg1Q1cYNROTOL\\g1P1^YNVOVOJ_g1m0ZYNZOWOIag1k0XYN\\OWOIdg1i0UYN]OWOJfg1i0SYN\\OUOKmg1h0oXNmNQO03:Qh1i0jXNiNVO4M:Vh1j0dXNgNXOm0Vh1=_XNgNYOm0Zh1;`XNIcg17\\XNHfg1XOcWN>8VO1P1Zh1ROdWNj0HYO>e0hh1<YWNCgh1=ZWNBgh1>XWNAih1a0UWN_Olh1d0PWN\\OPi1f0mVN[OTi1e0kVN[OVi1f13N2N2M4M2N2N2N1N5L3M3L3N3L3N2N3L4M3L4M3L4L3M4L4Jd`jf0"
+                },
+                "score": [
+                    0.88671875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0002.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    270.17449951171875,
+                    551.01904296875,
+                    410.4559326171875,
+                    681.173583984375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "XWT`03`k1e0F7H7I5L5K4L3M4M3L4M2M3N2N3M2N2N2M3N2N101N2N2N2O1N2N101N2O0O2O001N101N2O0O2O0O10001N10001O0O2O00001O0O1000001O00000000000O101O0000000000O2O000000000000000O2O000O2O0000000O2O001N100O2O000O2O0O2O0O2N101O0O2O1N1O2N2O1N101N2N2N2N2N2O1N2N2N3L3N3L3N3L4L4L4L4K6K5J8FUU_W1"
+                },
+                "score": 0.98046875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0009.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    265.4323425292969,
+                    377.9221496582031,
+                    766.5543212890625,
+                    570.344970703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "UZP`02mk13M2N2N2N2N2N1O2N100O100N2O0O20O01O10O01O000O2O001O1O100N10N20O10001O1N2N2O0O1N2N2O2M3N2M3N4L3N2O1O1O2N1O1O1O2N2N1O2N1O100O010019Fd0\\OO0O1N3L31O3M1O1O00M3N2O1N2N2O1hVNaNog1_1jWNjNSh12bWN47MWh10aWN70N^h1KcWN]1]h1cNcWN^1\\h1bNeWN]1[h1dN_WNa1ah1o000O10001O001OO10OO2O00O1O1N10M4O1O1L5G9K5O1O1K5N21O1O1OGaVNQN`i1W2000O101_NbVN>_i1WOSWNE@>Uk1NaUNA`i1>]VNLZi19VVN6gi10oUN7li1R1M2O1O0010O001O01O0001O0010O0000001O00000O1ZOf0N2O2N1O1N2N2N3N1N2N2O101N1O100O1O1O101N1O10000O100O10001O00000O100000001O00000000001O00000010O000001O0001O0000010O001O1O001O001O1O0O2O1O0N3N2N3L3N3K6K5@YWN_Mkh1^2<O2]NaVNb0bi1[O`VNa0ei1\\O\\VNa0li1YOUVNf0ni1UOUVN`02ZOei11]VNc0O\\Oei1N^VNe0N]OWj1c0gUN_OYj1a0eUNA[j1?dUNB[j1?eUNA\\j1>eUN]O_j1b0a0L5L3OO101O001N10000O1O2O0O2O0L5H7N2]OlNXVNV1gi1mNVVNU1ii1lNVVNT1ii1POQVNT1mi1a0jVNUNRh1o1cWN^NXh1d1`WNiNZh1b2M3L3N1N2O1O001O1O1O1O1O001O0010O01O00001O001O01O01O000000000001O000000000000001O00000O2O000O101O0O1O1O1O10000O2O0O1O1N2O1O1O1N3M2N2N2I7WOSWNQNZi1P2<O01O7I1ON2M3N2O2O01O1O1O0000O101O0001O001O01O00001O11O1O00O100O1SO\\VN\\Oei1b0^VN]Oai1c0_VN]Oai1c0^VN^Oai1c0_VN]Oai1b0`VN_O`i1a0^VN@bi1`0^VN@ci1?]VNAdi1?[VNAei1?[VNBdi1>]VNAbi1?`VN@`i1`0aVN@]i1a0dVN^O[i1c0fVN\\OZi1c0gVN]OYi1c0hVN]OVi1c0kVN]OUi1d0jVN]OTi1d0lVN\\OSi1e0mVN[OSi1f0lVN[OSi1e0mVN[OSi1e0mVN[OSi1e0lVN\\OTi1e0kVN[OUi1e0lVN[OSi1e0mVN[OSi1e0mVN\\ORi1d0nVN\\ORi1d0nVN\\ORi1c0oVN]ORi1a0PWN^OPi1a0QWN_Ooh1a0QWN_Ooh1a0QWN@nh1?SWNBc0YORg1U1[XNB6H]g1f0]XNC1Lbg1b0[XNHD0Ph18\\XNm0cg1TO[XNm0eg1SO[XNn0dg1RO]XNm0cg1TO\\XNl0eg1SO[XNm0eg1SO\\XNl0dg1UOZXNl0fg1UOYXNk0gg1WOUXNk0kg1]NQXN_2Ph1`MQXN_2og1aMoWNa2Qh1g0000O2M2N2L4XMfWNf1^h1ZNbWNb1bh1^N^WN^1gh1bNWWNW1Qi1h04N2M3N2M301O00000000000O1000010O0000000000001O0001O0000000000010O000001O0000001O00010N2O1O1nNcVN^O_i18lVNFWi1NTWNOQi1C[WN:Xj1KUTmb0"
+                },
+                "score": [
+                    0.92578125
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    747.6052856445312,
+                    76.10057830810547,
+                    963.1956176757812,
+                    259.6074523925781
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "fbY\\13mk15J3M4L3N2M3N3L5J7J6K6J5J5L5K6J5L5J:G6M3K2N2M4WXNeLdf1a3UYN_Lmf1g3jXNZLYg1i3_XNYLag1T400O100O1O000O20O3M3M1O10OO2O001OO101M2M4OmK\\XNj3eg1QL`XNn3jg1O1O0000EULaXNk3^g1WL`XNk3_g1VL`XNj3ag1WL[XNk3hg142O00010O1O001O001O7I00O100001O2O1N1O000000000001O00cLhWNR3Xh1mLiWNS3Wh1;00O1N31N3M1O1O1O101N0010O10O1O01O000O1001O1O1O1O1O101N2N1O000000002N2N1O10O01O000ZMSWNY2mh1=01O0006K0O1O1O00000000010O2N1O1O1O1O2O2M1O001O102M2N1O1O001O00010O3M3M1OCQNkVNm1ei1O2N100O1O4L2OB_N\\VN`1di1`N\\VN`1ei1^N]VNa1Rj1O2N010O001O00O1O1O1O2O01O1O1O101N1O2N2N2O3L3M2N2N3M2N2N2N3M2N4JZXi6"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0013.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    927.5524291992188,
+                    272.244140625,
+                    1074.736328125,
+                    483.501220703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Ylcf12lk14L3M4L3N2M3N1O2M2N3N2N1N3M3N1O2N2M2N3N1O2N1O2N2M3N1N3N2O0N3M2O2N1O2M2O2M3N1O3M1O2M2O2M3N1O2N1O2N2M2O2N2M2N3N1N3M2N3N2M2O2M3N1O2M3N1O2N101N1N3N2N2N2M2O2M2O2N1O2M2O2N2N1O2O1N10100O001O001O00001O1O1O1O1N10001O001O001O00100O1O10O00100O2O1N100O2O2M2O1O2N2N0O1O2N3M1O2N2N2O2N1001ON2N3M3M1O2N2N3N0O00ZE"
+                },
+                "score": [
+                    0.96484375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    340.02679443359375,
+                    320.8380126953125,
+                    725.2288208007812,
+                    610.0457153320312
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Zk\\d04kk13M3M2O1N10001N100000000O10000O10000000000O1000O100001N1]VNAeg1?ZXNFbg1:]XNHbg18]XNIbg19\\XNIcg17[XNLcg15[XNMeg14YXNNfg13XXNNgg13XXNOgg13VXNNig1d0eWN\\O[h1h0`WNYOah1i0]WNVOch1m0ZWNSOgh1n0WWNSOih1n0UWNSOkh1n0TWNROkh1o0TWNQOmh1Q1PWNoNPi1P21O0010O100O1O00100ZWNVMUh1j2jWN`Mng1_2QXNfMkg1Z2UXNiMhg1X2WXNjMhg1V2XXNkMfg1U2ZXNlMeg1U2UXNRNig1i1\\XNZNag1f1_XN\\N`g1c1aXN_N\\g1b1dXN_N[g1a1eXN`NZg1^O^XNX19ZOYg1]ObXNV15^OXg1[OdXNV14@Xg1ZOdXNT16BVg1YOdXNU16CWg1WOcXNU17DVg1UOeXNV15GVg1oNgXN[12GXg1lNgXN]10IYg1iNgXN^1OK[g1dNgXNb1LL^g1]NiXNe3jg10O1OhMkWNe0Vh1c1O010O1O100O1O[MmWN^1Rh1aNoWN`1Ph1_NQXNb1ng1]NSXNc1mg1\\NTXNe1kg1YNXXNg1gg1WN[XNj1cg1VN_XNj1`g1VNaXNj1^g1UNdXNj1[g1VNgXNj1Wg1WNjXNh1Vg1VNmXNi1Rg1VNQYNj1nf1VNRYNk1mf1TNTYNm1jf1TNUYNn1jf1QNWYNP2hf1oMYYNR2gf1lMXYNV2hf1iMXYNY2gf1fMZYNZ2gf1cMZYN^2gf1`M[YN`2ef1]M]YNc2df1[M]YNe2df1XM^YNh2lg1100O010N2N10O100001O1O001OO101O001O1000O01N2M2O2O1000O0100000O10O100001O000PXN[Mff1d2UYNgMef1Y2XYNmMef1S2YYNQNef1o1ZYNUNcf1k1]YNUNdf1j1[YNXNdf1i1ZYNYNef1g1[YNZNef1f1YYN\\Nff1d1WYN`Nif1b0iXNmN;e0kf1<mXNnN6i0mf18mXNoN6i0mf19kXNoN8i0lf1W1SYNjNmf1U1SYNkNmf1U1SYNlNmf1S1SYNmNmf1S1SYNmNnf1FjXNPO0?8m0mf1CoXNlNOc05n0nf1BoXNjN0g01n0Qg1@XYNe1hf1ZNXYNf1if1ZNVYNf1lf1VNVYNk1kf1PNYYNo1jf1cMaYN]2bf1]MVYNH_Ok2\\g1\\M`YNd2cf1XM]YNi2ef1TMYYNo2lg100000001N10O100000O100O100O1000001NO1M3K40110O1O001O10O01O0O21O001O000O2N1O2N1O101O001O0O2O2M1O2O1O010O001O1O001001O1N101N2^XNYMhe1g2SZN_Mle1a2QZNbMoe1^2oYNdMQf1\\2mYNeMTf1[2jYNgMVf1Y2iYNhMWf1X2gYNjMXf1W2eYNkM\\f1U2bYNlM^f1U2`YNlMaf1S2^YNnMbf1S2\\YNnMdf1S2[YNlMgf1T2VYNnMjf1S2TYNmMmf1T2oXNnMRg1S2kXNnMUg1T2gXNnMZg1S2bXNPN^g1X30001O00O2O001O001O1O001O1O0001N11O1gN[XNUNgg1j1[XNTNeg1l1]XNSNcg1l1^XNSNcg1n1\\XNRNcg1P2\\XNoMeg1Q2[XNoMeg1R2YXNoMgg1R2XXNnMhg1S2VXNnMjg1U3O0O1O2N1O101OQO^XNaM`g1^2dXN`M\\g1_2fXNaMYg1`2fXN`MZg1c2aXN`M^g1b1bXN\\O_g1]OdXNGNl0]g1\\OiXNEKo0Zg1]OmXNBHR1[g1\\OmXNBHR1[g1\\OnXNBET1[g1[OPYNAET1[g1ZORYNc1mf1]NSYNd1lf1[NVYNe1if1[NWYNf1if1YNXYNf1hf1YNZYNg1ef1YN]YNe1df1ZN]YNe1df1YN]YNh1cf1WN^YNh1cf1VN_YNj1`f1UNaYNk1_f1SNdYNl1]f1RNdYNn1]f1QNdYNn1]f1PNdYNP2]f1oMdYNo1^f1oMdYNo1_f1nMcYNP2_f1nMcYNP2`f1mMbYNQ2_f1oMbYNm1bf1QN_YNm1ef1oM^YNn1ff1oM[YNo1]h1L4M2O2M3O1N2N1O2N1N3N1N3N2O1N2N2N2M2O2N2N1O2O1N2N2N2M4L3M[[Te0"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0041.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    897.3036499023438,
+                    345.08349609375,
+                    998.0973510742188,
+                    413.34881591796875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "`ckd16fk18J5L3M2N3M2N2O1N2O1N2O1O1N2O001O1N2O001O1O0O2O001O001O001O00001O001O01O01O000010O0001O000001O0001O01O0000000010O0001O001O001O00001N101O001O001O1O0O2O1O001N2O001N2O1O1N2N2O2M2N2N3M2N3L6IoSm4"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    88.38313293457031,
+                    77.76337432861328,
+                    412.735595703125,
+                    238.36502075195312
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "c[`54kk14L2N2M3N2N1O1O2O0O2O0O2N1O2N1N3N2N1O2N1O1O2O000O2O0000001O00001O00100O10O01O010O01O010O01O00010O00001O00001O001N2O1O1N2O1N2N2N2N2O2M4L2O1O0O2O1O0O10O10000000010O1UN]VNW1ci1eNbVN[1^i1`NfVN`1[i1]NhVNb1Yi1ZNkVNf1gi101O10ON3O1N1O200O001O010O2O1OO010O0010OO101N1N200O1O2O0O1O1O2N1O101O0O10000O1000001O0O10000000O1O10000O10000001OKRVNZNli1e1TVN]Nli1k100010O01O2O2M2O1N101N1000O1O100O100O3M3N0O;F1N2OO010O001O0N2O100O100O101N10O0100O010O1O1O1000O1000000O1000000O101N1000001O010N101NQVN]Nci1c1[VNaNdi1^1[VNdNdi1]1ZVNeNfi1[1XVNgNgi1[1WVNgNhi1h100010O00001O00010N2O1O001N10001O001O001O010O01O1O10001O1N1000O101O2N1O1N2N01N1O101N100000O01000O100O1O1O1O1fNmUNg0Tj1VOoUNh0Rj1WOPVNh0Pj1WORVNh0oi1VOTVNh0li1TOZVNi0`j1O1N2O1N101O1N101O0O2O1O0O101O00000O2O0000000O10001O000O1000001O001N6K]]aW1"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0006.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    567.4759521484375,
+                    380.932373046875,
+                    1072.682861328125,
+                    548.9315185546875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "S[jQ12lk14M2N2M3M2O2N2N1O1N3N1N1O2O001N2O0O2N101L3M3M4L3L5F9J7N10O1M4M2O200O1O100O1O100O10000001001O1O3L3N000O1000O2N100O1O1O1O001O11O1O1N1fNlUNg0Qj1[OoUNe0oi1]OkUNj0Sj1WOlUNk0Rj1c0OcNQVNi0ni1XOVVNd0ji1\\OYVNa0gi1_O]VN=bi1D_VN;ai1E_VN;ai1J[VN5ei1NXVN2hi10VVN0ji11UVNNki13UVNMki14TVNKmi17PVNJPj1R101O1F:M4N2N3M5L6J5J;F3M4L3M2N1O01O01O0001O1O2N2M20O01O;E:F6I=C8ZNXVNe0li1UO^VNc0ai1_O`VN?^i1EeVN6Zi1NfVNOZi12gVNA_ONni18lVNB_O1gi19b1N2OL8K4L3N1O000O10O11O1O5J8I7I:F6J3BQNeVNP2lh1^NTWNc1dh1cN\\WN_1`h1dN`WN]1]h1eNcWN\\1Zh1V1N3N1O1O2N1O1O1O1O100O1O100O2N100O100O01000000000O10000000O100000000000000000000000001O000O101O00001O1O1O001O001O00001O1O2N1N2O1O1O2N1`M]WNa1eh1l02N2N4TMUWN[2mh1bMVWN\\2kh1`MYWN_2Ui1O2N2N1O2N1O000O1000O10000O10O10000O1hN^VN2ci1JfVNIbi15W1M3M02N1O1N3N1NHQUNBoj1=91N3jNEcVN`0Yi1EcVN=\\i1EaVN>^i1C_VN?`i1B^VNa0ai1_O]VNc0ci1]O\\VNl0\\i1UOcVNl0\\i1TOcVNm0]i1SOcVNn0\\i1SObVNn0^i1RObVNn0^i1RObVNn0^i1SOaVNl0`i1TO_VNd03iN^i1c0_VNd0ji1i0\\VNlM\\i1T2aVNPN^i1Q2_VNQNai1X2N101O0000002N1jVN`Mjh1R3I2N2N2N2N1O1O1O1O1O1O1O1O001O001O1O00001O001O000O2O0000000000000000000000000O1000000000000000O100O10000O1O100O010O100O100N2N2O2N1fNcWNoN_h1Q1aWNmNah1S1`WNjNah1W1_WNgNdh1X1\\WNeNhh1NVWNa02nN\\i1?dVNb01mN]i1?cVNc02lN^i1?aVNd01mN^i1>bVNg0LmNdi1:aVNQ1`i1nN`VNR1ai1mN`VNR1ai1lNaVNS1_i1mNbVNR1_i1lNdVNR1\\i1nNkVNb0\\O[Ohi14lVNj0Ti1VOlVNj0Si1WOmVNi0Si1XOlVNg0Ui1YOkVNb0Zi1^OfVN>^i1CbVN;`i1ETVNHLb0Pj1HQVNIN?li1NTVNEN?li1X1O1O2N2O1N2O1O0O10001O000O010000001O0000001O00001O000000O100O1nNgVN]OYi1c0gVN]OYi1d0fVN\\OZi1e100000000000000000001O001O1O1O1O3M3M3M3M8H8H3M2N1O1O1O000O2O00000001O00000O10000O10000O1ZOlWN_MUh1V2aXN\\Mbg1[2cWNkM[i1T2iVNiMWi1W2jVNhMVi1X2iVNiMWi1X2gVNiMYi1^21O11O1OGiVNiMXi1V2hVNjMYi1T2iVNkMWi1U2:01O1O2M3N4K3N3M3M2O1N2N3M2N4K3N3N3L2N2M4M2M3M3Moii0"
+                },
+                "score": 0.91796875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0030.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    881.136962890625,
+                    272.43798828125,
+                    978.9979248046875,
+                    326.261474609375
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Vamc17gk15K4M2O1N2N2N2O1N101N101N2O0O2O000O2O001O0O2O0000001N1000001O0000001O0000001O000000000000001O000000O101O00000001OO2O000000001O0O101O00001N1000000O2O1O0O2O001N101N2O1N1O2N2N2N2N3L5KfjP6"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    103.61924743652344,
+                    489.9999694824219,
+                    501.2177734375,
+                    668.3438720703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "`g`64jk13N3M2N2N101N2O0O2O1O1O1O2M2O2M2N3N1O1N3N1O1TOnNfVNV1Ti1ROfVNR1Wi1SOdVNP1Zi1RObVNQ1]i1j0N2O1O1O0O101O0000000001O1O2N1O1O1N2O2N2N0O2O2M2O1O1O1N101N100O2O000O100000O0100O10O01000O01000O10O1000O1000O01000O01000000O0101N100O10000O10O10O01F^NUVNb1ki1:O0N3G9N2N1N3O000010O01O0000O10OO3001N101O000000000O2O00001O0000O010000000O100O100O100000000O2O000O101O001N101O0O3M2O1N101O1N3N0O101N2O1O1N3N2N1O1N1000001N100000O10O1OPOaN`WN`1_h1dN^WN\\1bh1gN[WNY1dh1mNVWNS1jh1oNUWNQ1jh1SOQWNo0nh1UOmVNl0Si1Q10O01000O01000O010O1XOgVNiNYi1V1iVNhNXi1X1hVNgNXi1Y1iVNgNWi1W1lVNgNUi1V1oVNgNSi1Y1nVNaNWi1^1kVN\\NZi1d1gVN[NXi1f1hVNZNXi1f1gVN[NXi1f1hVNZNXi1g1fVNZNYi1i1eVNWN[i1j1eVNUNZi1m1fVNQN[i1P29101O2UVNPNbi1X2N10O1H800O02O1O2M2O000O2O000O2O0O2O0O10000O10001O1O000000000000000001O001O001O1O1O1O1O1O0O3M2N101N2O1O1N2OZOYNTWNf1kh1^NSWN`1nh1bNQWN]1nh1fNoVNZ1Ri1hNlVNX1Ti1iNkVNV1Ui1lNjVNT1Vi1nNgVNQ1[i1h02N102N1O2N1O2L4K5M3N2ARVNiNPj1c100100^OiUNXOZj1l0<K4N2O1000000000O2M3N0O2N2N2O1N2O1N2O001O001O001O00O01001N1000000O101N1FhUNjNZj1T1:000000O10000O101O001N101N010O10O0O3M2M3M4M2O2N2N1O101O1O1O00O1000001nNkUN7Uj1BUVN;li1AZVN;hi1_O_VN?cj1M3N3L6Jkn]R1"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0066.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    90.75817108154297,
+                    242.13430786132812,
+                    272.165283203125,
+                    348.8985290527344
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "n\\b54fk1;I5K4L4L4M2N2N2N2N2N3N1N2N2O1N1O2O1N2O1N101N2N101O1N101O1N101O1N10001N101N101O0O2O00001O1O0O101O001O0O101O00001O00001O00001O00000O2O0000001O00000010O000000000001O00000000000010O000001O000001O0000001O00000000001O0000001O001O00001O0000001O0000001N101O001O000O2O001O001N10001O0O2O001N101O0O2O001N2O0O2O1O0O2O1N2O1N2O1N2N2N2N2N2O1N2N3L3M4M3M3L6I5K5GhZ`_1"
+                },
+                "score": 0.98046875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0057.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    256.2387390136719,
+                    540.917724609375,
+                    377.1230163574219,
+                    644.29736328125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "[RX?2fk1>G8I5K5K4M3L4M2N2N3M2N3M2N2N101N2N2O1N2N2O1N1O2O0O2O1N101O1O0O2O001O001N10001O000O2O00001O000000001O0000000000001O0001O00000000001O0000001O0O1000001N10001O001N101O1N101O0O2O0O2O001N102M2N2N101N2N2N2O1N3L3M3N2N3L4L4M3L5J5I:GdQ]Y1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    484.9592590332031,
+                    2.19097900390625,
+                    711.0618896484375,
+                    187.7151641845703
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "[PTm08fk13N3N1O1N2O1O1N1O001N200N3L4M2O2M3N2L4N3L201N2N101O1O2O0O1O2N1O1N3M3DSN`VNP2\\i1<N2L3N2N2N1O2N1O101O01O0M2L31HWM[WNj2eh18100O100O100TMTWNd2Ui1N1000000O1000HZMVWNe2jh190O1O0001O1N2O1O1O001O001O2N2N1N3M2N2N3M2O2N1O1O2O0O1O2N1O1O2O0O2N1O1O1O1O10O1O1O1OOO1OO12O11O1O1O2M100001O0000L50O1O1O1_L\\XNd2fg1ZM]XNd2dg1XMbXNe2_g1[MbXNd2^g1]MbXNa2_g1_MbXN_2_g1aMbXN\\2`g1fM^XNY2cg1kMZXNS2gg1PNVXNo1kg1QNUXNm1mg1SNSXNl1ng1TNRXNk1og1UNQXNj1Ph1VNPXNi1Qh1WNoWNh1Rh1R11N2O1N2O1N2N2M3N2N2[MYWNP2hh1lM_WNQ2ah1oM^WNo1eh1QNZWNo1gh1QNXWNo1ih1RNUWNo1kh1oMWWNP2jh1nMYWNP2hh1PNXWNo1ih1PNXWNb0G`0Ri1mNXWNb0J>nh1QOVWNa0N<mh1SOoVNf066kh1UOmVNd0<5gh1WOmVNb0?5eh17VWNMkh13QWN1oh1OkVN6Vi1Y1100O1O1N2N2H8C=O1O100000005K1N3dNeUNe0O[O^j1JhUNh0N\\Oej1c0[UN]Ofj1c0ZUN[Ohj1d0YUN[Ohj1d0;O1O1O0O200O0010O0001N101N2N2N3MmVme0"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0001.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    363.62261962890625,
+                    538.2623901367188,
+                    503.4119873046875,
+                    667.5659790039062
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "c^de0<^k1=F6K6I6K4L4L4L5L2N2M4L3N3M2N2N2N2N2N2N2N2O1N2O0O2N101N2N2O0O2O0O2O1N101O0O2O001N101O0O2O00001N10001O000O1000001O00000000000O11O00000000000000000000001O000O101O000O2O000O2O001N10001N100O2O0O2O001N2O0O2O0O2N2N2O1N1O2N2O1N2N2N2N2N2O1N2N2N2M4L4L4M2N3K6K4L5J8F:F^iPR1"
+                },
+                "score": 0.984375
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0043.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    335.27752685546875,
+                    35.06414031982422,
+                    619.7979736328125,
+                    224.65966796875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "oYQd05jk14L2N2N2O0O2N2N2O0O2O1N101O0O2O001N2O0O2O2M2N2O1N2N1O2O0O2O0O2O10O01O1O001O00100O100O100O1000O010O10O010O2N10O01O1O1O1O1N2O1O0O2O001O001N101O1N101O1N2O1N101O0O101O0010O01O100000iMmVN_1Ti1^NQWN`1oh1_NRWNa1nh1]NTWNb1mh1\\NTWNe1lh1WNXWNh1_i12O001N2O0001O000O2O1N101OO01000000O100O1000O101O001O0QVN`N^i1a1\\VNfNbi1m1N3N1O2N1O100O001O00100O00100O1O010O010O01O002N1O1O1O10O01O1O2N4L3M5J2O000000004M0O10O1O0O1000009F4M3M1O1O001O00000001O00001O001O001O1O1O1O000010O011O00001N102N2M2O2N0O10O1O002OO01O1O0O2O1O001O1N2O1N2O2N1N3N2N1O1N2O1O001O000000O1001O001N1mNVVN0ki1LYVN3hi1KZVN4gi1I[VN7fi1G[VN9fi1D]VN;di1B^VN>bj101O001O00001O00000O100010O0001N10001N2O3M2Me][k0"
+                },
+                "score": 0.91796875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0044.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    395.19097900390625,
+                    19.877647399902344,
+                    648.2756958007812,
+                    212.84133911132812
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Yiag09fk13N1N2O2N0O2O1O1N2O1N2O1O1N2O1N2N2O1O2M2O001O0O2O001O1N1O2O1O1N2O2N1O001O1O10O0100O100O100000000O10000O1O010O001O1O1O1O1O1O1O1O1N2O1O001O1O0O2O1O001N2O001O1O001N10001O01UNgVNm0Zi1l01O001O1O100O5K2N3N0O2O1O6J0O1O11N:G3L4L1O1O1O0O2O1O1O1O001O10O01O1O0000000010O01O01O001O1O10O01O10O011N2O3M2NO101O1N20OcMlVNm1ci1100O1O001O001O000000000000001O00001O2N2N1O100O2O2M2O000O10O100O1O1O1O1O1O001O1O1O1N2O001O001O001O1N3N1O1N2O001O2O0O2N1O2N1O001O1O1O1O1N1oNnUN4Sj1IQVN5oi1JTVN4li1JWVN6ii1IXVN6hi1JXVN6ji1GXVN8ii1FYVN9hi1E[VN9ei1G\\VN8fi1D\\VN<ei1A^VN>bj11O01O1N101O001O001O1O7Hkmfi0"
+                },
+                "score": 0.9296875
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0061.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    240.83360290527344,
+                    570.8945922851562,
+                    358.66229248046875,
+                    665.7944946289062
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Sk]>;`k1:H5K5L4M3L4M2N3N1N2N3M2N2N1O2O1N2N2O1N101N2O0O2O1N101O001N10001O0O2O00001O0O101O000O101O000000001O00000000000000000001O000000001O00000O2O0000001N10001N101O0O101O0O2O1N101N1O2O1N1O2O1N2N2N2N2O1M3N2N2N3M2N2M5K4L4M5I7Hjh^Z1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    586.6743774414062,
+                    116.98623657226562,
+                    837.1961059570312,
+                    287.95904541015625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "cgmR13lk12N2N3M2O1O0O2O1O001O1O1O101N1O1O2N1N3N2\\O_OdUNe0Xj1d0M3N3L3N10O1O010O00O10O01O1O0O01D<1O1000000O10O010000000000N2M3N2O1O0O2O1O100O01O001O100O10O100O2O0M3010O010O0001N1000100O001O1J5N3N101N100O2O0O1O1O2M200O01O010O000N1O2001O100O10O10O10000O1O1O1O00001O01O01O10O01O001O01O010O1O1O100O1O100O00O1O2O01O001O001O010O0000O11O0O1O2O0O2O1O02N1O2N2N1O2O0O10O0O1O1010O100O1000O1O1O1O101N1oNmVNUOSi1k0nVNTOSi1i0oVNVORi1i0QWNSORi1j0QWNTOQi1i0SWNTOnh1l0TWNQOmh1o0TWNoNnh1o0UWNmNmh1S1Q1O001O001O1O001O001O010O10O010O010O000001N110O010O100N2QO_UN=cj1^OaUNa0Pk1O1O10O010OO2N2O1N3M4Lcfb>"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0004.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    1.9168853759765625,
+                    599.3712158203125,
+                    132.27821350097656,
+                    733.237060546875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Pd0k1Uj1000N4M3L3N3M1N4M2N2N2N2N2O1N2N1O2N2N2N1O2N101N101N2N2O0O2O0O2O0O100O101O000O10001O0O101O00001N1000000O1000000000000000000000O10000000O1001O0O1000001N10000O2O00000O2O0O101N100O101N101N101N101N2O001N101N2N1O2O1N2N1O2O1N2N2N2N3M2M3N2N2M4L4L4M3L4K5L4K7H8GfWjg1"
+                },
+                "score": [
+                    0.984375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    773.2072143554688,
+                    296.51739501953125,
+                    1075.904541015625,
+                    477.998291015625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "U]n]15hk14M3M3M2N3M2M3M3M3kNSOUWNo0dh1ZOWWNi0hh1]OnVNh0Ri1S1O1O10O1O010N2000O10O1M3M3M4L3M4O1N2N2N2O0O:G2M20O10O2OO0N3M4M2N1O101O000010O01O0O2N2M2O2O0O2O000O10001O0D[N\\VNf1bi1=O1O1O1000O10000000O101O01O00001O101N101O03M1O1O12O3N0N2NN3M2L3JfMiVNW2Ui1hMSWNQ2_i10000nM]VNe1di1XN`VNf1_i1[NaVNe1ih1oNYWNQ1eh1QO[WNP1bh1ROYWNR1fh1U1N10bNZWNDeh1<^WNBah1`0^WN@ah1b0]WN^Och1P200O01N100SObWNnMhh1U2XWNgMih1]2VWNaMih1h223N1O1O001O102M2O1N2O3L3M2N2O2M3N1O1O0O1000O0101O1O001OO100O10000000000O100O2O000000001O001O0O2O1O00001O001O1O001O001O1O1O1N2O2M3N1O1O2N2N3L4M2N8HO001O1000O3N1O1N2O000O10000000O0100000O1dNSNeXNm1Yg1VNeXNk1[g1WNcXNh1]g1YNbXNh1^g1[N\\XN>\\O6Xh1@TXN<I1Rh1FPXN=NKSh1Y1oWNeNQh1\\1PXNbNPh1^1QXNaNog1_1TXN]Nmg1b1XXNXNig1h1[XNRNhg1m1V100001O0O10000O10001O001O0O1000O0101O1O1O2M3N3M1O001O1O001O1N4M3M2N1O1O00001N10001O00001O00000O2O001O0O101O001O0000000000000000000^F"
+                },
+                "score": [
+                    0.90625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0019.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    232.86883544921875,
+                    54.036216735839844,
+                    331.447998046875,
+                    119.75081634521484
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "mZn=8ek15K5L4M2M3N2N2N2N2N1O2N1O1O2N1O101N100O100O100O2N10000O100O100O01000O1000000O01000O1000000000O0100000O10000O100O01000O10000O100O2O0O100O101N1O101N1O1O2O0O2N1O1O2N2N2N2M3N2M4L4JkiS\\1"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    336.635986328125,
+                    461.0869140625,
+                    504.09869384765625,
+                    821.367431640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "lh`d08dk19hTNR1Ri1SOgVN]1mh1cNRWN`1]1UNce1;PYNa1X1]Nce12UYNb1U1aNbe1NYYNb1R1dNce1KYYNb1R1gNde1GYYNc1Q1hNee1Q2YZNRNW1lNVb1R3a\\NTNT1SOVb1k2d\\NTNS1UOWb1h2c\\NVNS1UOYb1g2a\\NVNT1TOZb1l2[\\NSNZ1ROZb1m2Y\\NSN[1QO\\b1m2X\\NSN[1PO]b1n2U\\NUN]1mN^b1o4a]NQK_b1P5`]NPK`b1Q5_]NoJ`b1T5^]NlJbb1U5]]NkJcb1U5]]NjJdb1V5[]NkJdb1V5\\]NjJdb1U5]]NkJcb1T5^]NlJbb1U5]]NkJbb1W5\\]NjJdb1W5[]NiJeb1X5Y]NiJgb1W5Y]NiJgb1W5Z]NhJeb1Y5[]NgJeb1Y5[]NgJdb1Y5]]NgJbb1Z5^]NfJ`b1\\5`]NdJo`1^Oo^NP63bJm`1Ci^Nn5:_Jl`1Fd^No5`0ZJl`1I`^NP6d0WJj`1M]^Nn5j0UJh`10W^No5R1QJh`10R^NT6S1mIk`1Q7S_NQIm`1P7Q_NQIPa1o6o^NQIQa1o6n^NRIRa1n6n^NRISa1l6n^NTIRa1l6m^NUISa1m6k^NSIVa1m6h^NUIWa1l6_^NXH@l0Qb1m6Z^N]HCg0Rb1j7i]NXHWb1i8O2N3N4K9H3L3N0O10O00001O001O001O0O100O1O1O1O2YMY^NSKga1l4]^NPKda1P5\\^NPKda1P5\\^NPKda1P5\\^NPKda1P5]^NTJLSOha1i6Y^NQKga1d70000000O1000000000000000000O1kFU^N52i6ia1W2000O1000000000001XHS^N[5na1UIV^N01YO0a7ma1dHU^NK1e09k6`b1SIa]Nm6ab1PIa]No6ab1nH`]N[1@e3Sc1kJ`]N]1@g3Sc1bJe]N^1Ao3oc1nKR\\NR4oc1kKS\\NU4nc1eKX\\NZ4ic1dKX\\N\\4jc1`KZ\\N^4gc1`K[\\N_4gc1^K[\\N`4gc1]K]\\Na4hc1UK`\\Nh4ae1K:E>B=D?Af0YO;F6I7I>Ac0\\O?]Okg]R1"
+                },
+                "score": [
+                    0.9375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0051.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    716.6627197265625,
+                    615.431884765625,
+                    833.034423828125,
+                    715.750244140625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\\\ZZ1<_k1:I5J6L3L3N3M3M2N3L3N2N2N2O1N2N2O2M2O0O2O1O1N101O1N2O001N101O001O0O2O001O001N101O001O01O01O000000001O000001O01O0001O0000001O01O01O0O10001O001O001O001O0O2O1O001N2O001O1N101O0O2O1N2N2O1N2N2N3N1N3L4M3M2N3M2M4L4M2M5K8DWSd>"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    517.5208129882812,
+                    3.9614410400390625,
+                    655.2615356445312,
+                    214.91619873046875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "PPnn0=ck1>B8H=C9G:F9G8ZWN`M\\g1j2UXN^Mhg1h2kWNbMRh1X3N2N2N2N2N1eXNPLdf1Q4ZYNSLcf1n3[YNULcf1LTYNc39cLaf1j3]YN[LIKTf1j3SZNoLke1R3nYNUMQf1_4N000000001O0000000000001O000000000000001O0000001O000000001O00001O001O1O00001O001O00001O001O001O1O001O1O001O000000]OcZNdJ\\e1V5jZNjJVe1T5mZNkJSe1T5nZNkJSe1T5oZNkJQe1R5S[NlJnd1m0gZNc2`0]Ljd1l0kZNd2df1kLaYNT3af1iLbYNT3af1jLaYNU3`f1jLaYNU3_f1jLbYNV3_f1iLbYNV3_f1iLbYNV3`f1gLbYNX3dg1O1O1O002O0O0\\M]WNk1dh1RN_WNn1fh1kM\\WNT2Zi1M;F2N3M4L7I4L5K;Db0^O4K6IR[ai0"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0018.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    199.4142608642578,
+                    33.426334381103516,
+                    296.833251953125,
+                    100.89939880371094
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Zbn;7ek17J5M2M3M3N2N2M3N2N1O2N101N1O1O2O0O1O101N100O1O100O100O100O10000O10O0100000000O1000000O01000000O01000O10000O1000O0100O100O101N100O100O100O2N100O2N1O101N1O1O2N1O2N2N2N2M3M4L5K5G_bS^1"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    366.24798583984375,
+                    422.79791259765625,
+                    556.6998901367188,
+                    773.6447143554688
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "e[Sf0;dk14K4N4QUN\\OYj1j0]UNDZj1X1I5K8G5L4L6J4L2N4L2M3N1O1O1N101\\XNWMne1j2PZN\\Mle1d2RZN`Mle1`2RZNcMme1]2QZNfMne1Z2oYNjMoe1X2oYNjMPf1V2oYNlMoe1U2QZNlMYd1mN^\\NZ3WOkMYd1PO\\\\NU3[OlMWd1PO]\\NU3[OlMVd1RO]\\NT3\\OkMUd1TO[\\NS3_OjMUd1UOY\\NT3@iMWd1ROU\\NY3BgMYd1QOP\\N\\3EfMZd1nNo[N^3FeM[d1VOd[NW30eMb1_Ng`1e0e]NX32dM`1dNf`1l4j]NaL]1gNg`1h4m]NaLZ1iNi`1d4n]NcLX1kNi`1b4n]NdLY1jNi`1b4n]NcLY1kNj`1b4m]NcLY1kNk`1a4k]NdL[1kNj`1b4g]NfL_1hNj`1d6V_N\\Ij`1d6V_N\\Ik`1c6U_N]Ik`1c6U_N]Ik`1c6T_N^Il`1b6T_N^Il`1b6S_N_Im`1a6R_N`Io`1_6Q_NaIo`1_6Q_NaIo`1_6Q_NaIo`1`6P_N`IQa1^6P_NaIQa1_6o^NaIRa1]6o^NbIRa1]6o^NcIQa1]6o^NbISa1]6m^NcISa1\\6n^NdIRa1\\6n^NdIRa1\\6m^NeISa1]6k^NcIUa1_6i^NaIXa1a6d^N_I]a1b6`^N`I`a1`6_^NaIaa1_6^^NbIba1^6\\^NdIda1]6Z^NdIfa1[6Z^NfIfa1Z6Y^NfIha1Z6X^NfIha1Y6b]NnH6i0Yb1\\6Z]NWI3?cb1V8001O01N101O2N2N2N3M6J3M4L3M2N^JV^No0ia1POX^NQ1fa1POZ^NP1fa1oN[^NR1da1mN]^NS1ca1mN]^NS1da1mN[^NS1ea1WLX^Nk03n2fa1TL^^N]NLT20[3ga1PK]^N88]1D[3ia1dJf^Nc0M^1DZ3eb1WKg]N_1C[3fb1WKf]NZ1HS2JTMib1^Oe]NZ1FW2MoLkb1]Ob]N^1Cc3mb1mJ]]N\\7eb1cHZ]N_1Hh3Qc1gJV]Nc1Jd3Sc1fJV]Nd1Id3Sc1eJV]Nh1H`3mc1aLR\\N^3nc1bLS\\Nc0I3Ud1XOS\\N^3nc1_LV\\N`3kc1^LX\\N_3ic1`LY\\N_3hc1`LX\\N_3ic1bLS\\Na3mc1`LQ\\Na3oc1aLo[N_3Qd1aLo[N_3[d1RLj[Nn3Yd1mKi[NR4Zd1aK[[NXO;W5]d1\\K\\[NZO8Z5^d1XKP\\Nh4Td1oJQ\\NQ5_e10001N2O2N2N2N2M6K5K6J4L5K5J4M4L4L4K6K5K9G<C3N2N2N3M4K5L4L8G6J6K4K5K5K6J9CViTo0"
+                },
+                "score": [
+                    0.93359375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0028.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    812.3524780273438,
+                    203.24905395507812,
+                    907.7584838867188,
+                    255.08499145507812
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "SWj_14jk15K5L2N2N2N1O2N2N2O1O0O2O0O2O0O101O001N10001N1000001O0O100000001N100000000000001O00000O10000001O0000000000001O0O100000000O2O00000O101O000O101O0O101O0O101N101N2N101N2N2N2N2N3M3KQmW:"
+                },
+                "score": [
+                    0.9609375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    151.8138885498047,
+                    472.3858947753906,
+                    519.950927734375,
+                    694.984619140625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "``^91mk15L2N2N3M2O0O1O1O1O2POA]VN?^i1G`VN;^i1GaVN:]i1HaVN9_i1I^VN9ai1H]VN:ai1I]VN8bi1JYVN:fi1HVVN:ii1HTVN;ki1n0N101O1O100O1N2O1O00100100O000000O010O0101N2O0O001O000000000O1000O10O100O1O2O0O010O10O001O0000001000O1000O01O1O100O0100O001O00001\\OXNPWNh1hh1bNVWN]1hh1gNVWNZ1gh1jNXWNV1gh1Q10001O0010O01O010O0010O0nNbWNcN_h1^1`WNbN_h1`1`WN_Nah1a1`WN^N`h1c1_WN\\Nah1h1[WNYNeh1`21O001O100O010O1O1O0O2O100000000N2O2N1O10010O010O0O10001N10001N100O2O0O2O0O2O002M10O0O1O2DfMPWN8Kf1Vi1dNkVN[1Ui1dNlVN[1mh1mNSWNS1lh1ZNQWN:3\\1kh1mNXWNQ1hh1oNYWNP1gh1fNYWN_O2k1dh1fNgWNX1Yh1jNeWNV1[h1lNdWNT1\\h1lNdWNS1]h1PO_WNQ1`h1TO\\WNk0eh1WOXWNi0hh1\\OTWNd0kh1X11O0100O10O01O00100O01O10O010O10O0001O010O0001O001O1O010O010O001F9O110O0101N1iWNYMUg1g2kXNYMTg1g2S1O1ElVNjMTi1U2nVNiMRi1Y2mVNgMSi1Z2lVNfMTi1[2iVNgMWi1_22O10O1000001O0001O0O101N10010O1O1O1O001OBiMTWNV2ih1mMWWNS2hh1oMWWNQ2ih1PNWWNo1hh1RNYWNm1gh1TNXWNl1hh1TNXWNl1hh1UNUWNm1kh1c0010hMRWN^1nh1aNSWN_1mh1aNSWN_1mh1aNSWN_1nh1h01O2N101N1O2O001N2O0O2N2O001N101N1N3N2L4\\OVVNkNoi1d10O010O1L5L2N3D;O01O2M9DI;100O10001O1OPObUN?]j1@dUN`0\\j1AcUN`0\\j1b000000001O001O00000O100001O00000O001O1O010FeUNnN[j1S1jUNgNVj1Y170N3M20O2O12N1O10002M2O001O00000002M4M8H8H3M3M3N1N1O1O1N2O1O1N2O1N3M3LcgTQ1"
+                },
+                "score": [
+                    0.921875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0036.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    768.9679565429688,
+                    289.6593017578125,
+                    869.5139770507812,
+                    348.259765625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "giW]17fk16L3M3M2N2N2N2O1N2O1N101N2O1N101O1O0O2O001O1O001N10001O00001O0O10001O000000001O0000010O000000000000000001O00000000001O0000001O000O2O00001O001O00001N101O001N2O0O2O1N2O0O2O1N2N101N2N2N3M2L7JPR_<"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    1.6807785034179688,
+                    317.5638427734375,
+                    240.90060424804688,
+                    412.32489013671875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "W:V2ji10010O0000001O00001O001O001O1O2M4L3L<E3L3L5L3M3N2J5N3M20001N101N2LS`7LQ`H5K4M2O2N2N101N1O2M3J8J>B5L3N3M2N2O1N2O1O001O001O1O001O0000001O00000000001O000000000000000000O100000000000000O100O10000O100O1O1O100O100O1O1O1O1N2O2N100M3L4N2O1N2O100001O0010N2M3O2M2N3N8H4K3N2MPm1C\\SN7^OIoTN=kj1>K6J5J5J6M3N2L5M2N2M3O10O010O100O1O1O100O1O1O1O2O1O6K4K3L4M1N2O0O100000000000010O00010O0100O101O0O10000O10O001O1O1O00O1O1001N2O1N1O000O2N1O1N3M201N2O0010O01O0O101O001O100O1O1O1O1O1O101N102M3MiP`a1"
+                },
+                "score": [
+                    0.890625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0049.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    867.2029418945312,
+                    609.714111328125,
+                    980.1520385742188,
+                    705.9453125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Q`Uc1?^k17I6K4M3L4M3M2N2N3M2O1N3M2O1N2O0O2O1N2O1N2O1N101O1O001O1N101O001O1O001O00001O0O20O0001O001O00001O01O0001O000001O01O01O00001O001O001O001O001O001O001O0O2O001O1O001N2O1O0O2O1O1N3M2O0O2N2O2M1O3M2M4M3M3M3L4K6K4L8EZcn5"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    537.1047973632812,
+                    8.879035949707031,
+                    702.2218627929688,
+                    233.53231811523438
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "hhoo04jk16J6L3L4M4L3N3L4K3N2M3N3M3M3M3M4L3M3L5L3M3M3M4L3M2N1^OYMhWNi2Wh1XMgWNl2Vh1UMiWNQ3Qh1PMnWN[3gg1eLYXN^3dg1bL]XN`3`g1`L`XNm2HcMcg1@eXNh3Xg1WLiXNl3Tg1SLlXNP4Rg1oKoXNR4_g11O1O100O2N1O1O2M200O101N4L<E3M1O01O001O1OVYNSK`f1\\5I2O2F:J5O00SJYZNb5fe1]J\\ZNb5de1^J]ZNa5ce1_J]ZNa5ce1_J]ZNa5de1_JZZNb5fe1<1SJ]ZN\\5be1_JcZNa5^e1]JcZNc5]e1\\JdZNd5le10O100O1000001O0001O001O1O1O010O00101Nb0^O3M1O01N101OZKQYN[4of1eKQYN[4of1eKQYN[4Pg1bKRYN_4Wg101O2O1NB`K]YN`4Sg1N2N2ZL_XNj2bg1RMaXNm2bg1mLbXNR3bg1dLeXN[3Rh1O0O001O01OoNdWN^N\\h1_1iWN`NWh1^1kWNaNVh1^1jWNaNWh1_1jWN`NWh1^1kWNaNVh1^1nWN]NTh1b1UXNRNSh1h1W1L1O2N2N3M3M3M3L7J6J4L4L1O2N1N3MbZgf0"
+                },
+                "score": [
+                    0.9375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0033.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    828.388671875,
+                    313.4127502441406,
+                    927.8526611328125,
+                    369.5857849121094
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "]Vj`1:ek13L3N3M2N2N2O1N2O1O0O2O1O1N101N101O000O2O001O001N10001O001O00001N100000001O000000001O0001O000000000000001O00000000001O00001O00001O0O101O00001N101O001O0O2O0O2O0O2O0O2O1N1O3N1N2N2M3M4L]YR9"
+                },
+                "score": [
+                    0.96484375
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    3.673370361328125,
+                    440.0395812988281,
+                    357.446044921875,
+                    560.8507080078125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "S?Y2gi10002N2N3M2N2N5K1O1O001O0O2O000000000O100000000000O1000O10000000001O0O100000O1001N1YOdUNI]j15gUNG[j19fUNC]j1=cUNB_j1=`UN@ej1a0VUN@mj1h02FPUNBQk1:UUNCkj1<WUNCij1=WUNCij1>VUNBij1a0UUN_Ojj1c0UUN]Okj1c0TUN^Okj1m0N4M1N2O2M3N1N2O0O1_Oa0N101O1N2O100O1O00100O100O100O100O0010000O1000000000O010000000000000O10001O0000000O101O00001O001N101O1O001O1O1O1O1O2N3L7J4L001O1O000O1000000O100000001O000O2O0]O]UNHej14`UNJ`j13eUNI^j11iUNH\\j15i00O1N2M4L3ZOHaUN;\\j1O[UN3cj1f0O2O1N101O001O1O001O00000O2O1O3M1O2N2N1O001O1O001N2O1O001O1O001O00001N10001O00001O00000O100000000O1000000000O1000O100000O1000000O0100000O2N1O2N1O101N101N1O3M2N3L3O1O2M5K1O1M3@bUNYOcj1f092O2O1O2N0M3L5O01F[UNYOdj1Q110O100nUNjNZi1Z1d04L3L2O3M3M3M2O1O10O2N2N0O2N2O1N1O2M2O2NO1O100O10O001O1N2O10O1000O2N1N2O2M3O001O0010O1O01O001O00001N1O1N3N2N12O1N2O0O1N2O1N1O1O100O2N001O1O1O1O001O1O10L3N2@`0O2N3M2O1N2M4L3O2M3N2N2N]]fZ1"
+                },
+                "score": [
+                    0.91796875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0039.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    777.0400390625,
+                    275.08966064453125,
+                    877.591796875,
+                    336.55352783203125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Vaj]1<bk14M3M3M2N2N2O1N2N2O1N2O1O0O2O1O001O0O2O1O001O00001O00001O001O00001O000000001O0000001O0001O000001O0001O0000001O001O0000001O00001O000O2O001O001N101O001O0O2O1O0O2O1N2O1N101N2N2N2O2M3L4L]nQ<"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    3.1302413940429688,
+                    158.26019287109375,
+                    256.88714599609375,
+                    272.8464660644531
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "j5Y1gj1000000001O00000000001O001O000O1N2M3M3N3N1O100O1O2O0O1O100O2O0O10000O1000000000000000000000O2O000O1O1N2N200O100O2N101N2N1O2O0010O0100O100EbUNRObj1S14M3K5L5102K1N1N1N2N2N2O1N2O1N2O1O0O101N1O2N1O1O2N1O1O2N1O100N200O100O10001OO100000001O0000000O100O10000O101O000O2O0O2O0O101N1O100O101O000000001O0O1O1000001O0O12iUNbNhi1b1PVNdNni1h1O1O0010O0000010O0010OO2O0O2O0O2N2N3N0O10010O001N2O1O00O101N1O101O1N2O2N1O001O001O1O1O1O1O01O005K;F1N1O001N2O1O1O1N2M4M3M3M101N2O0O1O00001O101N101N10O01O100O100O100O1000O0100O10000O100O2N101N101N2N2N2Ne\\^`1"
+                },
+                "score": [
+                    0.921875
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0040.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    857.363525390625,
+                    306.28497314453125,
+                    959.0321044921875,
+                    371.17364501953125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Yb`b16ek18L3L4M3M2N2O1N3N1N2O0O2O1N2O001O1N2O001O001O001N101O001O001O01O01O00001O0000010O001O0000001O01O000000001O00010O00001O0000001O001O000O2O001O001O001N2O001O0O2O1O1N2O0O2O1N2N2O1N2O2L3N3M4K6FZYV7"
+                },
+                "score": [
+                    0.96875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    4.6567840576171875,
+                    103.40721130371094,
+                    345.59442138671875,
+                    251.0791473388672
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "^4?ak1000O2N2M2O2M2O2N1O2M3M2O2M2O1O100O10000O10001O00001O00010O00001O001O1O010O01O01O01O0001O01O01O000000000O1O1O1O1O1O100O1O101N2N2O1N001O10001O0O2O010O1O0010[NVVNR1ji1mNXVNR1hi1mNYVNT1gi1jN[VNU1ei1jN\\VNV1Xj10O0010O00010O1O100O1O100O010O001O010O001O0001O001O001O001O0000001N1N2N2O1O1O1O1O2O0O2N100O2O001O00001N10000000O1O1O100O1O1O1O10000O1O2O00010O0O1O1O1O2N101N1N3N2O0010000WO\\UNb0Xj1[OjUNh0Sj1VOnUNm0bj10O1O1O1O1O1O1O1O1O0010O01O0O1O100O1O2N1O1O2O0O100O100O1O101N1O10O010000000000000O101N100000001N100O2N1O2O000O2O0O2O000010O2N1O10O0L4MmUNdNii1Z1XVNiNei1W1ZVNmNci1T1[VNmNfi1T1WVNnNhi1e110O01O010O00001O0000000O2O0O10001O0O101O101N002N102M100O1001M2N3N0O2O1N2O1N2N2O001O000000000001O001O1O1XNUVNY1mi1bNXVNZ1Zj1M2N3M2O1N3N1N2N3M2N3N1N100O101N101N100O1000O1000O010O100O1000000O100O100O1000001O0O3M4MVU][1"
+                },
+                "score": [
+                    0.92578125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0020.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    250.04019165039062,
+                    56.15576934814453,
+                    346.4272766113281,
+                    119.25110626220703
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "mVn>9ek14L4L4M2M3N2N2N2N1O2N1O2N1O100O1O2O0O1O100O101O0O100O100O10000O10O010000O10000000O0100000000O01000000O10O10O10000O100O10000O100O100O2O0O100O101N1O1O2N1O2N101N1O2N2M3N2M3M4L6GhiU[1"
+                },
+                "score": [
+                    0.97265625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    269.28076171875,
+                    460.23291015625,
+                    435.115234375,
+                    817.9688720703125
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "mk[`0:ck15M1O2M2`MEZYN<cf1JZYN6cf1O[YN1bf15[YNKdf17[YNIcf1;[YNEdf1=[YNCcf1`0\\YN@cf1b0\\YN^ORe1G[ZNm0a0]Okd12`ZNc0d0[O^d1b0kZN5f0YOVd1l0R[NMg0WOPd1S1X[NGh0VOkc1Y1Z[NCk0TOgc1]1\\[NBl0QOec1`1^[N@m0POob1@m[NS24_OP1nNkb1Gl[Nn19]OP1nNib1Kh[Nm1a0YOn0oNhb1]2Z\\NdNn0oNhb1]2Z\\NdNn0oNgb1^2[\\NcNn0oNgb1_2Z\\NbNo0oNgb1_2Z\\NbNo0oNgb1_2Y\\NcNo0oNhb1_2X\\NbNP1oNgb1`2Y\\NaNQ1nNfb1a2X\\NbNR1mNfb1b2W\\NaNS1mNfb1j4Z]NVKfb1j4Z]NVKeb1k4[]NUKeb1k4[]NUKeb1k4Z]NVKfb1j4[]NUKeb1k4[]NUKeb1b2l[NnN_1`Neb1b2m[NlN`1aNcb1c2l[NmN`1aNdb1j4[]NXKdb1h4\\]NXKcb1i4[]NZKdb1f4Z]N_KlN^Oob1T5Q^N\\Lla1e3P^N_Loa1b3P]N`Jb0T2]b1e3_]N_Lab1b3X]NdLhb1Z6O10000O10^JP]NlN0n0Pc15T]NiNNP1nb19U]NfNKR1ob1<U]Nf1kb1[NU]Nd1jb1_NV]N_1jb1cNT]N^1jb1fNS]N[1hb1P401NfN_]NYI^a1TOS_Nb7_O]I\\a1UOP_N_7F\\IYa1YOk^N`6:UIBS1Xa1[Oh^N\\6c0TI]OT1Xa1]Oh^NY6d0hJd`1oNh^NX6d0jJc`1oNj^NV6c0kJc`1oNj^NU6c0mJd`1oNf^NU6d0nJf`1POb^NS6g0nJh`1n5V_NTJj`1k5S_NYJn`1g5P_NZJPa1f5P_NZJQa1e5o^N[JQa1f5n^NZJSa1e5e^NcJ[a1]5g^NaJZa1TO]^Nl48oK\\a1UO\\^Nl48oK]a1SO\\^Nn48nK\\a1SO^^Nm49nKZa1TO]^Nm4b0gKRa1ZO]^Nm4f0fKm`1\\O_^Nk4f0iKl`1[O^^Nk4g0jKk`1[O^^Nj4h0kKk`1[O\\^Ni4i0mKk`1ZO\\^Nh4j0nKj`1YO]^Nj4h0mKl`1WO\\^Nn4g0kKm`1UO^^N]2IWOi0VOQa1UO\\^NQ2JZM2[2e0UOSa1UO\\^NQ2I[M3Z2f0SOSa1WOV^Nd2OTOg0QOTa1h5m^NWJSa1j5l^NVJTa1j5l^NVJUa1h5k^NYJUa1f5k^N[JUa1^2S^NVL0Y2f0UOWa1\\2T^NULOZ2d0WOYa1Z2S^NoN?kN^a1`5\\^NdJda1a5T^NbJla13R^NZ5oa1dJR^N\\5na1cJS^NC3h3la1bLS^NE4g3ia1cLT^NE<_3aa1jLU^NG7b3da1`KQ^N67g03c3ga1^KR^N55j02c3ga1]KU^N42l02b3ha1^KU^N31m02b3ha1_KT^N13n01_3ka1dKP^NL6P11\\3la1mKh]NE<S13V3ka1SLe]ND=R14Q3Pb1YL_]ND>P13^2fb1mLj\\NE=n03R1EXNZc14a\\ND=m03R14^MYc1n0T\\NE=l02Q1Zd1[NZ[NF<l04h0^d1dNT[NG<k068id1UOfZNH<i09B[e1KQZNI>f0`g1ASXNH?c0`g1DSXNG?c0_g1ETXNE`0d0]g1DWXNE?d0]g1CeYN9^f1@lYN9Si1BUZ_V1"
+                },
+                "score": [
+                    0.90234375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0010.jpg",
+        "annotations": [
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    215.39657592773438,
+                    311.9017028808594,
+                    694.50244140625,
+                    527.228515625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "j[T=2mk14K3N3M2N1O2O0O2N100O1000O0100O1O100O001O001O010O0010O01OO101O01O010O001N2O1N101O1O1O1N2O2M3M4M4K4L4L4L3N3M2O3L2O2N2N1O1O00010O000001OaWNcM[g1]2aXNlMZg1T2cXNQN\\g1n1aXNUNSh1W1jWNlNXh1IUWNK3?;2]h1BWWNK4?57`h1K[WNO19dh1HZWN1M;ih1DZWNZ1eh1hNZWNX1hh1gNVWNZ1kh1gNRWNZ1nh1l01OO100O10O010O1N2M3N2O1O1O1N2O0O2N2I7O0100O1O1N2N2N2O1O0ZWNbMkg1_2lWNlMRh1T2mWNoMPh1Q2QXNPNng1Q2lWNVNRh1k1kWNXNUh1h0mWNUOK5Wh19PXNiN3h1mg1^ORXNiNNm1og1XOUXNR1kg1jNXXNV1hg1fN\\XN[1cg1aNbXN^1_g1_NcXNa1^g1ZNfXNf1Zg1VNjXNk1Vg1QNmXNo1Tg1kMQYNU2]h110O01O0000001O0001O0001O00000000001O0O1E;M3N3N1M3N2M4N1O1O2N1N2O2N101N101N100O10000O2O000O100O2O000O2O00001O00001O00001O0000000001O000000001O000O2N1O2N1O2N1N2N3N2N1CdWNTM_h1j2cWNUM^h1j2bWNUM`h1f2`0K50010_NlVN3Ui1DSWN<nh1ASWN?nh1@SWN?oh1]OSWNc0oh1WOUWNi0Qj101N1F;L3N21O1O0011J7J7JRl10lSN6L4M2M2O2O1N2N3aUN_O[i1b0bVNESi1a0jVNEQi1>dVNNYi13eVN1Wi1_1M2M3N2O1O1O1O1_OUMhWNo2Uh1`0M2N3N1O1O2O0O2O01O01O0000001O0001O00010O001O001O001O0O101O0000000O1O100O2O0O101N100O1O1O1O100O1O2N1N3L3N3TOXWN\\Njh1d1XWNZNhh1f1[WNTNih1k1[WNnMhh1S2b0O100O2O000000001O0001O0001O0001O00100O1O1O1O10O01O100O0010O01O`N]VNc0di1[O^VNe0ai1ZOaVNf0^i1n01O001O10O01O010O10000O01O001O0002N2O0O1ON2O1O1O2N100aWNhMUg1Y2fXNoMWg1Q2fXNTNXg1m1eXNVNZg1j1aXN[N_g1f1]XN]Ncg1c1ZXNaNeg1m21O000kMnWN=Qh1BPXN>Ph1AQXN?og1ARXN>ng1BRXN>ng1BRXN>og1AQXN?og1AQXN>Ph1BPXN=Rh1BnWN=Sh1CnWN:Th1EmWN9Uh1GkWN8Vh1HjWN6Xh1JhWN3\\h1McWNOah12]WNLfh15XWNIkh1c13N3N1N2N3N1N2N3M200010O01O0000000010O00000001O0000010O00010O000000001O00010O0000001O0000010O000O2N1]OZVNkNgi1R1^VNkNci1S1`VNkNbi1P1dVNjN`i1Q1j0M4K5J7J5JQ[Rg0"
+                },
+                "score": [
+                    0.9375
+                ]
+            },
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    752.2550048828125,
+                    79.32630920410156,
+                    914.6336669921875,
+                    254.89598083496094
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "cal[1l0oj19oN@XVNe0Si1QOiVN`02a0hh1lNUWNd2gh1<L4J6L5I6L4M4N2N1000bN\\XN`Ncg1R1aXNjMNS1ag1R3N001N1000001O00010O01O000001O01O1O2O1N2N1O2O0O10O01O010O001O10O01O1O1O1O1O100O1O010O1O1O1O001O1O001O100O2N100O001O001O100O010O1O100[M_WNi1bh1VN^WNj1ch1UN[WNm1fh1f01O1O1O0010O01O011N1O100O1O1O002N100O1O1O1O01O01O1O1O1O2O0O1O10O00000O1011N4L2N1O2N2N1O1O1O001O1O2N2N2O001N1O2O0O1O102N1O3L2N2N00101N3M5K4L4L4L6J5K3L_`n9"
+                },
+                "score": [
+                    0.91015625
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0054.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    335.6847839355469,
+                    615.2830810546875,
+                    456.8471374511719,
+                    717.244384765625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "eTnc05dk1=G6J6K4L4M3L4M2N2N2M3N3M2N2O1N2N2O1N2N2N2O0O2O1N101O1N101N101O001N101O001N1000001O0O101O0000001O000000001O000001O000000000000001O0000001O00001O00000O2O00001O0O2O1O0O2O0O2O1O0O2O0O2O1N1O2N2O1N2N2O1N2N2N2N2N2N2N3M4K4L4L5J6I8HZofT1"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    348.205078125,
+                    4.148643493652344,
+                    509.6395263671875,
+                    206.0289306640625
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "X]od02lk15K4M2M3I6L5J5L4L4N2O1O2N1WOoNaVNS1[i1k0N3L3N2N3N1O2N101N101N2N101N1N3\\Od0K4M4M3K5K4L5L3M4L3N3L3N3M2O2H8J6K5L4L3K6O1O0000O1O100O1N2N2O1H8G9O1O1O100O1O1N2O1O1O1O1000000000000000000000000000000001O0000000000001O0000000000O1N2O1N2F:O1O1N2O1L4K5L4N2M3N2M3L4N2L4[Oe0L4N2N2O1O1O1O1N2M3N2N2H8I7N2N2M3L4M3H8WOUUN;mj1DUUN:lj1FTUN9mj1GTUN7mj1ITUN3oj1Mi0LN0gc^Q1"
+                },
+                "score": [
+                    0.9375
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0069.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    725.0865478515625,
+                    453.4464111328125,
+                    896.3665771484375,
+                    573.3377685546875
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "_SkZ15dk1=G6J5M3L4M3M3M2N2N3M2N2O1N3M2O1N2O1N2O1N2O1O1N101N101N2O1O1N101O1O001N2O001O1O001N101O1O001O001O001O001O001O001O001O001O000010O0001O0000010O001O0000010O00001O01O01O01O000010O000001O00001O01O01O001O000010O01O001O001O00001O001O001O1O001O001O001N101O1O001O1O1O0O2O1O1O0O2O1O1N2O0O2O1N2N2O1N2N3N1N2O1N3M3M2O1N3M4L3M2M5J6K4Jeoo:"
+                },
+                "score": [
+                    0.98046875
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    638.035400390625,
+                    1.2303352355957031,
+                    792.4697265625,
+                    83.37686157226562
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "\\iRV16ek17J5L3L5I6ZOUOTVNn0li1c001O000000001O00001O00001O0000001O00001O0000001O00001O00001O001O001O001O001O001O00001O001O001O001O001O1O00001O001O00001O00001O001O000000N2O1O1N2G9N2N2N2O1O1O100O100000000001O00000000000000001O000000001O000000O11O04L00001O001O000001O0000O2L3J6H9K5H8EPh^a0"
+                },
+                "score": [
+                    0.9453125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    },
+    {
+        "image_path": "/home/keti/ap_ws/Grounded_SAM-2/sample5506/0055.jpg",
+        "annotations": [
+            {
+                "class_name": "black hole",
+                "bbox": [
+                    298.4636535644531,
+                    606.8611450195312,
+                    422.4343566894531,
+                    712.0905151367188
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "Xhha0`0]k16K5J5L4M3L3M4M2N3M2M4N1N2N2N2N2O1N2N2N2O1N101N2O0O2O1N2O001N101O0O101N101O00001N10001O00001O0O101O0000000010O00000000000000001O000000001O00001O00001O000O2O000O2O00001N2O0O2O1O0O2O1N101N101N2N2N2O1N1O2N2O2M2N3L3N2N2N3L4L4K6K6H8HbchV1"
+                },
+                "score": [
+                    0.9765625
+                ]
+            },
+            {
+                "class_name": "contamination",
+                "bbox": [
+                    381.3761291503906,
+                    2.6400909423828125,
+                    565.3020629882812,
+                    194.0227813720703
+                ],
+                "segmentation": {
+                    "size": [
+                        1920,
+                        1080
+                    ],
+                    "counts": "iXmf02mk14K4M2N2N1N3L3N2M4L3L4J7N1N2O2N101O0O2O0O2N1YObNhVNc1Vi1eNaVN^1[i1e0N3M3N1N3N2N1N3N2N2O0O2O1N2N2M3I6N3O1N2N2N2K5J5L5N1N2O1N2M3N1N2O1O002MBTYNmKjf1V4XYNeKhf1]4=O0101O00001N1N2K51O1O1O1O100000000000000O11O00001O00000000001O0000001O0000001O00001OO100O100O1O1O1O1K5M3L8I3OM31O1O1N2N2N2M3M3O1O1O1N2N2M3K5M3M3M3M3M3L4N2K5L4O1O10000O1O1N2N2N2N2N2M3N2EoUNeNSj1Y1?J2E\\UNXOgj1f0:00001O1ON2N1O200O100O1N3L5H9JigSn0"
+                },
+                "score": [
+                    0.953125
+                ]
+            }
+        ],
+        "box_format": "xyxy",
+        "img_width": 1080,
+        "img_height": 1920
+    }
+]

@@ -440,31 +440,16 @@ class Nerfstudio(DataParser):
 
         points3D = torch.from_numpy(np.asarray(pcd.points, dtype=np.float32))
         #@@@ post_process points3d read logic@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        import os
-        import sys
-        my_module_path = '/home/keti/ap_ws/gaussian-splatting/mpegdataset/test_utils'
-        sys.path.insert(0, my_module_path)  # 가장 앞에 추가
-        
+        from plyfile import PlyData, PlyElement
         try:
-            from custom_parsing import custom_parsing_class
-            custom_ins=custom_parsing_class()
-        finally:
-            # 에러가 나든 안 나든 무조건 경로 제거
-            if my_module_path in sys.path:
-                sys.path.remove(my_module_path)
-        anomaly_val = torch.zeros(points3D.shape[0], dtype=torch.float32)
-
-
-        buf_postpt = custom_ins.post_process_points3d()
-        buf_postptrgb = custom_ins.post_process_points3d_rgb()
-
-        postppts=torch.from_numpy(np.asarray(buf_postpt, dtype=np.float32))
-        postppts_rgb=torch.from_numpy(np.asarray(buf_postptrgb, dtype=np.uint8))
-        buf_anomal=torch.ones((postppts.shape[0]), dtype=torch.float32)
-        anomaly_val = torch.cat([anomaly_val,buf_anomal], dim=0)
-        points3D = torch.cat([points3D, postppts], dim=0)
-        
-
+            plydata = PlyData.read(str(ply_file_path))
+            names = plydata['vertex'].data.dtype.names
+            feat_np = np.asarray(plydata['vertex']['feat'], dtype=np.float32)  # (0 or 1)
+            # n = points3D.shape[0]
+            anomaly_val = torch.from_numpy(feat_np)
+        except Exception:
+            anomaly_val = torch.zeros(points3D.shape[0], dtype=torch.float32)
+            print('exception occurred while reading feat from ply file, using zeros instead')
         #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22
         points3D = (
             torch.cat(
@@ -478,7 +463,9 @@ class Nerfstudio(DataParser):
         )
         points3D *= scale_factor
         points3D_rgb = torch.from_numpy((np.asarray(pcd.colors) * 255).astype(np.uint8))
-        points3D_rgb = torch.cat([points3D_rgb,postppts_rgb], dim=0)  # my own plus @@@ need to be removed later
+        # points3D_rgb = torch.cat([points3D_rgb,postppts_rgb], dim=0)  # my own plus @@@ need to be removed later
+        # anomaly_val = torch.zeros(points3D.shape[0], dtype=torch.float32)
+        
         out = {
             "points3D_xyz": points3D,
             "points3D_rgb": points3D_rgb,

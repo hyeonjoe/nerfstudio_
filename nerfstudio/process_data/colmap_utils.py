@@ -25,6 +25,12 @@ import cv2
 import numpy as np
 import requests
 import torch
+
+import json
+from pycocotools import mask as mask_util
+from custom_parsing import custom_parsing_class
+from collections import namedtuple
+
 from packaging.version import Version
 from rich.progress import track
 
@@ -684,15 +690,61 @@ def create_ply_from_colmap(
         colmap_points = read_points3D_text(recon_dir / "points3D.txt")
     else:
         raise ValueError(f"Could not find points3D.txt or points3D.bin in {recon_dir}")
+    
+    if (recon_dir / "images.bin").exists():
+        colmap_images = read_points3D_binary(recon_dir / "images.bin")
+    elif (recon_dir / "images.txt").exists():
+        colmap_images = read_points3D_text(recon_dir / "images.txt")
+    else:
+        raise ValueError(f"Could not find images.txt or images.bin in {recon_dir}")
+
+    #경로 grsam으로 받아서 해야됨
+    with open('/home/keti/ap_ws/nerfstudio_/grounded_sam2_all_results.json', 'r', encoding='utf-8') as f:
+    # with open('/home/keti/ap_ws/Grounded-SAM-2/outputs/grounded_sam2_local_demo/grounded_sam2_all_results.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    matching_info={}
+
+    for idx in data:# length : number of images
+        img_n=Path(idx['image_path'])
+        img_idname=img_n.stem
+        img_id=int(img_idname)
+        matching_info.setdefault(img_id, {})
+        for i, annotation in enumerate(idx['annotations']):
+            cls_name= annotation['class_name']
+            if cls_name == 'black hole':
+                mask_info=annotation['segmentation']
+                mask = mask_util.decode(mask_info)  # shape = (H, W, 1) or (H, W)
+                mask = np.squeeze(mask)       # (H, W)로 변환
+                matching_info[img_id][cls_name]=mask
+
+    for n,p in enumerate(colmap_points):
+        id_list=colmap_points[p].image_ids#image_id
+        for ls_idx in id_list:#images_id list
+            if ls_idx in matching_info:
+                matching_class=list(matching_info[ls_idx].keys())
+                for cls_n in matching_class:
+                    mask=matching_info[ls_idx][cls_n]
+                    matching_dict = {value: index for index, value in enumerate(images_extrin[ls_idx].point3D_ids) if value != -1}
+                    pixel=np.array(images_extrin[ls_idx].xys[matching_dict[colmap_points[p].id]])
+                    pixel=np.round(pixel).astype(int)  # xys는 float형태니깐 round로 반올림해야함
+                    if mask[pixel[1]][pixel[0]] == 1:  # mask는 2D numpy 배열
+                        if colmap_points[p].anomaly_features is None:
+                            updated = colmap_points[p]._replace(anomaly_features=1)
+                            colmap_points[p]=updated
 
     # Load point Positions
     points3D = torch.from_numpy(np.array([p.xyz for p in colmap_points.values()], dtype=np.float32))
+
+
     if applied_transform is not None:
         assert applied_transform.shape == (3, 4)
         points3D = torch.einsum("ij,bj->bi", applied_transform[:3, :3], points3D) + applied_transform[:3, 3]
 
     # Load point colours
     points3D_rgb = torch.from_numpy(np.array([p.rgb for p in colmap_points.values()], dtype=np.uint8))
+
+    points3D_anomaly = torch.from_numpy(np.array([p.anomaly_features for p in colmap_points.values()], dtype=np.uint8))
+
 
     # write ply
     with open(output_dir / filename, "w") as f:
@@ -706,9 +758,10 @@ def create_ply_from_colmap(
         f.write("property uint8 red\n")
         f.write("property uint8 green\n")
         f.write("property uint8 blue\n")
+        f.write("property uint8 feat\n")
         f.write("end_header\n")
 
-        for coord, color in zip(points3D, points3D_rgb):
+        for coord, color, feat in zip(points3D, points3D_rgb,points3D_anomaly):
             x, y, z = coord
             r, g, b = color
-            f.write(f"{x:8f} {y:8f} {z:8f} {r} {g} {b}\n")
+            f.write(f"{x:8f} {y:8f} {z:8f} {r} {g} {b} {feat}\n")

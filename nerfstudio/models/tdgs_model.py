@@ -23,12 +23,11 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Literal, Optional, Tuple, Type, Union
 
 import torch
-
-import sys
+import torch.nn.functional as F
 from gsplat.strategy import DefaultStrategy, MCMCStrategy
 
 try:
-    from gsplat.rendering import rasterization
+    from gsplat.rendering import rasterization_2dgs, rasterization_2dgs_inria_wrapper
 except ImportError:
     print("Please install gsplat>=1.0.0")
 from pytorch_msssim import SSIM
@@ -37,9 +36,18 @@ from torch.nn import Parameter
 from nerfstudio.cameras.camera_optimizers import CameraOptimizer, CameraOptimizerConfig
 from nerfstudio.cameras.cameras import Cameras
 from nerfstudio.data.scene_box import OrientedBox
-from nerfstudio.engine.callbacks import TrainingCallback, TrainingCallbackAttributes, TrainingCallbackLocation
+from nerfstudio.engine.callbacks import (
+    TrainingCallback,
+    TrainingCallbackAttributes,
+    TrainingCallbackLocation,
+)
 from nerfstudio.engine.optimizers import Optimizers
-from nerfstudio.model_components.lib_bilagrid import BilateralGrid, color_correct, slice, total_variation_loss
+from nerfstudio.model_components.lib_bilagrid import (
+    BilateralGrid,
+    color_correct,
+    slice,
+    total_variation_loss,
+)
 from nerfstudio.models.base_model import Model, ModelConfig
 from nerfstudio.utils.colors import get_color
 from nerfstudio.utils.math import k_nearest_sklearn, random_quat_tensor
@@ -61,7 +69,11 @@ def resize_image(image: torch.Tensor, d: int):
 
     image = image.to(torch.float32)
     weight = (1.0 / (d * d)) * torch.ones((1, 1, d, d), dtype=torch.float32, device=image.device)
-    return tf.conv2d(image.permute(2, 0, 1)[:, None, ...], weight, stride=d).squeeze(1).permute(1, 2, 0)
+    return (
+        tf.conv2d(image.permute(2, 0, 1)[:, None, ...], weight, stride=d)
+        .squeeze(1)
+        .permute(1, 2, 0)
+    )
 
 
 @torch_compile()
@@ -84,10 +96,16 @@ def get_viewmat(optimized_camera_to_world):
 
 
 @dataclass
-class SplatfactoModelConfig(ModelConfig):
+class Splatfacto2DGSModelConfig(ModelConfig):
     """Splatfacto Model Config, nerfstudio's implementation of Gaussian Splatting"""
 
-    _target: Type = field(default_factory=lambda: SplatfactoModel)
+    _target: Type = field(default_factory=lambda: Splatfacto2DGSModel)
+
+    # 2DGS specific parameters
+    rasterization_backend: Literal["2dgs", "2dgs-inria"] = "2dgs"
+    """Model type for 2DGS rasterization"""
+
+    # Training parameters
     warmup_length: int = 500
     """period of steps where refinement is turned off"""
     refine_every: int = 100
@@ -106,7 +124,7 @@ class SplatfactoModelConfig(ModelConfig):
     """Every this many refinement steps, reset the alpha"""
     densify_grad_thresh: float = 0.0008
     """threshold of positional gradient norm for densifying gaussians"""
-    use_absgrad: bool = True
+    use_absgrad: bool = False
     """Whether to use absgrad to densify gaussians, if False, will use grad rather than absgrad"""
     densify_size_thresh: float = 0.01
     """below this size, gaussians are *duplicated*, otherwise split"""
@@ -150,7 +168,9 @@ class SplatfactoModelConfig(ModelConfig):
     However, PLY exported with antialiased rasterize mode is not compatible with classic mode. Thus many web viewers that
     were implemented for classic mode can not render antialiased mode PLY properly without modifications.
     """
-    camera_optimizer: CameraOptimizerConfig = field(default_factory=lambda: CameraOptimizerConfig(mode="off"))
+    camera_optimizer: CameraOptimizerConfig = field(
+        default_factory=lambda: CameraOptimizerConfig(mode="off")
+    )
     """Config of the camera optimizer to use"""
     use_bilateral_grid: bool = False
     """If True, use bilateral grid to handle the ISP changes in the image space. This technique was introduced in the paper 'Bilateral Guided Radiance Field Processing' (https://bilarfpro.github.io/)."""
@@ -169,15 +189,55 @@ class SplatfactoModelConfig(ModelConfig):
     mcmc_scale_reg: float = 0.01
     """Regularization term for scale in MCMC strategy. Only enabled when using MCMC strategy"""
 
+    # 2DGS specific parameters from training config
+    packed: bool = False
+    """Use packed mode for rasterization, this leads to less memory usage but slightly slower."""
+    sparse_grad: bool = False
+    """Use sparse gradients for optimization. (experimental)"""
+    antialiased: bool = False
+    """Anti-aliasing in rasterization. Might slightly hurt quantitative metrics."""
+    revised_opacity: bool = False
+    """Whether to use revised opacity heuristic from arXiv:2404.06109 (experimental)"""
 
-class SplatfactoModel(Model):
+    # Loss parameters
+    depth_loss: bool = False
+    """Enable depth loss. (experimental)"""
+    depth_lambda: float = 1e-2
+    """Weight for depth loss"""
+    normal_loss: bool = False
+    """Enable normal consistency loss. (Currently for 2DGS only)"""
+    normal_lambda: float = 5e-2
+    """Weight for normal loss"""
+    normal_start_iter: int = 7_000
+    """Iteration to start normal consistency regulerization"""
+    dist_loss: bool = False
+    """Distortion loss. (experimental)"""
+    dist_lambda: float = 1e-2
+    """Weight for distortion loss"""
+    dist_start_iter: int = 3_000
+    """Iteration to start distortion loss regulerization"""
+
+    # Rendering parameters
+    near_plane: float = 0.2
+    """Near plane clipping distance"""
+    far_plane: float = 200
+    """Far plane clipping distance"""
+
+    # Initialization parameters (matching gsplat example)
+    init_opa: float = 0.1
+    """Initial opacity of GS"""
+    init_scale: float = 1.0
+    """Initial scale of GS"""
+
+
+class Splatfacto2DGSModel(Model):
     """Nerfstudio's implementation of Gaussian Splatting
 
     Args:
         config: Splatfacto configuration to instantiate model
     """
 
-    config: SplatfactoModelConfig
+    config: Splatfacto2DGSModelConfig
 
     def __init__(
         self,
@@ -189,50 +249,54 @@ class SplatfactoModel(Model):
         super().__init__(*args, **kwargs)
 
     def populate_modules(self):
+        # Initialize based on seed points or random initialization
         if self.seed_points is not None and not self.config.random_init:
-            means = torch.nn.Parameter(self.seed_points[0])  # (Location, Color)
+            points = self.seed_points[0]  # (Location, Color)
+            rgbs = (
+                self.seed_points[1] / 255.0
+                if self.seed_points[1].shape[0] > 0
+                else torch.rand((points.shape[0], 3))
+            )
         else:
-            means = torch.nn.Parameter((torch.rand((self.config.num_random, 3)) - 0.5) * self.config.random_scale)
-        distances, _ = k_nearest_sklearn(means.data, 3)
-        # find the average of the three nearest neighbors for each point and use that as the scale
-        avg_dist = distances.mean(dim=-1, keepdim=True)
-        scales = torch.nn.Parameter(torch.log(avg_dist.repeat(1, 3)))
-        num_points = means.shape[0]
-        quats = torch.nn.Parameter(random_quat_tensor(num_points))
-        dim_sh = num_sh_bases(self.config.sh_degree)
+            points = (torch.rand((self.config.num_random, 3)) - 0.5) * self.config.random_scale
+            rgbs = torch.rand((self.config.num_random, 3))
 
-        if (
-            self.seed_points is not None
-            and not self.config.random_init
-            # We can have colors without points.
-            and self.seed_points[1].shape[0] > 0
-        ):
-            shs = torch.zeros((self.seed_points[1].shape[0], dim_sh, 3)).float().cuda()
-            if self.config.sh_degree > 0:
-                shs[:, 0, :3] = RGB2SH(self.seed_points[1] / 255)
-                shs[:, 1:, 3:] = 0.0
-            else:
-                CONSOLE.log("use color only optimization with sigmoid activation")
-                shs[:, 0, :3] = torch.logit(self.seed_points[1] / 255, eps=1e-10)
-            features_dc = torch.nn.Parameter(shs[:, 0, :])
-            features_rest = torch.nn.Parameter(shs[:, 1:, :])
+        N = points.shape[0]
+
+        # Initialize the GS size to be the average dist of the 3 nearest neighbors (like in gsplat example)
+        distances, _ = k_nearest_sklearn(points, 4)
+        dist2_avg = (distances[:, 1:] ** 2).mean(dim=-1)  # [N,] - exclude self
+        dist_avg = torch.sqrt(dist2_avg)
+        scales = torch.log(dist_avg * self.config.init_scale).unsqueeze(-1).repeat(1, 3)  # [N, 3]
+
+        # Initialize parameters like in gsplat example
+        means = torch.nn.Parameter(points)
+        quats = torch.nn.Parameter(random_quat_tensor(N))
+        opacities = torch.nn.Parameter(torch.logit(torch.full((N,), self.config.init_opa)))
+
+        # Initialize colors based on SH degree
+        if self.config.sh_degree > 0:
+            # Use spherical harmonics
+            dim_sh = num_sh_bases(self.config.sh_degree)
+            colors = torch.zeros((N, (self.config.sh_degree + 1) ** 2, 3))  # [N, K, 3]
+            colors[:, 0, :] = RGB2SH(rgbs)
+            features_dc = torch.nn.Parameter(colors[:, :1, :])  # DC term
+            features_rest = torch.nn.Parameter(colors[:, 1:, :])  # Higher order terms
         else:
-            features_dc = torch.nn.Parameter(torch.rand(num_points, 3))
-            features_rest = torch.nn.Parameter(torch.zeros((num_points, dim_sh - 1, 3)))
-        # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
-        if self.seed_points is not None and not self.config.random_init:
-            anomals = torch.nn.Parameter(self.seed_points[2],requires_grad=False)  # (anomaly)
-        # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
-        opacities = torch.nn.Parameter(torch.logit(0.1 * torch.ones(num_points, 1)))
+            # Use direct color optimization with sigmoid activation
+            CONSOLE.log("use color only optimization with sigmoid activation")
+            colors = torch.logit(rgbs, eps=1e-10)  # [N, 3]
+            features_dc = torch.nn.Parameter(colors)
+            features_rest = torch.nn.Parameter(torch.zeros((N, 0, 3)))  # Empty for sh_degree=0
+
         self.gauss_params = torch.nn.ParameterDict(
             {
                 "means": means,
-                "scales": scales,
+                "scales": torch.nn.Parameter(scales),
                 "quats": quats,
+                "opacities": opacities,
                 "features_dc": features_dc,
                 "features_rest": features_rest,
-                "opacities": opacities,
-                "anomals": anomals, # need to be removed later
             }
         )
 
@@ -266,6 +330,12 @@ class SplatfactoModel(Model):
 
         # Strategy for GS densification
         if self.config.strategy == "default":
+            # Determine the key for gradient based on model type
+            if self.config.rasterization_backend == "2dgs":
+                key_for_gradient = "gradient_2dgs"
+            else:
+                key_for_gradient = "means2d"
+
             # Strategy for GS densification
             self.strategy = DefaultStrategy(
                 prune_opa=self.config.cull_alpha_thresh,
@@ -281,8 +351,9 @@ class SplatfactoModel(Model):
                 refine_every=self.config.refine_every,
                 pause_refine_after_reset=self.num_train_data + self.config.refine_every,
                 absgrad=self.config.use_absgrad,
-                revised_opacity=False,
+                revised_opacity=self.config.revised_opacity,
                 verbose=True,
+                key_for_gradient=key_for_gradient,
             )
             self.strategy_state = self.strategy.initialize_state(scene_scale=1.0)
         elif self.config.strategy == "mcmc":
@@ -308,14 +379,14 @@ class SplatfactoModel(Model):
             return torch.sigmoid(self.features_dc)
 
     @property
-    def shs_0(self):
+    def features_dc(self):
         if self.config.sh_degree > 0:
             return self.features_dc
         else:
             return RGB2SH(torch.sigmoid(self.features_dc))
 
     @property
-    def shs_rest(self):
+    def features_rest(self):
         return self.features_rest
 
     @property
@@ -345,11 +416,6 @@ class SplatfactoModel(Model):
     @property
     def opacities(self):
         return self.gauss_params["opacities"]
-    
-
-    @property
-    def anomals(self): #@@@@@@@@@@@@@@@@@@@@@@@@@@@need to be removed later
-        return self.gauss_params["anomals"]
 
     def load_state_dict(self, dict, **kwargs):  # type: ignore
         # resize the parameters to match the new number of points
@@ -391,7 +457,9 @@ class SplatfactoModel(Model):
                 state=self.strategy_state,
                 step=step,
                 info=self.info,
-                lr=self.schedulers["means"].get_last_lr()[0],  # the learning rate for the "means" attribute of the GS
+                lr=self.schedulers["means"].get_last_lr()[
+                    0
+                ],  # the learning rate for the "means" attribute of the GS
             )
         else:
             raise ValueError(f"Unknown strategy {self.strategy}")
@@ -423,22 +491,10 @@ class SplatfactoModel(Model):
     def get_gaussian_param_groups(self) -> Dict[str, List[Parameter]]:
         # Here we explicitly use the means, scales as parameters so that the user can override this function and
         # specify more if they want to add more optimizable params to gaussians.
-        # return {
-        #     name: [self.gauss_params[name]]
-        #     for name in ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
-        # }
-        #@@@@@@@@@@@@@@ need to be removed later
-        names = ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
-        # 만약 "anomal" 키가 있으면 추가
-        if "anomal" in self.gauss_params:
-            names.append("anomals")
         return {
             name: [self.gauss_params[name]]
-            for name in names
+            for name in ["means", "scales", "quats", "features_dc", "features_rest", "opacities"]
         }
-
-
-
 
     def get_param_groups(self) -> Dict[str, List[Parameter]]:
         """Obtain the parameter groups for the optimizers
@@ -468,7 +524,9 @@ class SplatfactoModel(Model):
         return image
 
     @staticmethod
-    def get_empty_outputs(width: int, height: int, background: torch.Tensor) -> Dict[str, Union[torch.Tensor, List]]:
+    def get_empty_outputs(
+        width: int, height: int, background: torch.Tensor
+    ) -> Dict[str, Union[torch.Tensor, List]]:
         rgb = background.repeat(height, width, 1)
         depth = background.new_ones(*rgb.shape[:2], 1) * 10
         accumulation = background.new_zeros(*rgb.shape[:2], 1)
@@ -488,7 +546,9 @@ class SplatfactoModel(Model):
             raise ValueError(f"Unknown background color {self.config.background_color}")
         return background
 
-    def _apply_bilateral_grid(self, rgb: torch.Tensor, cam_idx: int, H: int, W: int) -> torch.Tensor:
+    def _apply_bilateral_grid(
+        self, rgb: torch.Tensor, cam_idx: int, H: int, W: int
+    ) -> torch.Tensor:
         # make xy grid
         grid_y, grid_x = torch.meshgrid(
             torch.linspace(0, 1.0, H, device=self.device),
@@ -542,7 +602,6 @@ class SplatfactoModel(Model):
             features_rest_crop = self.features_rest[crop_ids]
             scales_crop = self.scales[crop_ids]
             quats_crop = self.quats[crop_ids]
-            anomals_crop = self.anomals[crop_ids] #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ need to be removed later
         else:
             opacities_crop = self.opacities
             means_crop = self.means
@@ -550,10 +609,8 @@ class SplatfactoModel(Model):
             features_rest_crop = self.features_rest
             scales_crop = self.scales
             quats_crop = self.quats
-            anomals_crop = self.anomals #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ need to be removed later
 
-
-        colors_crop = torch.cat((features_dc_crop[:, None, :], features_rest_crop), dim=1)
+        colors_crop = torch.cat((features_dc_crop, features_rest_crop), dim=1)
 
         camera_scale_fac = self._get_downscale_factor()
         camera.rescale_output_resolution(1 / camera_scale_fac)
@@ -573,33 +630,72 @@ class SplatfactoModel(Model):
             render_mode = "RGB"
 
         if self.config.sh_degree > 0:
-            sh_degree_to_use = min(self.step // self.config.sh_degree_interval, self.config.sh_degree)
+            sh_degree_to_use = min(
+                self.step // self.config.sh_degree_interval, self.config.sh_degree
+            )
         else:
             colors_crop = torch.sigmoid(colors_crop).squeeze(1)  # [N, 1, 3] -> [N, 3]
             sh_degree_to_use = None
 
-        render, alpha, self.info = rasterization(
-            means=means_crop,
-            quats=quats_crop,  # rasterization does normalization internally
-            scales=torch.exp(scales_crop),
-            opacities=torch.sigmoid(opacities_crop).squeeze(-1),
-            colors=colors_crop,
-            viewmats=viewmat,  # [1, 4, 4]
-            Ks=K,  # [1, 3, 3]
-            width=W,
-            height=H,
-            packed=False,
-            near_plane=0.01,
-            far_plane=1e10,
-            render_mode=render_mode,
-            sh_degree=sh_degree_to_use,
-            sparse_grad=False,
-            absgrad=self.strategy.absgrad if isinstance(self.strategy, DefaultStrategy) else False,
-            rasterize_mode=self.config.rasterize_mode,
-            # set some threshold to disregrad small gaussians for faster rendering.
-            # radius_clip=3.0,
-        )
-        # print('self.info:',self.info, flush=True)
+        # Use 2DGS rasterization based on model type
+        if self.config.rasterization_backend == "2dgs":
+            (
+                render_colors,
+                render_alphas,
+                render_normals,
+                normals_from_depth,
+                render_distort,
+                render_median,
+                self.info,
+            ) = rasterization_2dgs(
+                means=means_crop,
+                quats=quats_crop,
+                scales=torch.exp(scales_crop),
+                opacities=torch.sigmoid(opacities_crop).squeeze(-1),
+                colors=colors_crop,
+                # viewmats=torch.linalg.inv(optimized_camera_to_world),  # [C, 4, 4]
+                viewmats=viewmat,
+                Ks=K,  # [C, 3, 3]
+                width=W,
+                height=H,
+                packed=self.config.packed,
+                absgrad=self.config.use_absgrad,
+                sparse_grad=self.config.sparse_grad,
+                near_plane=self.config.near_plane,
+                far_plane=self.config.far_plane,
+                render_mode=render_mode,
+                sh_degree=sh_degree_to_use,
+                distloss=self.config.dist_loss,
+            )
+            render = render_colors
+            alpha = render_alphas
+        elif self.config.rasterization_backend == "2dgs-inria":
+            renders, self.info = rasterization_2dgs_inria_wrapper(
+                means=means_crop,
+                quats=quats_crop,
+                scales=torch.exp(scales_crop),
+                opacities=torch.sigmoid(opacities_crop).squeeze(-1),
+                colors=colors_crop,
+                viewmats=torch.linalg.inv(optimized_camera_to_world),  # [C, 4, 4]
+                Ks=K,  # [C, 3, 3]
+                width=W,
+                height=H,
+                packed=self.config.packed,
+                absgrad=self.config.use_absgrad,
+                sparse_grad=self.config.sparse_grad,
+                near_plane=self.config.near_plane,
+                far_plane=self.config.far_plane,
+                render_mode=render_mode,
+                sh_degree=sh_degree_to_use,
+                distloss=self.config.dist_loss,
+            )
+            render_colors, render_alphas = renders
+            render = render_colors
+            alpha = render_alphas
+        else:
+            raise ValueError(
+                f"Unsupported rasterization_backend: {self.config.rasterization_backend}. Only '2dgs' and '2dgs-inria' are supported."
+            )
         if self.training:
             self.strategy.step_pre_backward(
                 self.gauss_params, self.optimizers, self.strategy_state, self.step, self.info
@@ -624,13 +720,23 @@ class SplatfactoModel(Model):
         if background.shape[0] == 3 and not self.training:
             background = background.expand(H, W, 3)
 
-        return {
+        outputs_dict = {
             "rgb": rgb.squeeze(0),  # type: ignore
             "depth": depth_im,  # type: ignore
             "accumulation": alpha.squeeze(0),  # type: ignore
             "background": background,  # type: ignore
-            "anomaly_rgb" : rgb.squeeze(0),
         }  # type: ignore
+
+        # Add 2DGS specific outputs if available
+        if self.config.rasterization_backend in ["2dgs", "2dgs-inria"] and hasattr(self, "info"):
+            if "normals_rend" in self.info:
+                outputs_dict["normals"] = self.info["normals_rend"].squeeze(0)
+            if "render_distloss" in self.info:
+                outputs_dict["distortion"] = self.info["render_distloss"].squeeze(0)
+            if "render_median" in self.info:
+                outputs_dict["median_depth"] = self.info["render_median"].squeeze(0)
+
+        return outputs_dict
 
     def get_gt_img(self, image: torch.Tensor):
         """Compute groundtruth image with iteration dependent downscale factor for evaluation purpose
@@ -663,7 +769,9 @@ class SplatfactoModel(Model):
             outputs: the output to compute loss dict to
             batch: ground truth batch corresponding to outputs
         """
-        gt_rgb = self.composite_with_background(self.get_gt_img(batch["image"]), outputs["background"])
+        gt_rgb = self.composite_with_background(
+            self.get_gt_img(batch["image"]), outputs["background"]
+        )
         metrics_dict = {}
         predicted_rgb = outputs["rgb"]
 
@@ -685,7 +793,9 @@ class SplatfactoModel(Model):
             batch: ground truth batch corresponding to outputs
             metrics_dict: dictionary of metrics, some of which we can use for loss
         """
-        gt_img = self.composite_with_background(self.get_gt_img(batch["image"]), outputs["background"])
+        gt_img = self.composite_with_background(
+            self.get_gt_img(batch["image"]), outputs["background"]
+        )
         pred_img = outputs["rgb"]
 
         # Set masked part of both ground-truth and rendered image to black.
@@ -699,7 +809,9 @@ class SplatfactoModel(Model):
             pred_img = pred_img * mask
 
         Ll1 = torch.abs(gt_img - pred_img).mean()
-        simloss = 1 - self.ssim(gt_img.permute(2, 0, 1)[None, ...], pred_img.permute(2, 0, 1)[None, ...])
+        simloss = 1 - self.ssim(
+            gt_img.permute(2, 0, 1)[None, ...], pred_img.permute(2, 0, 1)[None, ...]
+        )
         if self.config.use_scale_regularization and self.step % 10 == 0:
             scale_exp = torch.exp(self.scales)
             scale_reg = (
@@ -718,15 +830,70 @@ class SplatfactoModel(Model):
             "scale_reg": scale_reg,
         }
 
+        # 2DGS specific losses
+        if self.config.normal_loss and self.step > self.config.normal_start_iter:
+            # Normal consistency loss (only for 2DGS)
+            if (
+                hasattr(self, "info")
+                and "normals_rend" in self.info
+                and "normals_surf" in self.info
+            ):
+                normals = self.info["normals_rend"].squeeze(0).permute((2, 0, 1))
+                normals_from_depth = self.info["normals_surf"]
+                normals_from_depth *= outputs["accumulation"].squeeze(0).detach()
+                if len(normals_from_depth.shape) == 4:
+                    normals_from_depth = normals_from_depth.squeeze(0)
+                normals_from_depth = normals_from_depth.permute((2, 0, 1))
+                normal_error = (1 - (normals * normals_from_depth).sum(dim=0))[None]
+                normalloss = self.config.normal_lambda * normal_error.mean()
+                loss_dict["normal_loss"] = normalloss
+
+        if self.config.dist_loss and self.step > self.config.dist_start_iter:
+            # Distortion loss
+            if hasattr(self, "info") and "render_distloss" in self.info:
+                distloss = self.config.dist_lambda * self.info["render_distloss"].mean()
+                loss_dict["dist_loss"] = distloss
+
+        if self.config.depth_loss:
+            # Depth loss (if depth data is available in batch)
+            if "depths" in batch and "points" in batch:
+                points = batch["points"].to(self.device)  # [1, M, 2]
+                depths_gt = batch["depths"].to(self.device)  # [1, M]
+
+                # Query depths from depth map
+                points = torch.stack(
+                    [
+                        points[:, :, 0] / (pred_img.shape[1] - 1) * 2 - 1,
+                        points[:, :, 1] / (pred_img.shape[0] - 1) * 2 - 1,
+                    ],
+                    dim=-1,
+                )  # normalize to [-1, 1]
+                grid = points.unsqueeze(2)  # [1, M, 1, 2]
+
+                if outputs["depth"] is not None:
+                    depths = outputs["depth"].unsqueeze(0).unsqueeze(0)  # [1, 1, H, W]
+                    depths = F.grid_sample(depths, grid, align_corners=True)  # [1, 1, M, 1]
+                    depths = depths.squeeze(3).squeeze(1)  # [1, M]
+
+                    # Calculate loss in disparity space
+                    disp = torch.where(depths > 0.0, 1.0 / depths, torch.zeros_like(depths))
+                    disp_gt = 1.0 / depths_gt  # [1, M]
+                    depthloss = F.l1_loss(disp, disp_gt)
+                    loss_dict["depth_loss"] = depthloss * self.config.depth_lambda
+
         # Losses for mcmc
         if self.config.strategy == "mcmc":
             if self.config.mcmc_opacity_reg > 0.0:
                 mcmc_opacity_reg = (
-                    self.config.mcmc_opacity_reg * torch.abs(torch.sigmoid(self.gauss_params["opacities"])).mean()
+                    self.config.mcmc_opacity_reg
+                    * torch.abs(torch.sigmoid(self.gauss_params["opacities"])).mean()
                 )
                 loss_dict["mcmc_opacity_reg"] = mcmc_opacity_reg
             if self.config.mcmc_scale_reg > 0.0:
-                mcmc_scale_reg = self.config.mcmc_scale_reg * torch.abs(torch.exp(self.gauss_params["scales"])).mean()
+                mcmc_scale_reg = (
+                    self.config.mcmc_scale_reg
+                    * torch.abs(torch.exp(self.gauss_params["scales"])).mean()
+                )
                 loss_dict["mcmc_scale_reg"] = mcmc_scale_reg
 
         if self.training:
@@ -738,7 +905,9 @@ class SplatfactoModel(Model):
         return loss_dict
 
     @torch.no_grad()
-    def get_outputs_for_camera(self, camera: Cameras, obb_box: Optional[OrientedBox] = None) -> Dict[str, torch.Tensor]:
+    def get_outputs_for_camera(
+        self, camera: Cameras, obb_box: Optional[OrientedBox] = None
+    ) -> Dict[str, torch.Tensor]:
         """Takes in a camera, generates the raybundle, and computes the output of the model.
         Overridden for a camera-based gaussian model.
 
@@ -764,7 +933,9 @@ class SplatfactoModel(Model):
         Returns:
             A dictionary of metrics.
         """
-        gt_rgb = self.composite_with_background(self.get_gt_img(batch["image"]), outputs["background"])
+        gt_rgb = self.composite_with_background(
+            self.get_gt_img(batch["image"]), outputs["background"]
+        )
         predicted_rgb = outputs["rgb"]
         cc_rgb = None
 

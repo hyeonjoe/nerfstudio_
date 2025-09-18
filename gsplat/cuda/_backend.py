@@ -80,9 +80,12 @@ _C = None
 
 try:
     # try to import the compiled module (via setup.py)
-    from gsplat import csrc as _C
+    #from gsplat import csrc as _C
+    from gsplat import csrc_custom as _C
+    print("csrc_custom imported@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 except ImportError:
     # if failed, try with JIT compilation
+    print('import error@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2')
     if cuda_toolkit_available():
         name = "gsplat_cuda"
         build_dir = _get_build_directory(name, verbose=False)
@@ -106,11 +109,18 @@ except ImportError:
         except OSError:
             pass
 
-        if os.path.exists(os.path.join(build_dir, "gsplat_cuda.so")) or os.path.exists(
-            os.path.join(build_dir, "gsplat_cuda.lib")
+
+
+        if os.path.exists(os.path.join(build_dir, "csrc_custom.so")):
+            print("csrc_custom.so exists, loading it",flush=True)
+            name = "csrc_custom"  
+            _C = _import_module_from_library(name, build_dir, True)
+        elif os.path.exists(os.path.join(build_dir, "gsplat_cuda.so")) or os.path.exists(
+            os.path.join(build_dir, "gsplat_cuda.lib") 
         ):
             # If the build exists, we assume the extension has been built
             # and we can load it.
+            print('file exists@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',flush=True)
             _C = load_extension(
                 name=name,
                 sources=sources,
@@ -122,6 +132,7 @@ except ImportError:
         else:
             # Build from scratch. Remove the build directory just to be safe: pytorch jit might stuck
             # if the build directory exists with a lock file in it.
+            print("anything new build@@@@@@@@@@@@@@@@@22",flush=True)
             shutil.rmtree(build_dir)
             with Console().status(
                 f"[bold yellow]gsplat: Setting up CUDA with MAX_JOBS={os.environ['MAX_JOBS']} (This may take a few minutes the first time)",

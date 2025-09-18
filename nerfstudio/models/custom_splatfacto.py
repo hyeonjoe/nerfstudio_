@@ -222,6 +222,11 @@ class SplatfactoModel(Model):
         # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
         if self.seed_points is not None and not self.config.random_init:
             anomals = torch.nn.Parameter(self.seed_points[2],requires_grad=False)  # (anomaly)
+            # print('anomals shape:', anomals)
+            # print('anomals shape:', anomals.shape)
+            # count_of_ones = torch.sum(anomals == 1).item()
+
+            # print(f"number of tensor 1: {count_of_ones}")
         # #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ anomal_params
         opacities = torch.nn.Parameter(torch.logit(0.1 * torch.ones(num_points, 1)))
         self.gauss_params = torch.nn.ParameterDict(
@@ -579,6 +584,7 @@ class SplatfactoModel(Model):
             sh_degree_to_use = None
 
         render, alpha, self.info,rast_anomal = custom_rasterization(
+        # render, alpha, self.info = rasterization(
             means=means_crop,
             quats=quats_crop,  # rasterization does normalization internally
             scales=torch.exp(scales_crop),
@@ -600,6 +606,7 @@ class SplatfactoModel(Model):
             # set some threshold to disregrad small gaussians for faster rendering.
             # radius_clip=3.0,
         )
+        # print('self.info:',self.info, flush=True)
         if self.training:
             self.strategy.step_pre_backward(
                 self.gauss_params, self.optimizers, self.strategy_state, self.step, self.info
@@ -624,40 +631,35 @@ class SplatfactoModel(Model):
         if background.shape[0] == 3 and not self.training:
             background = background.expand(H, W, 3)
 
-        #####anomaly blending
-        blen_anomals = rast_anomal
-        # 예시: rgb [1, H, W, 3], anomals [1, H, W, 1]
-        standrgb = rgb.squeeze(0)         # [1, H, W, 3]
-        anomals = blen_anomals # [1, H, W, 1]
-
-        # 빨간색 텐서 만들기 ([1, H, W, 3])
+        # #####anomaly blending
+      
+        standrgb = rgb# [1, H, W, 3]
+        anomals = rast_anomal # [1, H, W, 1]
+       
+        # num_ones = (anomals == 1).sum()
+       
         red = torch.zeros_like(standrgb)
         red[..., 0] = 1.0   # R=1, G=0, B=0
-
-        # anomals mask가 float이나 int일 경우, bool로 변환
-        # anomaly_mask = anomals.bool()   # [1, H, W, 1]
-
-        # 1채널을 3채널로 브로드캐스트 (마지막 차원 맞추기)
-        print(f"[DEBUG] anomals.shape: {anomals.shape}, rgb.shape: {rgb.shape}")
-        
-        print(f"[DEBUG] alpha.shape: {alpha.shape}")
-        print(f"[DEBUG] alpha: {alpha}")
+        anomaly_mask = anomals.bool()   # [1, H, W, 1]
         assert anomals.shape == rgb[..., 0:1].shape, f"Shape mismatch! anomals: {anomals.shape}, rgb: {rgb.shape}"
 
         anomaly_mask_expanded = anomals.expand(-1, -1, -1, 3)  # [1, H, W, 3]
 
-        # torch.where(조건, True일 때 값, False일 때 값)
-        anomaly_rgb = torch.where(anomaly_mask_expanded, red, rgb)  # [1, H, W, 3]
-
-        # (만약 나중에 squeeze(0)해서 [H, W, 3]로 쓰고 싶으면)
-        anomaly_rgb = anomaly_rgb.squeeze(0)
+        # # torch.where(조건, True일 때 값, False일 때 값)
+        anomaly_rgb = torch.where(anomaly_mask_expanded.bool(), red, rgb)  # [1, H, W, 3]
+        only_anomaly = torch.where(anomaly_mask_expanded.bool(), red, torch.zeros_like(red))  # [1, H, W, 3]
+       
 
         return {
+            
+            # "anomaly": only_anomaly.squeeze(0),  # type: ignore
+            "anomaly_rgb" : anomaly_rgb.squeeze(0),
             "rgb": rgb.squeeze(0),  # type: ignore
             "depth": depth_im,  # type: ignore
             "accumulation": alpha.squeeze(0),  # type: ignore
             "background": background,  # type: ignore
-            "anomaly_rgb" : anomaly_rgb,
+            # "anomaly_rgb" : anomaly_rgb.squeeze(0),
+            "anomaly": only_anomaly.squeeze(0),  # type: ignore
         }  # type: ignore
 
     def get_gt_img(self, image: torch.Tensor):

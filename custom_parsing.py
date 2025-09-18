@@ -2,12 +2,14 @@ import numpy as np
 import struct
 from collections import namedtuple
 import cv2
-
+from pathlib import Path
+import torch
+import json
 class custom_parsing_class:
     CameraModel = namedtuple("CameraModel", ["model_id", "model_name", "num_params"])
     Camera = namedtuple("Camera", ["id", "model", "width", "height", "params"])
     BaseImage = namedtuple("Image", ["id", "qvec", "tvec", "camera_id", "name", "xys", "point3D_ids"])
-    Point3D = namedtuple("Point3D", ["id", "xyz", "rgb", "error", "image_ids", "point2D_idxs"])
+    Point3D = namedtuple("Point3D", ["id", "xyz", "rgb", "error", "image_ids", "point2D_idxs","anomaly_features"])
 
 
     CAMERA_MODELS = {
@@ -26,7 +28,8 @@ class custom_parsing_class:
     CAMERA_MODEL_IDS = dict([(camera_model.model_id, camera_model) for camera_model in CAMERA_MODELS])
     CAMERA_MODEL_NAMES = dict([(camera_model.model_name, camera_model) for camera_model in CAMERA_MODELS])
     def __init__(self):
-        self.txt_path = '/home/keti/ap_ws/gaussian-splatting/mpegdataset/test_utils/post_process_points.txt'
+        # self.txt_path = '/home/keti/ap_ws/gaussian-splatting/mpegdataset/test_utils/post_process_points.txt'
+        self.txt_path = '/home/keti/ap_ws/mpegdataset/test_utils/post_process_points.txt'
     
     
     class Image(BaseImage):
@@ -273,6 +276,7 @@ class custom_parsing_class:
             void Reconstruction::WritePoints3DBinary(const std::string& path)
         """
         points3D = {}
+        default_feat = np.uint8(0)
         with open(path_to_model_file, "rb") as fid:
             num_points = self.read_next_bytes(fid, 8, "Q")[0]
             for _ in range(num_points):
@@ -286,7 +290,8 @@ class custom_parsing_class:
                 image_ids = np.array(tuple(map(int, track_elems[0::2])))
                 point2D_idxs = np.array(tuple(map(int, track_elems[1::2])))
                 points3D[point3D_id] = self.Point3D(
-                    id=point3D_id, xyz=xyz, rgb=rgb, error=error, image_ids=image_ids, point2D_idxs=point2D_idxs
+                    id=point3D_id, xyz=xyz, rgb=rgb, error=error, image_ids=image_ids, point2D_idxs=point2D_idxs,anomaly_features=0
+
                 )
         return points3D
 
@@ -313,3 +318,41 @@ class custom_parsing_class:
                 rgb_list.append([r,g,b])
         return np.array(rgb_list, dtype=np.float32)
         
+    def create_ply_from_colmap(self,
+        filename: str,  output_dir: Path , pts:Point3D) -> None:
+       
+
+        # Load point Positions
+        points3D = torch.from_numpy(np.array([p.xyz for p in pts.values()], dtype=np.float32))
+
+
+
+        # Load point colours
+        points3D_rgb = torch.from_numpy(np.array([p.rgb for p in pts.values()], dtype=np.uint8))
+
+        points3D_anomaly = torch.from_numpy(np.array([p.anomaly_features for p in pts.values()], dtype=np.uint8))
+
+
+        # write ply
+        with open(output_dir / filename, "w") as f:
+            # Header
+            f.write("ply\n")
+            f.write("format ascii 1.0\n")
+            f.write(f"element vertex {len(points3D)}\n")
+            f.write("property float x\n")
+            f.write("property float y\n")
+            f.write("property float z\n")
+            f.write("property uint8 red\n")
+            f.write("property uint8 green\n")
+            f.write("property uint8 blue\n")
+            f.write("property uint8 feat\n")
+            f.write("end_header\n")
+
+            for coord, color, feat in zip(points3D, points3D_rgb,points3D_anomaly):
+                x, y, z = coord
+                r, g, b = color
+                y_out = z
+                z_out = -y
+                # f.write(f"{x:8f} {y:8f} {z:8f} {r} {g} {b} {feat}\n")
+                f.write(f"{x:8f} {y_out:8f} {z_out:8f} {r} {g} {b} {feat}\n")
+

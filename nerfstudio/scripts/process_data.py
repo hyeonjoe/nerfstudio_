@@ -36,6 +36,7 @@ from nerfstudio.process_data import (
 from nerfstudio.process_data.colmap_converter_to_nerfstudio_dataset import BaseConverterToNerfstudioDataset
 from nerfstudio.process_data.images_to_nerfstudio_dataset import ImagesToNerfstudioDataset
 from nerfstudio.process_data.video_to_nerfstudio_dataset import VideoToNerfstudioDataset
+#from nerfstudio.process_data.anomal_to_nerfstudio_dataset import ImagesToanomalgs
 from nerfstudio.utils.rich_utils import CONSOLE
 
 
@@ -529,6 +530,8 @@ Commands = Union[
     Annotated[ProcessRealityCapture, tyro.conf.subcommand(name="realitycapture")],
     Annotated[ProcessRecord3D, tyro.conf.subcommand(name="record3d")],
     Annotated[ProcessODM, tyro.conf.subcommand(name="odm")],
+    Annotated[ImagesToNerfstudioDataset, tyro.conf.subcommand(name="anomaly")],
+
 ]
 
 # Add aria subcommand if projectaria_tools is installed.

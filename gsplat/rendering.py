@@ -1941,4 +1941,4 @@ def custom_rasterization(
             dim=-1,
         )
 
-    return render_colors, render_alphas, meta
+    return render_colors, render_alphas, meta,render_anomals

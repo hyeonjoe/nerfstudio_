@@ -2155,6 +2155,7 @@ class _custom_RasterizeToPixels(torch.autograd.Function):
             conics,
             colors,
             opacities,
+            # anomals,
             backgrounds,
             masks,
             isect_offsets,
@@ -2176,12 +2177,14 @@ class _custom_RasterizeToPixels(torch.autograd.Function):
         ctx,
         v_render_colors: Tensor,  # [C, H, W, 3]
         v_render_alphas: Tensor,  # [C, H, W, 1]
+        v_render_anoamls: Tensor,  # [C, H, W, 1]
     ):
         (
             means2d,
             conics,
             colors,
             opacities,
+            # anomals,
             backgrounds,
             masks,
             isect_offsets,
@@ -2199,7 +2202,8 @@ class _custom_RasterizeToPixels(torch.autograd.Function):
             v_means2d,
             v_conics,
             v_colors,
-            v_opacities,
+            v_opacities
+            # v_anomals
         ) = _make_lazy_cuda_func("rasterize_to_pixels_bwd")(
             means2d,
             conics,
@@ -2235,6 +2239,8 @@ class _custom_RasterizeToPixels(torch.autograd.Function):
             v_colors,
             v_opacities,
             v_backgrounds,
+            # v_anomals,
+            None,
             None,
             None,
             None,

@@ -89,6 +89,6 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
     );
     m.def(
         "custom_rasterize_to_pixels_fwd",
-        &gsplat::rasterize_to_pixels_fwd_tensor
+        &gsplat::custom_rasterize_to_pixels_fwd_tensor
     );
 }

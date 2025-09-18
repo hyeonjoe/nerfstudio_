@@ -41,14 +41,14 @@ TODO(1480) Delete this file when moving to pycolmap.
 import collections
 import os
 import struct
-
+from pycocotools import mask as mask_util
 import numpy as np
 
 CameraModel = collections.namedtuple("CameraModel", ["model_id", "model_name", "num_params"])
 Camera = collections.namedtuple("Camera", ["id", "model", "width", "height", "params"])
 BaseImage = collections.namedtuple("Image", ["id", "qvec", "tvec", "camera_id", "name", "xys", "point3D_ids"])
-Point3D = collections.namedtuple("Point3D", ["id", "xyz", "rgb", "error", "image_ids", "point2D_idxs"])
-
+Point4D = collections.namedtuple("Point3D", ["id", "xyz", "rgb", "error", "image_ids", "point2D_idxs"]) #@@@@@@@@@@@@@@@@@@@@@@@@ plz
+Point3D = collections.namedtuple("Point3D", ["id", "xyz", "rgb", "error", "image_ids", "point2D_idxs","anomaly_features"])
 
 class Image(BaseImage):
     def qvec2rotmat(self):
@@ -355,8 +355,9 @@ def read_points3D_binary(path_to_model_file):
             image_ids = np.array(tuple(map(int, track_elems[0::2])))
             point2D_idxs = np.array(tuple(map(int, track_elems[1::2])))
             points3D[point3D_id] = Point3D(
-                id=point3D_id, xyz=xyz, rgb=rgb, error=error, image_ids=image_ids, point2D_idxs=point2D_idxs
+                id=point3D_id, xyz=xyz, rgb=rgb, error=error, image_ids=image_ids, point2D_idxs=point2D_idxs, anomaly_features=None
             )
+
     return points3D
 
 

@@ -25,7 +25,8 @@ __global__ void custom_rasterize_to_pixels_fwd_kernel(
     const S *__restrict__ opacities,   // [C, N] or [nnz]
     const S *__restrict__ backgrounds, // [C, COLOR_DIM]
     const bool *__restrict__ masks,    // [C, tile_height, tile_width]
-    const bool *__restrict__ anomals, // [nnz] need to be removed later
+    // const bool *__restrict__ anomals, // [nnz] need to be removed later
+    const float *__restrict__ anomals, // [nnz] need to be removed later
     const uint32_t image_width,
     const uint32_t image_height,
     const uint32_t tile_size,
@@ -173,6 +174,8 @@ __global__ void custom_rasterize_to_pixels_fwd_kernel(
             if (anomals != nullptr && anomals[g]) {
                 has_anomal = true;
                 anomals_count += 1;
+            //     printf("anomals_count: %d\n", anomals_count);//removed later
+                
             }
             }
             cur_idx = batch_start + t;
@@ -259,7 +262,7 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor> call_kerne
         {C, image_height, image_width}, means2d.options().dtype(torch::kInt32)
     );
     torch::Tensor render_anomals = torch::zeros(      // need to be removed later
-        {C, image_height, image_width}, means2d.options().dtype(torch::kInt32));
+        {C, image_height, image_width,1}, means2d.options().dtype(torch::kInt32));
 
     at::cuda::CUDAStream stream = at::cuda::getCurrentCUDAStream();
     const uint32_t shared_mem =
@@ -293,7 +296,7 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor> call_kerne
             backgrounds.has_value() ? backgrounds.value().data_ptr<float>()
                                     : nullptr,
             masks.has_value() ? masks.value().data_ptr<bool>() : nullptr,
-            anomals.data_ptr<bool>(),                    // need to be removed later
+            anomals.data_ptr<float>(),                    // need to be removed later
             image_width,
             image_height,
             tile_size,
@@ -311,7 +314,7 @@ std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor> call_kerne
 }
 
 std::tuple<torch::Tensor, torch::Tensor, torch::Tensor,torch::Tensor>
-rasterize_to_pixels_fwd_tensor(
+custom_rasterize_to_pixels_fwd_tensor(
     // Gaussian parameters
     const torch::Tensor &means2d,   // [C, N, 2] or [nnz, 2]
     const torch::Tensor &conics,    // [C, N, 3] or [nnz, 3]
